@@ -1,0 +1,5 @@
+<form method="post" action="{{ path('calepin_delete', {'id': calepin.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ calepin.id) }}">
+    <div class="register-form" style="margin:5px; margin-left: 450px;">
+    <button class="btn">Effacer</button>
+</form>

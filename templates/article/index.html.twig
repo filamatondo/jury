@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article index
+{% endblock %}
+
+{% block body %}
+
+	<div class="container py-5" style="margin-top: 85px" ;>
+
+
+		<div class="row">
+
+			{% for article in articles %}
+				<div class="col-12 col-md-4">
+                  
+				<a  href="{{ path('article_show', {'id': article.id}) }}" style="text-decoration : none !important;  ">
+					<div class="card">
+
+						<div class="card-header">
+							<h1>{{ article.titre | upper}}</h1>
+
+						</div>
+
+						<div class="card-body">
+						
+							<img  class="w-100" src="{{ asset(article.image) }}" style="height: 300px;  object-fit:contain !important; "/>
+						</div>
+
+
+						<div class="card-footer">
+							<p>Auteur :{{ article.auteur.nom}}</p>
+							<p>
+								{{ article.date ? article.date|date('Y-m-d') : '' }}</p>
+                              
+							  {% if app.user is same as article.auteur %}
+							  
+							  <a href="{{ path('article_edit', {'id' :article.id}) }}" class="btn btn-link">Modifier</a>
+							  
+							  {% endif %}
+
+						</div>
+
+
+					</div>
+				</a>	
+				</div>
+			{% endfor %}
+
+                  
+		</div>
+
+	</div>
+
+{% endblock %}

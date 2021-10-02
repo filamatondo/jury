@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Calepin{% endblock %}
+
+{% block body %}
+    <h1>Créer un nouveau</h1>
+
+<div class="register-form" style="margin:105px; margin-left: 100px;">
+    {{ include('calepin/_form.html.twig') }}
+
+   <a href="{{ path('calepin_index') }}">Retour à la liste</a>
+{% endblock %}

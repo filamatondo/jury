@@ -1,0 +1,22 @@
+{% extends 'user_base.html.twig' %}
+
+{% block title %}
+
+<div class="register-form" style="margin:25px;">
+	<h1>
+		{{ app.user.prenom }}
+		{{app.user.nom}}
+	</h1>
+
+{% endblock %}
+
+{% block body %}
+
+				<h1 class="titre">
+					welcome
+					{{ app.user.prenom }}
+					{{app.user.nom}}
+				</h1>
+			
+
+{% endblock %}

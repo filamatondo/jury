@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@0.5.3/dist/css/axentix.min.css"> {% block stylesheets %}{% endblock %}
+		<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+	</head>
+	<body class="layout with-sidenav ">
+		<header>
+			<nav class="navbar primary" style=" height: 85px" ;>
+				<a href="{{ path("home") }}" class="navbar-brand">Small World</a>
+				<div class="navbar-menu ml-auto">
+					<a class="navbar-link" href="{{path ("user_index") }}">Profil</a>
+					<a class="navbar-link" href="{{path ("home") }}">Mes contacts</a>
+
+					<a class="navbar-link" href="{{path("received")}}"> Messagerie</a>
+
+					<a class="navbar-link" href="{{ path("article_new")}}">Publier un Article</a>
+
+					<a class="navbar-link" href="{{path("app_logout")}}">Déconnexion</a>
+				</div>
+			</nav>
+		</header>
+		<div id="example-sidenav" class="sidenav large fixed white">
+			<div class="sidenav-header">
+				<button data-target="example-sidenav" class="sidenav-trigger">
+					<i class="fas fa-times"></i>
+				</button>
+				<img class="logo dropshadow-1" src="your_img_path" alt="Logo"/>
+			</div>
+			<a href="{{ path("received") }}" class="sidenav-link active">Boîte de réception</a>
+               <br>
+			<a href="{{path('sent')}}" class="sidenav-link active">Message envoyés</a>
+		</div>
+
+		{% block body %}{% endblock %}
+
+
+		<script src="https://cdn.jsdelivr.net/npm/axentix@0.5.3/dist/js/axentix.min.js"></script>
+		{% block javascripts %}{% endblock %}
+		<script>
+			var sidenav = new Sidenav('#example-sidenav');
+		</script>
+		<script src="{{ asset('js/scripts.js') }}"></script>
+	</body>
+</html>

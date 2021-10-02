@@ -1,0 +1,74 @@
+{% extends 'user_base.html.twig' %}
+
+{% block title %}
+	<h1>
+		{{ app.user.prenom }}
+		{{app.user.nom}}
+	</h1>
+
+{% endblock %}
+
+{% block body %}
+	<div class="register-form" style="margin-botto:05px;">
+
+		<div class="container">
+
+			{% for message in app.flashes('message') %}
+
+				<div class="col">
+					<div class="p-3 my2 rounded-2 success">
+						{{message}}
+					</div>
+				</div>
+			{% endfor %}
+
+			<div class="row">
+
+				<h1 class="titre">
+					welcome
+					{{ app.user.prenom }}
+					{{app.user.nom}}
+				</h1>
+
+				<div class="w-100"></div>
+				<div class="col">Nom :</div>
+				<div class="col">{{ app.user.nom}}</div>
+				<div class="w-100"></div>
+
+				<div class="col">
+					Prénom :</div>
+				<div class="col">{{ app.user.prenom}}</div>
+
+				<div class="w-100"></div>
+
+				<div class="col">Email:</div>
+				<divd class="col">{{ app.user.email}}</div>
+				<div class="w-100"></div>
+
+
+				<div class="col">Sexe :</div>
+				<div class="col-6">{{ app.user.sexe}}</div>
+
+
+				<a href="{{ path('user_profil_modifier')}}" class="btn btn-primary">
+					Modifier le profil</a>
+
+				<a href="{{path ('user_pass_modifier')}}" class="btn btn-primary">
+					Modifier le mot de passe</a>
+
+			</div>
+		</div>
+
+
+		{#  ici je met le h1 pour pouvoir afficher mes information modifier, le nom et le prénom par le suite je fais un for #}
+	{#  attends voir un cours sur les annonces #}
+		{# </div class="col-xs4">
+																								    <h1> Annonces de {{ app.user.prenom }}  {{ app.user.nom }} ( {{ app.user.annonces|length }}) </h1>
+																								        </div>
+																								  
+																								          
+																								      {% for annonce in app.user.annonces %}
+																								      <div class="col -xs1"> Titre : </div>
+																	{% endfor %} #}
+
+	{% endblock %}

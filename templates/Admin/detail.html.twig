@@ -1,0 +1,28 @@
+{% extends "base.html;twig" %}
+
+
+{% block body %}
+
+<div class="row">
+
+	<div class=" col-12">
+
+		<div class=" card">
+
+			<div class="card-header">
+
+				<h5>
+					Modifier mon mot de passe</h5</div>
+				<div class=" card-body">
+					{{  form(formPassword)}}
+						{{ form_widget(formPassword)}}
+
+						<button type="subimt" class="btn btn-primary"></button>
+
+						{{ form_end(formPassword)}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
