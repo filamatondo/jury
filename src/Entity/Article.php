@@ -59,7 +59,7 @@ class Article
      public function prePersist()
      {
          if(empty($this->date)){
-         $this->createdAt = new DateTime();
+         $this->date = new DateTime();
          } 
      }
 

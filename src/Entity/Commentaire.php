@@ -2,10 +2,12 @@
 
 namespace App\Entity;
 
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\CommentaireRepository;
 use Doctrine\ORM\Mapping\HasLifecycleCallbacks;
-use Symfony\Component\Validator\Constraints\DateTime;
+use Symfony\Component\Validator\Constraints\Date;
+
 
 /**
  * @ORM\Entity(repositoryClass=CommentaireRepository::class)
@@ -48,7 +50,7 @@ class Commentaire
     public function prePersist()
     {
         if (empty($this->date)) {
-            $this->createdAt = new DateTime();
+            $this->date = new DateTime();
         }
     }
 

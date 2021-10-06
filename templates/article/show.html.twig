@@ -9,7 +9,7 @@
 		<div class="contaire py-5">
 			<div class="row">
 
-				<div class="col-12 mt-3">
+				<div class="col-12 mt-1">
 
 					<div class="card">
 						<div class="card-header">
@@ -21,14 +21,18 @@
 							{{ article.contenu }}
 						</div>
 					</div>
-					<div class="col-12 mt-3">
+					<div class="col-12 mt-1">
 						<div class="card">
-							<p>image</p>
-
-							<img src={{ (article.image) }} style="height: 300px;object-fit:contain; "/></td>
+							<p>
+							<div class="card-body">
+						
+							<img  class="w-100" src="{{ asset(article.image) }}" style="height: 300px;  object-fit:contain !important; "/>
+						</div>
+							
+							</p>
 					</div>
 					<div class="card">
-						<div class="col-12 mt-3">
+						<div class="col-12 mt-1">
 							<div class="card-body">
 								Date
 								{{ article.date|date('d-m-Y') }}
@@ -37,7 +41,7 @@
 					</div>
 				</div>
 
-				<div class="col-12 mt-3">
+				<div class="col-12 mt-1">
 					<div class="card">
 						<div class="card-heard">
 							<h5>
@@ -74,7 +78,7 @@
 										<div class"card-body">
 
 											{% if article.commentaires | length > 0 %}
-												{% for commentaires in article.commentaires %}
+												{% for commentaire in article.commentaires %}
 												
 												<p 
 												{% if  app.user is same as commentaire.auteur %}
@@ -83,9 +87,9 @@
                                                 
 												{% endif %}
 
-												<P> Aueur: {{ commentaire.auteur.nom}}</p>
+												<P> Auteur: {{ commentaire.auteur.nom}}</p>
 
-												<p>Date : {{ commentaire.creatdAt | date('d-m-Y') }}
+												<p>Date : {{ commentaire.date | date('d-m-Y') }}</p>
 
 												<p> Contenu : {{ commentaire.contenu }} </p>
 												<hr/>
