@@ -1,51 +1,85 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>
-			{% block title %}Welcome!
-			{% endblock %}
-		</title>
+<section class="layout with-sidenav ">
+	<header>
+		<nav class="navbar navbar-expand-lg  position-fixed py-4 fixed-top" style=" height: 95px" ;>
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@0.5.3/dist/css/axentix.min.css"> {% block stylesheets %}{% endblock %}
-		<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-	</head>
-	<body class="layout with-sidenav ">
-		<header>
-			<nav class="navbar primary" style=" height: 85px" ;>
-				<a href="{{ path("home") }}" class="navbar-brand">Small World</a>
-				<div class="navbar-menu ml-auto">
-					<a class="navbar-link" href="{{path ("user_index") }}">Profil</a>
-					<a class="navbar-link" href="{{path ("home") }}">Mes contacts</a>
 
-					<a class="navbar-link" href="{{path("received")}}"> Messagerie</a>
+			<img class="w-80" src="{{ asset("asset/logo/logo_small.png") }}" style="height: 70px; margin-top:-6px;   object-fit:contain !important; "/>
 
-					<a class="navbar-link" href="{{ path("article_new")}}">Publier un Article</a>
+			<div class="navbar-menu ml-auto">
 
-					<a class="navbar-link" href="{{path("app_logout")}}">Déconnexion</a>
-				</div>
-			</nav>
-		</header>
-		<div id="example-sidenav" class="sidenav large fixed white">
-			<div class="sidenav-header">
-				<button data-target="example-sidenav" class="sidenav-trigger">
-					<i class="fas fa-times"></i>
-				</button>
-				<img class="logo dropshadow-1" src="your_img_path" alt="Logo"/>
+
+				<a class="navbar-link" href="{{path ("user_index") }}">
+					<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3">
+					<main class="profil">Profil</main>
+				</a>
+
+
+				<!-- Button Profil code bootstrap -->
+
+				<a class="navbar-link" href="{{path ("home") }}">
+					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi bi-people-fill" viewbox="0 0 16 16">
+						<path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+						<path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+						<path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+					</svg>
+					<main class="contact">Mes contacts</main>
+				</a>
+
+				<!-- Button Profil code bootstrap -->
+
+
+				<a class="navbar-link" href="{{path("received")}}">
+					<img src="https://img.icons8.com/ios/50/100000/mail.png" class="div1">
+					<main class="message">Messagerie</main>
+				</a>
+
+
+				<a class="navbar-link" href="{{ path("article_new")}}">
+					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="Color" class="bi bi-menu-down" viewbox="0 0 16 16">
+						<path d="M7.646.146a.5.5 0 0 1 .708 0L10.207 2H14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h3.793L7.646.146zM1 7v3h14V7H1zm14-1V4a1 1 0 0 0-1-1h-3.793a1 1 0 0 1-.707-.293L8 1.207l-1.5 1.5A1 1 0 0 1 5.793 3H2a1 1 0 0 0-1 1v2h14zm0 5H1v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2zM2 4.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+					</svg>
+					<main class="publier">Publier un Article</main>
+				</a>
+
+
+				<a class="navbar-link" href="{{ path("article_index")}}">
+					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="Color" class="bi bi-receipt-cutoff" viewbox="0 0 16 16 ">
+						<path d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zM11.5 4a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/>
+						<path d="M2.354.646a.5.5 0 0 0-.801.13l-.5 1A.5.5 0 0 0 1 2v13H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H15V2a.5.5 0 0 0-.053-.224l-.5-1a.5.5 0 0 0-.8-.13L13 1.293l-.646-.647a.5.5 0 0 0-.708 0L11 1.293l-.646-.647a.5.5 0 0 0-.708 0L9 1.293 8.354.646a.5.5 0 0 0-.708 0L7 1.293 6.354.646a.5.5 0 0 0-.708 0L5 1.293 4.354.646a.5.5 0 0 0-.708 0L3 1.293 2.354.646zm-.217 1.198.51.51a.5.5 0 0 0 .707 0L4 1.707l.646.647a.5.5 0 0 0 .708 0L6 1.707l.646.647a.5.5 0 0 0 .708 0L8 1.707l.646.647a.5.5 0 0 0 .708 0L10 1.707l.646.647a.5.5 0 0 0 .708 0L12 1.707l.646.647a.5.5 0 0 0 .708 0l.509-.51.137.274V15H2V2.118l.137-.274z"/>
+					</svg>
+					<main class="liste">Liste des Articles</main>
+				</a>
+
+
+				<a class="navbar-link" href="{{path("app_logout")}}">
+					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="Color" class="bi bi-slash-circle" viewbox="0 0 16 16">
+						<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+						<path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+					</svg>
+					<main class="deconnexion">Déconnexion</main>
+				</a>
 			</div>
-			<a href="{{ path("received") }}" class="sidenav-link active">Boîte de réception</a>
-               <br>
-			<a href="{{path('sent')}}" class="sidenav-link active">Message envoyés</a>
+		</nav>
+	</header>
+
+	<div id="example-sidenav" class="sidenav large fixed white">
+
+
+		<div class="sidenav-header" style="margin-top:50%; ">
+			
+          <button data-target="example-sidenav" class="sidenav-trigger">
+				<i class="fas fa-times"></i>
+			</button>
+			<div class="spinner-grow text-primary" role="status">
+				<span class="visually-hidden">Loading...</span>
+			</div>Message reçu
 		</div>
+         
 
-		{% block body %}{% endblock %}
 
+		<a href="{{ path("received") }}" class="sidenav-link " style="margin-left:10px; color:blue ">Boîte de réception</a>
+		<br>
 
-		<script src="https://cdn.jsdelivr.net/npm/axentix@0.5.3/dist/js/axentix.min.js"></script>
-		{% block javascripts %}{% endblock %}
-		<script>
-			var sidenav = new Sidenav('#example-sidenav');
-		</script>
-		<script src="{{ asset('js/scripts.js') }}"></script>
-	</body>
-</html>
+		<a href="{{path('sent')}}" class="sidenav-link " style="margin-left:10px; color:blue ">Message envoyés</a>
+
+	</div>

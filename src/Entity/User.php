@@ -80,6 +80,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $commentaires;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Photo::class, mappedBy="images", orphanRemoval=true)
+     */
+    private $photos;
+
     public function __toString() {
         return $this->getNom();
     }
@@ -104,6 +109,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->received = new ArrayCollection();
         $this->articles = new ArrayCollection();
         $this->commentaires = new ArrayCollection();
+        $this->photos = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -357,6 +363,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
             // set the owning side to null (unless already changed)
             if ($commentaire->getAuteur() === $this) {
                 $commentaire->setAuteur(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Photo[]
+     */
+    public function getPhotos(): Collection
+    {
+        return $this->photos;
+    }
+
+    public function addPhoto(Photo $photo): self
+    {
+        if (!$this->photos->contains($photo)) {
+            $this->photos[] = $photo;
+            $photo->setImages($this);
+        }
+
+        return $this;
+    }
+
+    public function removePhoto(Photo $photo): self
+    {
+        if ($this->photos->removeElement($photo)) {
+            // set the owning side to null (unless already changed)
+            if ($photo->getImages() === $this) {
+                $photo->setImages(null);
             }
         }
 

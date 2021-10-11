@@ -49,12 +49,7 @@
 				<div class="col">Sexe :</div>
 				<div class="col-6">{{ app.user.sexe}}</div>
 
-
-				<a href="{{ path('user_profil_modifier')}}" class="btn btn-primary">
-					Modifier le profil</a>
-
-				<a href="{{path ('user_pass_modifier')}}" class="btn btn-primary">
-					Modifier le mot de passe</a>
+				{{ include('user/_delete_form.html.twig') }}
 
 			</div>
 		</div>
@@ -63,12 +58,12 @@
 		{#  ici je met le h1 pour pouvoir afficher mes information modifier, le nom et le prénom par le suite je fais un for #}
 	{#  attends voir un cours sur les annonces #}
 		{# </div class="col-xs4">
-																								    <h1> Annonces de {{ app.user.prenom }}  {{ app.user.nom }} ( {{ app.user.annonces|length }}) </h1>
-																								        </div>
-																								  
-																								          
-																								      {% for annonce in app.user.annonces %}
-																								      <div class="col -xs1"> Titre : </div>
-																	{% endfor %} #}
+																										    <h1> Annonces de {{ app.user.prenom }}  {{ app.user.nom }} ( {{ app.user.annonces|length }}) </h1>
+																										        </div>
+																										  
+																										          
+																										      {% for annonce in app.user.annonces %}
+																										      <div class="col -xs1"> Titre : </div>
+																			{% endfor %} #}
 
 	{% endblock %}

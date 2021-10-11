@@ -13,80 +13,77 @@
 
 
 			{# <div class="p-7 m-5 baground-color-primary  "> #}
-		
-
-				<h2>
-					<div class="register-form" style="margin-bottom:50px; font-size:50px;  margin-left: 330px; ">
-						
-							Créer votre compte Small World
-						
-
-					</div>
 
 
-				</h2>
+			<h2>
+				<div class="register-form" style="margin-bottom:50px; font-size:50px;  margin-left: 300px; margin-top:-40%;  ">
 
-				<!-- Titre pour s'inscrire sur le site small world-->
-
-				<div class="register-form" style="  display: flex; ">
-
-
-						<div class="col-12">
-
-							{{ form_start(registrationForm) }}
-
-                                
-
-							<div class="register-form" style="margin-bottom:15px; margin-left: 350px;  width: 500px; display-flex">
-								{{ form_widget(registrationForm.nom ) }}
-							</div>
-
-							<div class="register-form" style="margin-bottom:15px; margin-left: 350px; width: 500px;">
-
-								{{ form_widget(registrationForm.prenom ) }}
-							</div>
-                            
-							<div class="register-form" style="margin-bottom:15px; margin-left: 350px; width: 500px;">
-								{{ form_widget(registrationForm.email) }}
-							</div>
+					Créer votre compte Small World
 
 
-							<div class="register-form" style="margin-bottom:15px; margin-left: 350px;  width: 500px; ">
-								{{ form_widget(registrationForm.plainPassword ) }}
-							</div>
-
-
-							<div class="register-form" style="margin-bottom:15px; margin-left: 350px;  width: 500px; ">
-								{{ form_widget(registrationForm.date) }}
-							</div>
-
-
-							<div class="register-form" style="margin-bottom:5px; margin-left: 350px; width: 80px; ">
-								{{ form_widget(registrationForm.sexe ) }}
-							</div>
-
-
-							<div class="INSCRIPTION">
-								<button type="submit" class="inscrire">S'inscrire</button>
-							</div>
-
-							{{ form_end(registrationForm) }}
-						</div>
-					</div>
 				</div>
 
+
+			</h2>
+
+			<!-- Titre pour s'inscrire sur le site small world-->
+
+			<div class="register-form" style="  display: flex;  ">
+
+				<div class="contenaire">
+					<div class="col-12">
+
+						{{ form_start(registrationForm) }}
+
+
+						<div class="register-form" style="margin-bottom:15px; margin-left: 350px;  width: 500px;">
+							{{ form_widget(registrationForm.nom )  }}
+						</div>
+
+						<div class="register-form" style="margin-bottom:15px; margin-left: 350px; width: 500px;">
+
+							{{ form_widget(registrationForm.prenom ) }}
+						</div>
+
+						<div class="register-form" style="margin-bottom:15px; margin-left: 350px; width: 500px;">
+							{{ form_widget(registrationForm.email) }}
+						</div>
+
+
+						<div class="register-form" style="margin-bottom:15px; margin-left: 350px;  width: 500px; ">
+							{{ form_widget(registrationForm.plainPassword ) }}
+						</div>
+
+
+						<div class="register-form" style="margin-bottom:15px; margin-left: 350px;  width: 500px; ">
+							{{ form_widget(registrationForm.date) }}
+						</div>
+
+
+						<div class="register-form" style="margin-bottom:5px; margin-left: 350px; width: 80px; ">
+							{{ form_widget(registrationForm.sexe ) }}
+						</div>
+
+
+						<div class="INSCRIPTION">
+							<button type="submit" class="inscrire">S'inscrire</button>
+						</div>
+
+						{{ form_end(registrationForm) }}
+					</div>
+				</div>
 			</div>
 
 		</div>
-		<footer>
-			<div class="message">
-				<ul>
-					<ol>Il existe des tas de façons de rester en contact avec vos proches</ol>
-					<ol>Small world est un petit moyen sympa de garder contact avec</ol>
-					<ol>le monde; C'est super facile à utiliser</ol>
-				</ul>
-			</div>
-		</footer>
 
-	</main>
-</nav>{% endblock %}
+	</div>
+	<footer>
+		<div class="message">
+			<ul>
+				<ol>Il existe des tas de façons de rester en contact avec vos proches</ol>
+				<ol>Small world est un petit moyen sympa de garder contact avec</ol>
+				<ol>le monde; C'est super facile à utiliser</ol>
+			</ul>
+		</div>
+	</footer>
+</main></nav>{% endblock %}

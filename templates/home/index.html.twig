@@ -3,54 +3,52 @@
 {% block title %}{% endblock %}
 
 {% block body %}
- <div class="register-form" style="margin-botton:105px;">
+	<div class="register-form" style="margin-top:-43%; ">
 
-<h1>
-	{{ app.user.prenom }}
-		{{app.user.nom}}
-</h1>
-
-
+		<h1>
+			{{ app.user.prenom }}
+			{{app.user.nom}}
+		</h1>
 
 
-	<div class="container p-5">
+		<div class="container p-5">
 
-		{{ form_start(form) }}
-
-
-		{{ form_widget(form) }}
+			{{ form_start(form) }}
 
 
-		<button type="submit" class="btn btn-primary">Rechercher</button>
-
-		{{ form_end(form) }}
+			{{ form_widget(form) }}
 
 
-		<div class="row">
-			{% for user in users %}
-				<div class="col-6 col-md-4">
+			<button type="submit" class="btn btn-primary">Rechercher</button>
 
-					<div class="card">
+			{{ form_end(form) }}
 
-						<div class="card-header">
 
-						  	{{ user.prenom }}
-							{{ user.nom }}
+			<div class="row">
+				{% for user in users %}
+					<div class="col-3 col-md-4">
 
-						</div>
-						<div class="card-body">
-							<a href="{{ path ("send", {'id': user.id})}} " class="btn btn-primary">
-								Envoyer un message</a>
+						<div class="card">
+
+							<div class="card-header">
+
+								{{ user.prenom }}
+								{{ user.nom }}
+
+							</div>
+							<div class="card-body">
+								<a href="{{ path ("send", {'id': user.id})}} " class="btn btn-primary">
+									Envoyer un message</a>
+
+							</div>
 
 						</div>
 
 					</div>
+				{% endfor %}
+			</div>
 
-				</div>
-			{% endfor %}
 		</div>
 
-	</div>
 
-
-{% endblock %}
+	{% endblock %}

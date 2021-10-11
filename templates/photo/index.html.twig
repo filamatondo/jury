@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Photo index{% endblock %}
+
+{% block body %}
+
+  <div class="register-form" style="margin:45px; margin-top: 85px;">
+    
+        {% for photo in photos %}
+        
+              <img class="w-100" src=" {{ asset( photo.id) }}" style="height:300px; object-fit:contain !important; "/>
+              
+
+                <div class="card-body">
+						
+
+                    <a href="{{ path('photo_show', {'id': photo.id}) }}">show</a>
+                    <a href="{{ path('photo_edit', {'id': photo.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('photo_new') }}">Create new</a>
+{% endblock %}
