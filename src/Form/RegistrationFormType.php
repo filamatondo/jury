@@ -24,33 +24,44 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('nom', TextType::class, [
-                'label' => 'Nom',
+                'label' => false,
                 'attr' => ['placeholder' => 'Entrez votre nom']
 
             ])
 
             ->add('prenom', TextType::class, [
-                'label' => 'Prenom',
+                'label' => false,
                 'attr' => ['placeholder' => 'Entrez votre prénom']
             ])
 
             ->add('email', EmailType::class, [
-                'label' => 'Email',
+                'label' => false,
                 'attr' => ['placeholder' => 'Entrez votre email']
 
             ])
 
 
             ->add('date', DateType::class, [
-                'label' => 'Date',
+                'label' => false,
                 'attr' => ['placeholder' => 'Entrez votre Age']
             ])
 
             ->add('sexe', ChoiceType::class, [
-                'label' => 'Sexe',
+                'label'=> false, 
                 'choices' => [
+                    'Sexe' => '',
                     'Homme' => 'Homme',
                     'Femme' => 'Femme',
+                ]
+            ])
+
+            ->add('agreeTerms', CheckboxType::class, [
+                'mapped' => false,
+                'label' => 'Veuillez accepter les CGUV',
+                'constraints' => [
+                    new IsTrue([
+                        'message' => 'Vous devez accepter les CGUV',
+                    ])
                 ]
             ])
 

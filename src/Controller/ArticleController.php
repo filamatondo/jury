@@ -75,24 +75,21 @@ class ArticleController extends AbstractController
     public function show(Article $article, Request $request, EntityManagerInterface $em, int $id): Response
     {
 
-             $commentaire = new Commentaire();
-             
-             $form = $this->createForm(CommentaireType::class, $commentaire); 
+        $commentaire = new Commentaire();
 
-              $form->handleRequest($request); 
+        $form = $this->createForm(CommentaireType::class, $commentaire);
 
-              if($form->isSubmitted() && $form->isValid() )
+        $form->handleRequest($request);
 
-              {
-                  $commentaire->setArticle($article); 
-                  $commentaire->setAuteur($this->getUser()); 
+        if ($form->isSubmitted() && $form->isValid()) {
+            $commentaire->setArticle($article);
+            $commentaire->setAuteur($this->getUser());
 
-                  $em->persist($commentaire); 
-                  $em->flush(); 
+            $em->persist($commentaire);
+            $em->flush();
 
-                  return $this->redirectToRoute('article_show', ['id' => $id]); 
-
-              }
+            return $this->redirectToRoute('article_show', ['id' => $id]);
+        }
 
 
 
@@ -120,7 +117,7 @@ class ArticleController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $file = $form->get('Image')->getData();
+            $file = $form->get('image_upload')->getData();
 
 
             if ($file) {
@@ -144,7 +141,7 @@ class ArticleController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="article_delete", methods={"POST"})
+     * @Route("/delete/article/{id}", name="article_delete", methods={"POST"})
      */
     public function delete(Request $request, Article $article, ImageService $imageService): Response
     {
@@ -160,4 +157,8 @@ class ArticleController extends AbstractController
 
         return $this->redirectToRoute('article_index', [], Response::HTTP_SEE_OTHER);
     }
+    
+
+
+    
 }

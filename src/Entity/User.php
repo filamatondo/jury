@@ -2,18 +2,23 @@
 
 namespace App\Entity;
 
+use App\Entity\Photo;
+use App\Entity\Article;
+use App\Entity\Messages;
+use App\Entity\Commentaire;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints\DateTime;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
- * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
+ * @UniqueEntity(fields={"email"}, message="Cet email n'est pas valide.")
  */
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -26,6 +31,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Assert\NotBlank(message="Vous devez ajouter un email")
      */
     private $email;
 
@@ -42,11 +48,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Vous devez ajouter un nom de famille")
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Vous devez ajouter un prénom")
      */
     private $prenom;
 
@@ -85,23 +93,28 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $photos;
 
-    public function __toString() {
+    public function __toString()
+    {
         return $this->getNom();
     }
 
+
+    /**
+     * @var \DateTime $updated_at
+     *
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime")
+     */
     
-       /**
+    /**
      * @ORM\PrePersist
      */
     public function prePersist()
     {
-        if(empty($this->date)){
-        $this->date = new DateTime();
-        } 
+        if (empty($this->date)) {
+            $this->date = new DateTime();
+        }
     }
-
-
-
 
     public function __construct()
     {
@@ -398,7 +411,4 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
-
-
-
 }

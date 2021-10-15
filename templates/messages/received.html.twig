@@ -9,13 +9,13 @@
 	<div class="row">
 		<div class="col">
 
-		<h1 class="reception" style="margin-top:7%; ">Boîte de réception</h1>
+		<h1 class="reception" style="margin-top:7%;  margin-left:2%">Boîte de réception</h1>
 			{#  Mon titre H1 de ma messagerie #}
              
 			
 
 			{# app.user.sent : c'est l'utilisateur qui envoye le message #}
-			<p>Vous avez Reçu :{{ messages|length }}</p>
+			<p class="recu" style="margin-left:2%">Vous avez Reçu :{{ messages|length }}</p>
 
 
 			{#les titre de ma messagerie, pour mieux expliquer au utilisateur  #}
@@ -23,7 +23,7 @@
 		</div>
 		<div class="card">
 		<div class="row">
-		<div class="col-4">De</div>
+		<div class="col-4" style="margin-left:1%">De</div>
 		<div class="col-4">Sujet</div>
 		<div class="col-2">Date</div>
 		<div class="col">Supprimer</div>
