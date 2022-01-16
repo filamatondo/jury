@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Videos
+{% endblock %}
+
+{% block body %}
+	<div class="col-1 col-md-7" style=" margin-left:22%; margin-top:-55%">
+
+		<div class="card">
+			<div class="card-header">
+				<p class="auteur" style="color:#008080">Auteur</p>
+				<p class="auteurs" style="color:blue; font-size:25px">{{ video.video }}</p>
+				<p>{{ video.date ? video.date|date('d/m/Y  à  H:i:s') : '' }}</p>
+
+				<p class="tt" style="color:#008080">Titre
+				</p>
+
+				<p>{{ video.titre }}</p>
+
+
+				<p class="cont" style="color:#008080">Contenu</p>
+
+				<p>{{ video.contenu }}</p>
+
+			</div>
+
+
+			<div class=" card-footer">
+				<video controls class="w-100" src="{{ asset(video.partager) }}" style="height: 520px;  object-fit:contain !important; "/>
+			</div>
+
+
+			<a class="btn btn-info" href="{{ path('videos_index') }}">retour à la liste</a>
+			{# <a class="btn btn-" href="{{ path('videos_edit', {'id': video.id}) }}">editer</a>
+									{{ include('videos/_delete_form.html.twig') }} #}
+
+
+		</div>
+	</div>
+{% endblock %}

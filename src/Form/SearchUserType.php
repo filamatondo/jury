@@ -17,19 +17,21 @@ class SearchUserType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('filtrerParPrenom', EntityType::class, [
-                'label' => 'Filtrer par prenom',
-                'required' => false,
-                'placeholder' => '--choisir par prenom --',
-                'class' => User::class,
-                'choice_label' => function (User $user) {
-                    return strtoupper($user->getPrenom());
-                }
-            ])
+            // ->add('filtrerParPrenom', EntityType::class, [
+            //     'label' => 'Filtrer par prenom',
+            //     'required' => false,
+            //     'placeholder' => '--choisir par prenom --',
+            //     'class' => User::class,
+            //     'choice_label' => function (User $user) {
+            //         return strtoupper($user->getPrenom());
+            //     }
+            // ])
 
             ->add('filtrerParNom', TextType::class, [
-                'label' => 'Filtrer par nom',
+                'label' => false,
                 'required' => false,
+                'attr' => ['placeholder' => 'Rechercher par nom']
+               
                 
             ]);
     }

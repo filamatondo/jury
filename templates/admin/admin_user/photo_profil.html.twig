@@ -1,0 +1,77 @@
+{% extends 'base_admin_user.html.twig' %}
+
+{% block title %}
+
+	Profil
+
+{% endblock %}
+
+{% block body %}
+	<div class="register-form" style="margin-botto:05px; margin-top:13%; font-size:21px;">
+
+		<div class="container">
+
+			{% for message in app.flashes('message') %}
+
+				<div class="col">
+					<div class="p-3 my2 rounded-2 success">
+						{{message}}
+					</div>
+				</div>
+			{% endfor %}
+
+
+			{# {% for user in users %} #}
+
+			<div class="row">
+
+				<h1 class="titre" style="margin-top:-8%">
+
+					Bonjour
+
+
+					<p class="text">
+						Est-il obligatoire d'avoir une photo de profil ?
+												Chez Malt nous croyons beaucoup à l'image : donc sans photo, votre profil n'est pas visible dans les résultats de recherche.
+												
+												De plus nous sommes un réseau de professionnels et votre profil est une vitrine pour les clients qui cherchent des freelances, avoir une photo professionnelle permet d’instaurer un climat de confiance entre vous et le client.
+												
+												Nous avons constaté qu’une photo de profil pro c’est en moyenne 5 fois plus de clics sur votre profil, donc 5 fois plus de contacts potentiels ou de missions pour vous 
+																		Chez Small-World nous croyons beaucoup
+																		
+																					 à l'image : donc sans photo, votre profil n'est pas visible dans les résultats de recherche
+																					 .</p>
+
+				</h1>
+
+
+				{%  if app.user  %}
+
+					<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3" style=" height: 50px;
+															                    width: 50px;">
+
+
+				{% endif %}
+
+				<div>
+					{{form_start(form)}}
+
+					{{form_widget(form)}}
+
+					<button type="submit" class="btn btn-primary mt-3">
+						enregistre
+					</button>
+
+					{{form_end(form)}}
+
+					<a href="{{ path('admin_home_profil') }}">retour sur le profil</a>
+
+				</div>
+				{# {% endfor %} #}
+			</div>
+		</div>
+
+	</div>
+
+
+{% endblock %}

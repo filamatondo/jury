@@ -5,11 +5,11 @@
 
 	{% block body %}
 
-	<div class="register-form" style="margin-top:-40%; margin-left:520px;  margin-right:520px" ;>
+	<div class="register-form" style="margin-top:-40%; margin-left:10%; margin:30%" ;>
 		<div class="contaire py-5">
 			<div class="row">
 
-				<div class="col-12 mt-1">
+				<div class="col">
 
 					<div class="card">
 						<div class="card-header">
@@ -21,7 +21,7 @@
 							{{ article.contenu }}
 						</div>
 					</div>
-					<div class="col-12 mt-1">
+					<div class="col">
 						<div class="card">
 							<p>
 								<div class="card-body">
@@ -32,16 +32,16 @@
 							</p>
 						</div>
 						<div class="card">
-							<div class="col-12 mt-1">
+							<div class="col">
 								<div class="card-body">
 									Date
-									{{ article.date|date('d-m-Y') }}
+									{{ article.date|date('d-m-Y  H:i:s') }}
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="col-12 mt-1">
+					<div class="col">
 						<div class="card">
 							<div class="card-heard">
 								<h5>
@@ -104,20 +104,25 @@
 														</p> 
 														
 														
-														<p> : {{ commentaire.date | date('d-m-Y') }} </p> <p> contenu : {{ commentaire.contenu }} </p> 
+														<p> : {{ commentaire.date | date('d-m-Y') }} </p>
 														
 														
-														<hr/> {% endfor %}
+														 <p> contenu : {{ commentaire.contenu }} </p> 
+														
+														
+														<hr/> 
+														
+														
+														
+														{% endfor %}
 														
 														
 														{% else %} 
 														
 														
-														<p> il n y a pas encore de commentaires.
-														
-														
-														
-														</p> {% endif %}
+										<p> il n y a pas encore de commentaires.</p> 
+									
+									{% endif %}
 
 
 	</div> 

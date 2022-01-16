@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Videos
+{% endblock %}
+
+{% block body %}
+	<div class="container position-fixed fixed-top" style="margin-top:16%;">
+		<h1 class="edit" style="color:blue; font-size:50px">Éditer</h1>
+
+		{{ include('videos/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+		<a class="btn btn-info" href="{{ path('videos_index') }}" style="margin-left:40%; margin-top:-5%">retour à la liste</a>
+
+		{{ include('videos/_delete_form.html.twig') }}
+
+	</div>
+{% endblock %}

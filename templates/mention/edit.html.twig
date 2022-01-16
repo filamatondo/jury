@@ -1,0 +1,17 @@
+{% extends 'base_apropos.html.twig' %}
+
+{% block title %}Modifier la mention
+{% endblock %}
+
+{% block body %}
+
+	<div class="allo fixed-top" style="margin-top:10%;margin:10%">
+		<h1>Modifier la mention</h1>
+
+		{{ include('mention/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+		<a class="btn btn-info" href="{{ path('mention_index') }}" style="margin-top:-3%; margin-left:40%">Retour à la liste</a>
+
+		{{ include('mention/_delete_form.html.twig') }}
+	</div>
+{% endblock %}

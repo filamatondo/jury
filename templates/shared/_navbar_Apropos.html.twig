@@ -1,0 +1,24 @@
+<header class="layout with-sidenav">
+	<main>
+		<nav class=" py-4 fixed-top  navbar-expand-lg " style=" height: 95px;">
+
+
+			<img class="w-80" src="{{ asset("asset/logo/logo_small.png") }}" style="height: 70px; margin-top:-25px;   object-fit:contain !important; "/>
+
+
+			<a class="btn btn-primary" href="{{path ("app_register") }}" style="margin-left:50%; margin-top:-2%">Inscription
+			</a>
+
+
+			<div class="navbar-menu ml-auto">
+				<div class="MonCompte">
+					<a class="connexion" href="{{path ("app_login") }}">
+						<img src="https://img.icons8.com/ios/50/ffffff/name--v2.png " class="ImageProfil" style="margin-top:-35%"/>
+						<div class="connexion" style="margin-top:-6%; margin-left:-24%">MON COMPTE</div>
+					</a>
+				</div>
+			</div>
+
+		</nav>
+	</main>
+</header>

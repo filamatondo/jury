@@ -2,11 +2,13 @@
 
 namespace App\Controller;
 
+use App\Form\UserType;
 use App\Entity\Article;
 use App\Form\ArticleType;
 use App\Entity\Commentaire;
 use App\Form\CommentaireType;
 use App\MesServices\ImageService;
+use App\Repository\UserRepository;
 use App\Repository\ArticleRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -23,11 +25,17 @@ class ArticleController extends AbstractController
     /**
      * @Route("/", name="article_index", methods={"GET", "POST"})
      */
-    public function index(ArticleRepository $articleRepository): Response
+    public function index(ArticleRepository $articleRepository,  UserRepository $userRepository, Request $request): Response
     {
+        $user = $this->getUser();
+        $form = $this->createForm(UserType::class, $user);
+        $form->handleRequest($request);
+
 
         return $this->render('article/index.html.twig', [
             'articles' => $articleRepository->findAll(),
+            'user' => $user,
+            'form' => $form->createView(),
 
         ]);
     }
@@ -157,8 +165,4 @@ class ArticleController extends AbstractController
 
         return $this->redirectToRoute('article_index', [], Response::HTTP_SEE_OTHER);
     }
-    
-
-
-    
 }

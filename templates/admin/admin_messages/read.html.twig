@@ -1,0 +1,31 @@
+{% extends 'base_admin_message.html.twig' %}
+
+{% block title %}Messagerie
+{% endblock %}
+
+{% block body %}
+	<div class="register-form" style="margin-botton:105px;">
+
+		<section class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="reception" style="margin-top:9%; ">Messagerie</h1>
+
+
+					<p>Message de
+						{{ message.sender.email | reverse }}</p>
+					<p>Le
+						{{ message.createdAt|date }}</p>
+					<div>{{ message.message }}</div>
+
+					<a href="{{ path ("send", {'id': message.sender.id })}} " class="btn btn-primary mt-5">Répondre</a>
+
+					<a href="{{ path("received") }}" class="btn btn-link mt-5">Retour à la boite de réception</a>
+
+
+				</div>
+			</div>
+		</section>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'base_admin_contact.html.twig' %}
+
+{% block title %}Videos index
+{% endblock %}
+
+{% block body %}
+
+	<section class="container py-1" style="margin-top:-10%;">
+
+		<div class="row">
+
+			{% for video in videos | reverse %}
+				<div class="col-1 col-md-7 " style="margin-left:20%;">
+
+					<a href="{{ path('admin_videos_show', {'id': video.id}) }}" style="text-decoration : none !important;  "></a>
+
+
+					<div class="card">
+
+
+						<div class="card-header">
+							<h1>{{ video.video | upper}}</h1>
+							<p>
+								{{ video.date ? video.date|date('d/m/Y  à  H:i:s') : '' }}</p>
+
+							<p>Contenu</p>
+							{{ video.contenu }}
+						</div>
+
+
+						<div class="card-body">
+							<video controls class="w-100" src="{{ asset(video.partager) }}" style="height: 620px;  object-fit:contain !important; "/>
+
+							<div class="card-footer">
+								<p>Auteur :{{video.video}}
+								</p>
+
+								<a href="{{ path('admin_videos_show', {'id' :video.id}) }}" class="btn btn-primary" style="margin-left:60%; font-size:14px; font-size:14px; ">Commenter</a>
+
+								<a href="{{ path('admin_videos_show', {'id' :video.id}) }}" class="btn btn-success" style="margin-left:20%; margin-top:-8% ; font-size:14px; ">voir l'videos</a>
+
+
+								{% if app.user is same as video.partager %}
+
+									<a href="{{ path('admin_videos_edit', {'id' :video.id}) }}" class="btn btn-info" style=" margin-left:-40%; margin-top:-8% ; font-size:14px; ">Modifier</a>
+
+
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				</diV>
+
+		{% else %}
+			</div>
+
+			<tr>
+				<td colspan="5">no records found</td>
+			</tr>
+
+		{% endfor %}
+
+
+		<a href="{{ path('videos_new') }}">Create new</a>
+	{% endblock %}

@@ -8,77 +8,120 @@
 			<div class="navbar-menu ml-auto">
 
 
-				<a class="navbar-link" href="{{path ("user_index") }}">
-					<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3">
-					<main class="profil">Profil</main>
-				</a>
+				<div class="logo_profil">
+					<a class="navbar-link" href="{{path ("photo_profil") }}">
+						<img src="https://img.icons8.com/ios/50/000000/name--v2.png  " class="ImageProfil"/>
+						<main class="profil">Profil</main>
+					</a>
+				</div>
+
+				<!-- Button Profil code bootstrap -->
+				<div class="logo_contact">
+					<a class="navbar-link" href="{{path ("home") }}">
+						<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-people-fill" viewbox="0 0 16 16">
+							<path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+							<path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+							<path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+						</svg>
+						<main class="contact">Contacts</main>
+					</a>
+				</div>
+
+				<!-- Button Profil code bootstrap -->
 
 
 				<!-- Button Profil code bootstrap -->
 
-				<a class="navbar-link" href="{{path ("home") }}">
-					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi bi-people-fill" viewbox="0 0 16 16">
-						<path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-						<path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
-						<path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
-					</svg>
-					<main class="contact">Mes contacts</main>
-				</a>
+				<div class="LogoMessage">
 
-				<!-- Button Profil code bootstrap -->
+					<a class="navbar-link" href="{{path("received")}}">
+						<img src="https://img.icons8.com/ios/50/100000/mail.png" class="ImageMessage">
+						<main class="message">Messagerie
+						</main>
 
-
-				<a class="navbar-link" href="{{path("received")}}">
-					<img src="https://img.icons8.com/ios/50/100000/mail.png" class="div1">
-					<main class="message">Messagerie</main>
-				</a>
+					</a>
+					{% for message in app.flashes('') %}
+						<div class="allo" style="color:red; font-size:25px;  margin-left:50%; margin-top:-105%">1</div>
+					{% endfor %}
+				</div>
 
 
-				<a class="navbar-link" href="{{ path("article_new")}}">
-					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="Color" class="bi bi-menu-down" viewbox="0 0 16 16">
-						<path d="M7.646.146a.5.5 0 0 1 .708 0L10.207 2H14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h3.793L7.646.146zM1 7v3h14V7H1zm14-1V4a1 1 0 0 0-1-1h-3.793a1 1 0 0 1-.707-.293L8 1.207l-1.5 1.5A1 1 0 0 1 5.793 3H2a1 1 0 0 0-1 1v2h14zm0 5H1v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2zM2 4.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
-					</svg>
-					<main class="publier">Publier un Article</main>
-				</a>
+				<div class="dropdown liste_article">
+					<a class=" navbar-link " id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="Color" class="bi bi-menu-down" viewbox="0 0 16 16">
+							<path d="M7.646.146a.5.5 0 0 1 .708 0L10.207 2H14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h3.793L7.646.146zM1 7v3h14V7H1zm14-1V4a1 1 0 0 0-1-1h-3.793a1 1 0 0 1-.707-.293L8 1.207l-1.5 1.5A1 1 0 0 1 5.793 3H2a1 1 0 0 0-1 1v2h14zm0 5H1v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2zM2 4.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+						</svg>
+						<main class="article">Article</main>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="navbar-link" href="{{ path("article_new")}}">
+							<main class="publier">Publier un Article</main>
+						</a>
+						<a class="navbar-link" href="{{ path("article_index")}}">
+							<main class="liste">Liste des Articles</main>
+						</a>
+					</div>
+				</div>
+				<!-- Button Paramètres code bootstrap -->
 
 
-				<a class="navbar-link" href="{{ path("article_index")}}">
-					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="Color" class="bi bi-receipt-cutoff" viewbox="0 0 16 16 ">
-						<path d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zM11.5 4a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/>
-						<path d="M2.354.646a.5.5 0 0 0-.801.13l-.5 1A.5.5 0 0 0 1 2v13H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H15V2a.5.5 0 0 0-.053-.224l-.5-1a.5.5 0 0 0-.8-.13L13 1.293l-.646-.647a.5.5 0 0 0-.708 0L11 1.293l-.646-.647a.5.5 0 0 0-.708 0L9 1.293 8.354.646a.5.5 0 0 0-.708 0L7 1.293 6.354.646a.5.5 0 0 0-.708 0L5 1.293 4.354.646a.5.5 0 0 0-.708 0L3 1.293 2.354.646zm-.217 1.198.51.51a.5.5 0 0 0 .707 0L4 1.707l.646.647a.5.5 0 0 0 .708 0L6 1.707l.646.647a.5.5 0 0 0 .708 0L8 1.707l.646.647a.5.5 0 0 0 .708 0L10 1.707l.646.647a.5.5 0 0 0 .708 0L12 1.707l.646.647a.5.5 0 0 0 .708 0l.509-.51.137.274V15H2V2.118l.137-.274z"/>
-					</svg>
-					<main class="liste">Liste des Articles</main>
-				</a>
+				<div class="dropdown liste_video">
+					<a class=" navbar-link" id="dropdownMenuButton" data-toggle="dropdown" style="margin-left-50%" aria-haspopup="true" aria-expanded="false">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-camera-reels-fill" viewbox="0 0 16 16">
+							<path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+							<path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+							<path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7z"/>
+						</svg>
+						<main class="video">Vidéo</main>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="navbar-link" href="{{ path("videos_new")}}">
+							<main class="liste">Publier une video</main>
+						</a>
+						<a class="navbar-link" href="{{ path("videos_index")}}">
+							<main class="liste">Liste des videos</main>
+						</a>
+					</div>
+				</div>
+				<!-- Button Paramètres code bootstrap -->
 
 
-				<a class="navbar-link" href="{{path("app_logout")}}">
-					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="Color" class="bi bi-slash-circle" viewbox="0 0 16 16">
-						<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-						<path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
-					</svg>
-					<main class="deconnexion">Déconnexion</main>
-				</a>
+				<div class="dropdown liste_parametre">
+					<a class=" navbar-link " id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-gear" viewbox="0 0 16 16">
+							<path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+							<path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+						</svg>
+						<main class="paramètres">Paramètres</main>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="parametreduconde" href="{{path('contact')}}">contactez-nous!</a>
+						<a class="navbar-link" href="{{path("app_logout")}}">
+							<main class="deconnexion">Déconnexion</main>
+						</a>
+					</div>
+				</div>
+				<!-- Button Paramètres code bootstrap -->
+			</nav>
+		</header>
+
+		<div id="example-sidenav" class="sidenav large fixed white">
+
+
+			<div class="sidenav-header" style="margin-top:50%; ">
+
+				<button data-target="example-sidenav" class="sidenav-trigger">
+					<i class="fas fa-times"></i>
+				</button>
+				<div class="spinner-grow text-primary" role="status">
+					<span class="visually-hidden">Loading...</span>
+				</div>Message reçu
 			</div>
-		</nav>
-	</header>
-
-	<div id="example-sidenav" class="sidenav large fixed white">
 
 
-		<div class="sidenav-header" style="margin-top:50%; ">
+			<a href="{{ path("received") }}" class="sidenav-link " style="margin-left:10px; color:blue ">Boîte de réception</a>
+			<br>
 
-			<button data-target="example-sidenav" class="sidenav-trigger">
-				<i class="fas fa-times"></i>
-			</button>
-			<div class="spinner-grow text-primary" role="status">
-				<span class="visually-hidden">Loading...</span>
-			</div>Message reçu
+			<a href="{{path('sent')}}" class="sidenav-link " style="margin-left:10px; color:blue ">Message envoyés</a>
+
 		</div>
-
-
-		<a href="{{ path("received") }}" class="sidenav-link " style="margin-left:10px; color:blue ">Boîte de réception</a>
-		<br>
-
-		<a href="{{path('sent')}}" class="sidenav-link " style="margin-left:10px; color:blue ">Message envoyés</a>
-
-	</div>

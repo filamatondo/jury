@@ -1,15 +1,13 @@
 {% extends 'user_base.html.twig' %}
 
 {% block title %}
-	<h1>
-		{{ app.user.prenom }}
-		{{app.user.nom}}
-	</h1>
+
+	Profil
 
 {% endblock %}
 
 {% block body %}
-	<div class="register-form" style="margin-botto:05px;">
+	<div class=" position-fixed fixed-top register-form" style="margin-botto:05px; margin-top:23%; font-size:21px;">
 
 		<div class="container">
 
@@ -24,10 +22,13 @@
 
 			<div class="row">
 
-				<h1 class="titre">
-					welcome
+
+				<h1 class="titre" style="margin-top:-8%; color:blue; ">
+
+					Bienvenue
 					{{ app.user.prenom }}
 					{{app.user.nom}}
+
 				</h1>
 
 				<div class="w-100"></div>
@@ -42,28 +43,25 @@
 				<div class="w-100"></div>
 
 				<div class="col">Email:</div>
-				<divd class="col">{{ app.user.email}}</div>
+				<div class="col">{{ app.user.email}}</div>
+				<div class="w-100"></div>
+
+				<div class="col">Date:</div>
+				<div class="col">{{ app.user.date |  date }}</div>
 				<div class="w-100"></div>
 
 
-				<div class="col">Sexe :</div>
-				<div class="col-6">{{ app.user.sexe}}</div>
+				<div class="col">Sexe:</div>
+				<div class="col">{{ app.user.sexe}}</div>
+				<div class="w-100"></div>
 
-				{{ include('user/_delete_form.html.twig') }}
 
 			</div>
 		</div>
 
 
-		{#  ici je met le h1 pour pouvoir afficher mes information modifier, le nom et le prénom par le suite je fais un for #}
-	{#  attends voir un cours sur les annonces #}
-		{# </div class="col-xs4">
-																										    <h1> Annonces de {{ app.user.prenom }}  {{ app.user.nom }} ( {{ app.user.annonces|length }}) </h1>
-																										        </div>
-																										  
-																										          
-																										      {% for annonce in app.user.annonces %}
-																										      <div class="col -xs1"> Titre : </div>
-																			{% endfor %} #}
+		{{ include('user/_delete_form.html.twig') }}
+	</div>
 
-	{% endblock %}
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base_admin_contact.html.twig' %}
+
+{% block title %}New Videos
+{% endblock %}
+
+{% block body %}
+	<div class="register-form position-fixed fixed-top" style="margin:105px; margin-left: 320px; margin-top:15%; ">
+		<h1>Create new Videos</h1>
+
+		{{ include('admin/admin_videos/_form.html.twig') }}
+
+		<a href="{{ path('admin_videos_index') }}">retour à la liste</a>
+	{% endblock %}

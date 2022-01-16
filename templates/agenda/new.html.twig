@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Agenda{% endblock %}
+
+{% block body %}
+
+<div class="register  position-fixed fixed-top" style="margin-left:5%; margin:40%; margin-top:5%;">
+    <h1 class="text" style="font-size:20px; ">créer un agenda</h1>
+
+    {{ include('agenda/_form.html.twig') }}
+</div>
+    <a href="{{ path('agenda_index') }}" class="btn btn-info position-fixed fixed-top" style="margin-left:14%; margin-top:14%; ">Retour à la liste</a>
+{% endblock %}

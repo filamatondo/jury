@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-use App\Entity\Photo;
+use DateTime;
 use App\Entity\Article;
 use App\Entity\Messages;
 use App\Entity\Commentaire;
@@ -10,7 +10,6 @@ use Doctrine\ORM\Mapping as ORM;
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
-use Symfony\Component\Validator\Constraints\DateTime;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -28,6 +27,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\Column(type="integer")
      */
     private $id;
+
+
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
@@ -74,7 +75,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $sent;
 
     /**
-     * @ORM\OneToMany(targetEntity=Messages::class, mappedBy="recipient")
+     * @ORM\OneToMany(targetEntity=Messages::class, mappedBy="recipient",  orphanRemoval=true)
      */
     private $received;
 
@@ -89,14 +90,40 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $commentaires;
 
     /**
-     * @ORM\OneToMany(targetEntity=Photo::class, mappedBy="images", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity=Img::class, mappedBy="imga", orphanRemoval=true)
      */
-    private $photos;
+    private $imgs;
 
-    public function __toString()
-    {
-        return $this->getNom();
-    }
+    /**
+     * @ORM\OneToMany(targetEntity=Agenda::class, mappedBy="bloc", orphanRemoval=true)
+     */
+    private $agendas;
+
+
+    /**
+     * @ORM\OneToMany(targetEntity=Videos::class, mappedBy="video", orphanRemoval=true)
+     */
+    private $videos;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $photoProfil;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Apropo::class, mappedBy="videos", orphanRemoval=true)
+     */
+    private $apropos;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Mention::class, mappedBy="mentions", orphanRemoval=true)
+     */
+    private $mentions;
+
+    /**
+     * @ORM\OneToMany(targetEntity=CommentaireVideo::class, mappedBy="auteur")
+     */
+    private $commentaireVideos;
 
 
     /**
@@ -105,7 +132,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @Gedmo\Timestampable(on="update")
      * @ORM\Column(type="datetime")
      */
-    
+
     /**
      * @ORM\PrePersist
      */
@@ -122,7 +149,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->received = new ArrayCollection();
         $this->articles = new ArrayCollection();
         $this->commentaires = new ArrayCollection();
-        $this->photos = new ArrayCollection();
+        $this->imgs = new ArrayCollection();
+        $this->agendas = new ArrayCollection();
+        $this->videos = new ArrayCollection();
+        $this->apropos = new ArrayCollection();
+        $this->mentions = new ArrayCollection();
+        $this->commentaireVideos = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -383,29 +415,205 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-     * @return Collection|Photo[]
+     * @return Collection|Img[]
      */
-    public function getPhotos(): Collection
+    public function getImgs(): Collection
     {
-        return $this->photos;
+        return $this->imgs;
     }
 
-    public function addPhoto(Photo $photo): self
+    public function addImg(Img $img): self
     {
-        if (!$this->photos->contains($photo)) {
-            $this->photos[] = $photo;
-            $photo->setImages($this);
+        if (!$this->imgs->contains($img)) {
+            $this->imgs[] = $img;
+            $img->setImga($this);
         }
 
         return $this;
     }
 
-    public function removePhoto(Photo $photo): self
+    public function removeImg(Img $img): self
     {
-        if ($this->photos->removeElement($photo)) {
+        if ($this->imgs->removeElement($img)) {
             // set the owning side to null (unless already changed)
-            if ($photo->getImages() === $this) {
-                $photo->setImages(null);
+            if ($img->getImga() === $this) {
+                $img->setImga(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Agenda[]
+     */
+    public function getAgendas(): Collection
+    {
+        return $this->agendas;
+    }
+
+    public function addAgenda(Agenda $agenda): self
+    {
+        if (!$this->agendas->contains($agenda)) {
+            $this->agendas[] = $agenda;
+            $agenda->setBloc($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAgenda(Agenda $agenda): self
+    {
+        if ($this->agendas->removeElement($agenda)) {
+            // set the owning side to null (unless already changed)
+            if ($agenda->getBloc() === $this) {
+                $agenda->setBloc(null);
+            }
+        }
+
+        return $this;
+    }
+
+
+
+
+    public function __toString()
+    {
+        return (string) $this->getNom();
+    }
+
+    /**
+     * @return Collection|Videos[]
+     */
+    public function getVideos(): Collection
+    {
+        return $this->videos;
+    }
+
+    public function addVideo(Videos $video): self
+    {
+        if (!$this->videos->contains($video)) {
+            $this->videos[] = $video;
+            $video->setVideo($this);
+        }
+
+        return $this;
+    }
+
+    public function removeVideo(Videos $video): self
+    {
+        if ($this->videos->removeElement($video)) {
+            // set the owning side to null (unless already changed)
+            if ($video->getVideo() === $this) {
+                $video->setVideo(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getPhotoProfil(): ?string
+    {
+        return $this->photoProfil;
+    }
+
+    public function setPhotoProfil(?string $photoProfil): self
+    {
+        $this->photoProfil = $photoProfil;
+
+        return $this;
+    }
+
+
+    // public function __toString()
+    // {
+    //     return $this->titre; 
+    // }
+
+    /**
+     * @return Collection|Apropo[]
+     */
+    public function getApropos(): Collection
+    {
+        return $this->apropos;
+    }
+
+    public function addApropo(Apropo $apropo): self
+    {
+        if (!$this->apropos->contains($apropo)) {
+            $this->apropos[] = $apropo;
+            $apropo->setVideos($this);
+        }
+
+        return $this;
+    }
+
+    public function removeApropo(Apropo $apropo): self
+    {
+        if ($this->apropos->removeElement($apropo)) {
+            // set the owning side to null (unless already changed)
+            if ($apropo->getVideos() === $this) {
+                $apropo->setVideos(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Mention[]
+     */
+    public function getMentions(): Collection
+    {
+        return $this->mentions;
+    }
+
+    public function addMention(Mention $mention): self
+    {
+        if (!$this->mentions->contains($mention)) {
+            $this->mentions[] = $mention;
+            $mention->setMentions($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMention(Mention $mention): self
+    {
+        if ($this->mentions->removeElement($mention)) {
+            // set the owning side to null (unless already changed)
+            if ($mention->getMentions() === $this) {
+                $mention->setMentions(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|CommentaireVideo[]
+     */
+    public function getCommentaireVideos(): Collection
+    {
+        return $this->commentaireVideos;
+    }
+
+    public function addCommentaireVideo(CommentaireVideo $commentaireVideo): self
+    {
+        if (!$this->commentaireVideos->contains($commentaireVideo)) {
+            $this->commentaireVideos[] = $commentaireVideo;
+            $commentaireVideo->setAuteur($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCommentaireVideo(CommentaireVideo $commentaireVideo): self
+    {
+        if ($this->commentaireVideos->removeElement($commentaireVideo)) {
+            // set the owning side to null (unless already changed)
+            if ($commentaireVideo->getAuteur() === $this) {
+                $commentaireVideo->setAuteur(null);
             }
         }
 

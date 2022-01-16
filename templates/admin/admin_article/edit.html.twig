@@ -1,0 +1,17 @@
+{% extends 'base_admin_contact.html.twig' %}
+
+{% block title %}Edit Article
+{% endblock %}
+
+{% block body %}
+
+	<div class="register-form fixed-top" style=" margin-left: 150px; margin-top:-10%; margin:10%">
+		<h1>Editer Article</h1>
+
+		{{ include('admin/admin_article/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+		<a class="btn btn-success" href="{{ path('admin_article_index') }}" style="margin-left:30%; margin-top:-3.5%">Retour à la liste</a>
+
+		{{ include('admin/admin_article/_delete_form.html.twig') }}
+	</div>
+{% endblock %}

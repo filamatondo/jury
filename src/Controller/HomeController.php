@@ -4,7 +4,9 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Search\SearchUser;
+use App\Entity\PhotoProfil;
 use App\Form\SearchUserType;
+use App\MesProfil\ProfilService;
 use App\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -24,17 +26,19 @@ class HomeController extends AbstractController
       $form = $this->createForm(SearchUserType::class, $search); 
       $form->handleRequest($request); 
        
-       
-         
             $users = $userRepository->findAllUserByFilter($search); 
-
-
+            
 
         return $this->render('home/index.html.twig', [
             'users' => $users,
             'form' => $form->createView()
+
+                      
+
         ]);
+
     }
+    
 
 
 

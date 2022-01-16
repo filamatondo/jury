@@ -1,0 +1,109 @@
+.navbar-expand-lg {
+  background-color: rgb(1, 112, 116);
+}
+
+/* navbar de la page d'inscription */
+
+
+.MonCompte {
+  margin-left: 89%;
+  margin-top: -1%;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* le lien connexion pour aller sur la page de connexion */
+
+
+
+.ImageProfil {
+  color: #ffffff;
+  margin-left: 90%;
+  margin-top: -3.5%;
+}
+
+/* logo de la touche mon compte */
+
+
+.titre {
+  text-align: center;
+  font-size: 70px;
+  color: blue;
+  margin-top: 10%;
+}
+
+/* titre de la page d'inscription */
+
+
+.sexe {
+  margin-top: 2%;
+}
+
+/* css du bouton sex */
+
+.date {
+  margin-top: -40%;
+  margin-left: 31.8%;
+}
+
+/* css de formulaire de la date */
+
+
+.agree {
+  margin-left: 5%;
+  font-size: 20px;
+  color: blue;
+}
+
+/* css de l'agree de la page d'inscription */
+
+
+
+.inscrire {
+  text-align: center;
+  height: 65px;
+  width: 370px;
+  background-color: rgb(1, 112, 116);
+  color: #ffffff;
+  border-radius: 15px;
+  border-color: #fff;
+  font-size: 40px;
+  border-style: double;
+  cursor: pointer;
+  margin-left: 35%;
+}
+
+/* css de la touche s'inscrire */
+
+
+
+.message {
+  font-size: 20px;
+  margin: 0px;
+  margin-top: 50px;
+  color: rgb(120, 120, 247);
+  text-align: center;
+  display: flex;
+}
+
+/* css du message */
+
+
+
+.APROPOS {
+  font-size: 20px;
+
+}
+
+.allo {
+  display: flex;
+  margin-left: 10%;
+  margin-top: -3%;
+}
+
+
+.text {
+  font-size: 20px;
+  margin-left: 100%;
+  margin-top: -3%;
+}

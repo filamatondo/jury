@@ -1,0 +1,39 @@
+{% extends 'base_admin_contact.html.twig' %}
+
+{% block title %}Videos
+{% endblock %}
+
+{% block body %}
+	<h1>Videos</h1>
+
+	<table class="table">
+		<tbody>
+			<tr>
+				<th>Id</th>
+				<td>{{ video.id }}</td>
+			</tr>
+			<tr>
+				<th>Titre</th>
+				<td>{{ video.titre }}</td>
+			</tr>
+			<tr>
+				<th>Contenu</th>
+				<td>{{ video.contenu }}</td>
+			</tr>
+			<tr>
+				<th>Partager</th>
+				<td>{{ video.partager }}</td>
+			</tr>
+			<tr>
+				<th>Partager</th>
+				<td>{{ video.date }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<a href="{{ path('admin_videos_index') }}">back to list</a>
+
+	<a href="{{ path('admin_videos_edit', {'id': video.id}) }}">edit</a>
+
+	{{ include('admin/admin_videos/_delete_form.html.twig') }}
+{% endblock %}

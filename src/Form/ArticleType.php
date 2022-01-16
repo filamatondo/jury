@@ -19,7 +19,7 @@ class ArticleType extends AbstractType
             ->add('contenu')
         
             ->add('image_upload', FileType::class, [
-                'label' => 'ajouter une image', 
+                'label' => false, 
                 'mapped' => false 
             ])
         ;

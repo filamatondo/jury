@@ -1,17 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Article
-{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body %}
 
-	<div class="register-form" style="margin:105px; margin-left: 320px; margin-top:-40%; ">
+	<div class="register-form position-fixed fixed-top" style="margin:105px; margin-left: 320px; margin-top:20%; ">
 
 
-		<h1>Créer un Article</h1>
+		<h1 class="arti" style="color:blue">Créer un article</h1>
 
 		{{ include('article/_form.html.twig') }}
-     <div class="col-3 p3" style="margin-left: 385px; "> 
-	<button class="btn btn-active"><a href="{{ path('article_index') }}">Retour à la liste</a></button>
-	</div> 
+		<div class="col-3 p3" style="margin-left: 385px; ">
+			<button class="btn btn-info">
+				<a href="{{ path('article_index') }}">Retour à la liste</a>
+			</button>
+		</div>
 	{% endblock %}
