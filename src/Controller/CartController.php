@@ -2,64 +2,87 @@
 
 namespace App\Controller;
 
-use App\MesServices\PanierService;
 use App\Repository\UserRepository;
+use SessionIdInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\BrowserKit\Request;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class CartController extends AbstractController
 {
 
     /**
-     * @Route("/panier/ajouter/{id}", name="panier_ajouter")
+     * @Route("/panier", name="cart_index")
      */
 
-    public function ajouter(int $id, UserRepository $userRepository, PanierService $panierService, SessionInterface $sessionInterface)
+    public function index($id, UserRepository $userRepository, SessionInterface $session)
     {
-        // le produit que je vais ajouter est égale à.. le formulaire d'ajout 
-        $user = $userRepository->find($id);
 
-        // si le produit ajouter n'est pas, je vais t'en renvoyer. 
-        if (!$user) {
-            throw $this->createNotFoundException("Le produit n'existe pas");
+        $panier = $session->get('panier', []);
+        $panierWithData = [];
+        foreach ($panier as $id => $quantity) {
+            $panierWithData[] = [
+                'paroduit' => $userRepository->find($id),
+                'quantity' => $quantity
+            ];
+        }
+        $total = 0;
+        foreach ($panierWithData as $item) {
+            $totalItem = $item['product']->getPrice * $item['quantity'];
+            $total += $totalItem;
         }
 
-        $panierService->ajouter($id);
-        dd($this->session->get('panier'));
+        return $this->render('cart/index.html.twig', [
+            'items' => $panierWithData,
+            'total' => $total
 
-        return $this->redirectToRoute('home', ['id' => $user->getId()]);
+        ]);
     }
 
 
+    /**
+     * @Route("/panier/add/{id}", name="cart_add")
+     */
+
+    public function add($id, SessionInterface $session)
+    {
+
+        $panier = $session->get('panier', []);
 
 
-    // /**
-    //  * @Route("/delete/{id}", name="delete")
-    //  */
-    // public function delete(User $user, SessionInterface $session)
-    // {
-    //     // On récupère le panier actuel
-    //     $panier = $session->get("panier", []);
-    //     $id = $user->getId();
+        // si le produit existe déjà, alors rajoute moi un plus 1.
+        if (!empty($panier[$id])) {
+            $panier[$id]++;
+        } else {
+            $panier[$id] = 1;
+        }
 
-    //     if (!empty($panier[$id])) {
-    //         unset($panier[$id]);
-    //     }
 
-    //     // On sauvegarde dans la session
-    //     $session->set("panier", $panier);
+        //   rajoute un produits dans le panier. si le produit existe deja alors là il faut rajouter: 
+        $panier[$id] = 1;
 
-    //     return $this->redirectToRoute("cart_index");
-    // }
+        $session->set('panier', $panier);
 
-    // /**
-    //  * @Route("/delete", name="delete_all")
-    //  */
-    // public function deleteAll(SessionInterface $session)
-    // {
-    //     $session->remove("panier");
+        dd($session->get('panier'));
+    }
 
-    //     return $this->redirectToRoute("cart_index");
-    // }
+
+    /**
+     * @Route("/panier/remove/{id}", name="cart_remove", methods={"GET","POST"})
+     */
+
+    public function remove($id, UserRepository $userRepository,  SessionIdInterface $session)
+    {
+        // $panier = $session->get('panier', []);
+
+        if (!empty($panier[$id])) {
+            unset($panier[$id]);
+        }
+
+        // $session->set('panier', $panier);
+
+        return $this->redirectToRoute("cart_index");
+    }
 }

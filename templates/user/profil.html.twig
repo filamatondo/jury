@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block body %}
-	<div class="register-form" style="margin-botto:05px; margin-top:13%; font-size:21px;">
+	<div class="register-form" style="margin-bottom:5px; margin-top:-50%; margin-left:20%; font-size:21px;">
 
 		<div class="container">
 
@@ -25,42 +25,24 @@
 
 			<div class="row">
 
-				<h1 class="titre" style="margin-top:-6%; ">
-
-					Bienvenue
-					{{ app.user.prenom }}
-					{{app.user.nom}}
-
+				<h1 class="titre" style="margin-top:-20%;margin-left:20%;  color:blue ">
+					Profil de
+					{{ user.nom }}
+					{{ user.prenom }}
 				</h1>
 
-				{% for photoProfil in user %}
+				<div>
+					{% if user.photoProfil is not null %}
+						<img class="w-90" src="{{ asset(user.photoProfil) }}" style="height: 600px; margin-top:-1%; margin-left:10%; "/>
+					{% else %}
+						<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3" style=" height: 250px; width: 280px;"/>
+					{% endif %}
 
-					<div>
-						{{form_start(form)}}
+					Bonjour
+				</div>
 
-						{% if user.photoProfil is not null %}
-							<img class="w-90" src="{{ asset(user.photoProfil) }}" style="height: 600px; margin-top:-1%; margin-left:10%; "/>
-						{% else %}
-							<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3" style=" height: 250px; width: 280px;"/>
-						{% endif %}
-						{{form_widget(form)}}
-
-						<button type="submit" class="btn btn-primary mt-3">
-							enregistre
-						</button>
-						{{form_end(form)}}
-
-						<a href="{{ path('photo_profil_new') }}">Create new</a>
-					</div>
-
-				{% else %}
-
-					<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3" style=" height: 450px; width: 600px;"/>
-
-				{% endfor %}
-
-				<a href="{{ path('photo_profil') }}">Télécharger une image</a>
 			</div>
 		</div>
+	</div>
 
-	{% endblock %}
+{% endblock %}

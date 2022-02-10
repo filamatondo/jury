@@ -11,10 +11,14 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+/**
+ * @Route("/admin")
+ */
+
 class MessagesController extends AbstractController
 {
     /**
-     * @Route("/admin/messages", name="admin_messages")
+     * @Route("/messages", name="admin_messages")
      */
     public function index(): Response
     {
@@ -63,7 +67,7 @@ class MessagesController extends AbstractController
 
     // la route received me permet de voir les messages reçu.
     /**
-     * @Route("/admin/received", name="admin_received")
+     * @Route("/received", name="admin_received")
      */
     public function received(MessagesRepository $messagesRepository): Response
     {
@@ -81,7 +85,7 @@ class MessagesController extends AbstractController
 
     // pour pouvoir lire les messages.
     /**
-     * @Route("/admin/read/{id}", name="admin_read")
+     * @Route("/read/{id}", name="admin_read")
      */
     public function read(Messages $message): Response
     {
@@ -99,7 +103,7 @@ class MessagesController extends AbstractController
 
     // la route de dellet.
     /**
-     * @Route("/admin/delete/{id}", name="admin_dellet")
+     * @Route("/delete/{id}", name="admin_dellet")
      */
     public function delette(Messages $message): Response
     {
@@ -114,7 +118,7 @@ class MessagesController extends AbstractController
 
     // c'est une route qui me permet de consulter mes boite de messagerie
     /**
-     * @Route("/admin/sent", name="admin_sent")
+     * @Route("/sent", name="admin_sent")
      */
     public function sent(): Response
     {

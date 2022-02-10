@@ -1,9 +1,9 @@
 <section class="layout with-sidenav ">
 	<header>
 		{# <nav class="navbar navbar-expand-lg  py-4 fixed-top" style=" height: 95px" ;>
-																																																																																																																																																										
-																																																																																																																																																										
-																																																																																																																																																													<img class="w-80" src="{{ asset("asset/logo/logo_small.png") }}" style="height: 70px; margin-top:-20px;   object-fit:contain !important; "/> #}
+																																																																																																																																																																		
+																																																																																																																																																																		
+																																																																																																																																																																					<img class="w-80" src="{{ asset("asset/logo/logo_small.png") }}" style="height: 70px; margin-top:-20px;   object-fit:contain !important; "/> #}
 
 		<nav class="navbar navbar-expand-lg navbar-dark bg-info  py-4 fixed-top">
 
@@ -12,7 +12,7 @@
 			</a>
 
 			<!-- Titre de ma page et le lien qui index qui
-																																																																																																																																																																																																																																							             conduit à une autre page pour savoir plus sur le site. -->
+																																																																																																																																																																																																																																																			             conduit à une autre page pour savoir plus sur le site. -->
 
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,6 +105,9 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						<a class="parametreduconde" href="parametreFrancais.html">Paramètres</a>
+						<a class="navbar-link" href="{{path("photo_profil")}}">
+							<main class="deconnexion">Accueil</main>
+						</a>
 						<a class="navbar-link" href="{{path("app_logout")}}">
 							<main class="deconnexion">Déconnexion</main>
 						</a>
@@ -141,17 +144,12 @@
 	<a href="{{path('admin_img_index')}}" class=" sidenav-link color-primary " style="margin-left:10px; color:blue; font-size:22px ">
 		Album</a>
 
-	{# <a href="{{path ('agenda_index')}}" class=" sidenav-link color-primary " style="margin-left:10px; color:blue; font-size:22px ">
-																						Agenda</a> #}
+	{# <a href="{{path ('#')}}" class=" sidenav-link color-primary " style="margin-left:10px; color:blue; font-size:22px ">
+				Amis #}
 
+	<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-plus" viewbox="0 0 16 16">
+		<path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+		<path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+	</svg>
 
-	<a href="{{path ('cart_index')}}" class=" sidenav-link color-primary " style="margin-left:10px; color:blue; font-size:22px ">
-		Amis
-
-		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-plus" viewbox="0 0 16 16">
-			<path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-			<path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
-		</svg>
-
-	</a>
-</div>
+</a></div>

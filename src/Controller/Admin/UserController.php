@@ -19,7 +19,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class UserController extends AbstractController
 {
     /**
-     * @Route("/user", name="admin_user_index", methods={"GET"})
+     * @Route("/", name="admin_user_index", methods={"GET"})
      */
     public function index(UserRepository $userRepository): Response
     {
@@ -65,7 +65,7 @@ class UserController extends AbstractController
 
 
     /** 
-     * @Route("/pass/modifier", name="admin_user_pass_modifier")
+     * @Route("pass/modifier", name="admin_user_pass_modifier")
      */
 
     public function editPass(Request $request, UserPasswordEncoderInterface $userPasswordEncoder)
@@ -98,7 +98,7 @@ class UserController extends AbstractController
 
 
     /**
-     * @Route("/{id}", name="admin_user_delete", methods={"POST"})
+     * @Route("/{id}", name="admin_user_delete", methods={"GET", "POST"})
      */
     public function delete(Request $request, User $user): Response
     {
@@ -108,7 +108,7 @@ class UserController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin_app_register', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('admin_home', [], Response::HTTP_SEE_OTHER);
         // return $this->render('registration/register.html.twig');     
     }
 
@@ -145,11 +145,11 @@ class UserController extends AbstractController
 
 
     /**
-     * @Route("/home", name="admin_home_profil")
+     * @Route("/home/{id}", name="admin_home_profil")
      */
-    public function photo(Request $request, Photo $photo): Response
+    public function photo(Request $request, Photo $photo, UserRepository $userRepository, int $id): Response
     {
-        $user = $this->getUser();
+        $user = $userRepository->find($id);
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
@@ -163,7 +163,7 @@ class UserController extends AbstractController
 
             $entityManager->flush();
 
-            return $this->redirectToRoute('profil', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('admin_profil', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('admin/admin_user/profil.html.twig', [

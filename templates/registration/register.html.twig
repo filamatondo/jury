@@ -12,7 +12,7 @@
 
 			{# <div class="p-7 m-5 baground-color-primary  "> #}
 
-			<h1 class="titre">
+			<h1 class="inscription">
 
 				INSCRIPTION
 
@@ -72,33 +72,30 @@
 							{{ form_end(registrationForm) }}
 						</div>
 
-						<footer>
-
-
-							<div class="message " style="margin-top:22px; ">
+						<footer class="footer">
+							<div class="message">
 								<marquee>
 									<p>Il existe des tas de façons de rester en contact avec vos proches
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																	Small world est un petit moyen sympa de garder contact avec
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																	le monde; C'est super facile à utiliser
+																			Small world est un petit moyen sympa de garder contact avec
+																	        le monde; C'est super facile à utiliser
 									</p>
 								</marquee>
 							</div>
 							{# Message explicatif #}
-							<div class="APROPOS">
-								<a class="navbar-link" href="{{path ("apropo_index") }}">
-									<div class="APROPOS">À propos</div>
-								</a>
+
+							<div class=" col-1 col-md-7 mentionslegales">
+								<div class="APROPOS">
+									<a class="navbar-link" href="{{path ("apropo_index") }}">
+										<div class="APROPO">À propos</div>
+									</a>
+								</div>
+
+
+								<div class="mention">
+									<a class="mentions" href="{{path("mention_index")}}">Mentions légales</a>
+								</div>
+
 							</div>
-
-
-							<div class="allo">
-								<a class="mention" href="{{path("mention_index")}}">Mentions légales</a>
-							</div>
-
-
-							<div class="text" style="margin-left:29%">CGU</div>
-
-
 						</footer>
 					</div>
 				</div>

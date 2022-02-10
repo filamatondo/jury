@@ -35,7 +35,7 @@ class UserController extends AbstractController
 
 
     /** 
-     * @Route("user/profil/modifier", name="user_profil_modifier")
+     * @Route("/profil/modifier", name="user_profil_modifier")
      */
 
     public function editProfile(Request $request)
@@ -65,7 +65,7 @@ class UserController extends AbstractController
 
 
     /** 
-     * @Route("user/pass/modifier", name="user_pass_modifier")
+     * @Route("pass/modifier", name="user_pass_modifier")
      */
 
     public function editPass(Request $request, UserPasswordEncoderInterface $userPasswordEncoder)
@@ -145,11 +145,11 @@ class UserController extends AbstractController
 
 
     /**
-     * @Route("/home", name="home_profil")
+     * @Route("/home/{id}", name="home_profil")
      */
-    public function photo(Request $request, Photo $photo): Response
+    public function photo(Request $request, Photo $photo, UserRepository $userRepository, int $id): Response
     {
-        $user = $this->getUser();
+        $user = $userRepository->find($id);
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 

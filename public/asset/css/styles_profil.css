@@ -453,3 +453,10 @@ header .navbar-expand-lg {
 .aproposTritre {
     color: blue;
 }
+
+/*
+    Une nouvelle table en bdd => nouvelle entité (ami) :
+    - id
+    - user : relation avec User
+    - ami : relation avec User
+*/

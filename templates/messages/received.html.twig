@@ -5,16 +5,16 @@
 {% block body %}
 
 	<main class="color">
-
 		<div class="row">
+
 			<div class="col">
 
-				<h1 class="reception_message" style="margin-top:10%">Boîte de réception</h1>
+				<h1 class="  reception_message" style="margin-top:20%; margin-left:2%; color:blue; ">Boîte de réception</h1>
 				{#  Mon titre H1 de ma messagerie #}
 
 
 				{# app.user.sent : c'est l'utilisateur qui envoye le message #}
-				<p class="recu" style="margin-left:2%">Vous avez Reçu :{{ messages|length }}</p>
+				<p class="recu" style="margin-left:2%; color:#32cd32; font-size:15px; ">Vous avez Reçu :{{ messages|length }}</p>
 
 
 				{% for message in app.flashes('message') %}
@@ -31,16 +31,16 @@
 			</div>
 		</div>
 
-		<div class="card">
+		<div class="card" style="font-size:18px">
 			<div class="row">
-				<div class="col-4" style="margin-left:1%">De</div>
-				<div class="col-4">Sujet</div>
-				<div class="col-2">Date</div>
-				<div class="col">Supprimer</div>
+				<div class="col-4" style="margin-left:1%; color:	#191970 ">De</div>
+				<div class="col-4" style="color:blue">Sujet</div>
+				<div class="col-2" style="color:#008080">Date</div>
+				<div class="col" style="color:#F81010">Supprimer</div>
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row" style="font-size:20px; ">
 			<div class="table-primary">
 				<div
 					class="col-12">

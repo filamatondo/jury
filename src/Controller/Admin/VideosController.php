@@ -5,7 +5,10 @@ namespace App\Controller\Admin;
 use App\Entity\Videos;
 use App\Form\VideosType;
 use App\MesVideos\VideoService;
+use App\Entity\VideoCommentaire;
+use App\Form\VideoCommentaireType;
 use App\Repository\VideosRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -56,12 +59,28 @@ class VideosController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="admin_videos_show", methods={"GET"})
+     * @Route("/{id}", name="admin_videos_show", methods={"GET", "POST"})
      */
-    public function show(Videos $video): Response
+    public function show(Videos $video, Request $request, EntityManagerInterface $em, int $id): Response
     {
+        $videoCommentaire = new VideoCommentaire();
+        $form = $this->createForm(VideoCommentaireType::class, $videoCommentaire);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $videoCommentaire->setVideo($video);
+            $videoCommentaire->setAuteur($this->getUser());
+
+            $em->persist($videoCommentaire);
+            $em->flush();
+
+            return $this->redirectToRoute('admin_videos_show', ['id' => $id]);
+        }
+
+
         return $this->render('admin/admin_videos/show.html.twig', [
             'video' => $video,
+            'form' => $form->createView()
         ]);
     }
 
@@ -86,7 +105,7 @@ class VideosController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="admin/admin_videos_delete", methods={"POST"})
+     * @Route("/{id}", name="admin_videos_delete", methods={"POST"})
      */
     public function delete(Request $request, Videos $video): Response
     {
@@ -96,6 +115,22 @@ class VideosController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin/admin_videos_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('admin_videos_index', [], Response::HTTP_SEE_OTHER);
+    }
+
+
+
+    /**
+     * @Route("/{id}", name="admin_video_commentaire_delete", methods={"POST"})
+     */
+    public function deleteCommentaire(Request $request, VideoCommentaire $videoCommentaire): Response
+    {
+        if ($this->isCsrfTokenValid('delete' . $videoCommentaire->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($videoCommentaire);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('admin_videos/index.html.twig', [], Response::HTTP_SEE_OTHER);
     }
 }

@@ -95,12 +95,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $imgs;
 
     /**
-     * @ORM\OneToMany(targetEntity=Agenda::class, mappedBy="bloc", orphanRemoval=true)
-     */
-    private $agendas;
-
-
-    /**
      * @ORM\OneToMany(targetEntity=Videos::class, mappedBy="video", orphanRemoval=true)
      */
     private $videos;
@@ -121,9 +115,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $mentions;
 
     /**
-     * @ORM\OneToMany(targetEntity=CommentaireVideo::class, mappedBy="auteur")
+     * @ORM\ManyToMany(targetEntity=ListeAmiAjouter::class, mappedBy="listeAjouter")
      */
-    private $commentaireVideos;
+    private $listeAmiAjouters;
+
+    /**
+     * @ORM\OneToMany(targetEntity=VideoCommentaire::class, mappedBy="auteur")
+     */
+    private $videoCommentaires;
+
+
 
 
     /**
@@ -150,11 +151,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->articles = new ArrayCollection();
         $this->commentaires = new ArrayCollection();
         $this->imgs = new ArrayCollection();
-        $this->agendas = new ArrayCollection();
         $this->videos = new ArrayCollection();
         $this->apropos = new ArrayCollection();
         $this->mentions = new ArrayCollection();
-        $this->commentaireVideos = new ArrayCollection();
+        $this->listeAmiAjouters = new ArrayCollection();
+        $this->videoCommentaires = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -444,38 +445,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    /**
-     * @return Collection|Agenda[]
-     */
-    public function getAgendas(): Collection
-    {
-        return $this->agendas;
-    }
-
-    public function addAgenda(Agenda $agenda): self
-    {
-        if (!$this->agendas->contains($agenda)) {
-            $this->agendas[] = $agenda;
-            $agenda->setBloc($this);
-        }
-
-        return $this;
-    }
-
-    public function removeAgenda(Agenda $agenda): self
-    {
-        if ($this->agendas->removeElement($agenda)) {
-            // set the owning side to null (unless already changed)
-            if ($agenda->getBloc() === $this) {
-                $agenda->setBloc(null);
-            }
-        }
-
-        return $this;
-    }
-
-
-
 
     public function __toString()
     {
@@ -591,29 +560,56 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-     * @return Collection|CommentaireVideo[]
+     * @return Collection|ListeAmiAjouter[]
      */
-    public function getCommentaireVideos(): Collection
+    public function getListeAmiAjouters(): Collection
     {
-        return $this->commentaireVideos;
+        return $this->listeAmiAjouters;
     }
 
-    public function addCommentaireVideo(CommentaireVideo $commentaireVideo): self
+    public function addListeAmiAjouter(ListeAmiAjouter $listeAmiAjouter): self
     {
-        if (!$this->commentaireVideos->contains($commentaireVideo)) {
-            $this->commentaireVideos[] = $commentaireVideo;
-            $commentaireVideo->setAuteur($this);
+        if (!$this->listeAmiAjouters->contains($listeAmiAjouter)) {
+            $this->listeAmiAjouters[] = $listeAmiAjouter;
+            $listeAmiAjouter->addListeAjouter($this);
         }
 
         return $this;
     }
 
-    public function removeCommentaireVideo(CommentaireVideo $commentaireVideo): self
+    public function removeListeAmiAjouter(ListeAmiAjouter $listeAmiAjouter): self
     {
-        if ($this->commentaireVideos->removeElement($commentaireVideo)) {
+        if ($this->listeAmiAjouters->removeElement($listeAmiAjouter)) {
+            $listeAmiAjouter->removeListeAjouter($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|VideoCommentaire[]
+     */
+    public function getVideoCommentaires(): Collection
+    {
+        return $this->videoCommentaires;
+    }
+
+    public function addVideoCommentaire(VideoCommentaire $videoCommentaire): self
+    {
+        if (!$this->videoCommentaires->contains($videoCommentaire)) {
+            $this->videoCommentaires[] = $videoCommentaire;
+            $videoCommentaire->setAuteur($this);
+        }
+
+        return $this;
+    }
+
+    public function removeVideoCommentaire(VideoCommentaire $videoCommentaire): self
+    {
+        if ($this->videoCommentaires->removeElement($videoCommentaire)) {
             // set the owning side to null (unless already changed)
-            if ($commentaireVideo->getAuteur() === $this) {
-                $commentaireVideo->setAuteur(null);
+            if ($videoCommentaire->getAuteur() === $this) {
+                $videoCommentaire->setAuteur(null);
             }
         }
 

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ListeAmiAjouter{% endblock %}
+
+{% block body %}
+    <h1>Edit ListeAmiAjouter</h1>
+
+    {{ include('liste_ami_ajouter/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('liste_ami_ajouter_index') }}">back to list</a>
+
+    {{ include('liste_ami_ajouter/_delete_form.html.twig') }}
+{% endblock %}

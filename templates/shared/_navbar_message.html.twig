@@ -1,6 +1,6 @@
 <section class="layout with-sidenav ">
 	<header>
-		<nav class="navbar navbar-expand-lg  position-fixed py-4 fixed-top" style=" height: 95px" ;>
+		<nav class="navbar navbar-expand-lg  position-fixed py-4 fixed-top" style=" height:120px" ;>
 
 
 			<img class="w-80" src="{{ asset("asset/logo/logo_small.png") }}" style="height: 70px; margin-top:-20px;   object-fit:contain !important; "/>
@@ -96,16 +96,27 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						<a class="parametreduconde" href="{{path('contact')}}">contactez-nous!</a>
-						<a class="navbar-link" href="{{path("app_logout")}}">
-							<main class="deconnexion">Déconnexion</main>
-						</a>
+						{% if app.user %}
+							{% if app.user.roles[0] is same as "ROLE_ADMIN" %}
+								<li class="nav-item">
+									<a class="nav-link" href="{{ path('admin_home') }}">
+										Administration</a>
+								</li>
+							{% endif %}
+
+							<a class="navbar-link" href="{{path("app_logout")}}">
+								<main class="deconnexion">Déconnexion</main>
+							</a>
+							{% else %}
+
+						{% endif %}
 					</div>
 				</div>
 				<!-- Button Paramètres code bootstrap -->
 			</nav>
 		</header>
 
-		<div id="example-sidenav" class="sidenav large fixed white">
+		<div id="example-sidenav" class="sidenav large fixed white" style="margin-top:20%; font-size:25px; ">
 
 
 			<div class="sidenav-header" style="margin-top:50%; ">

@@ -5,9 +5,10 @@
 
 {% block body %}
 
-	<section class="container py-1" style="margin-top:-50%;">
+	<section class="container py-1" style="margin-top:-55%;">
 
 		<div class="row">
+
 
 			{% for video in videos | reverse %}
 				<div class="col-2 col-md-7 " style="margin-left:22%;">
@@ -30,6 +31,7 @@
 							<video controls class="w-100" src="{{ asset(video.partager) }}" style="height: 620px;  object-fit:contain !important; "/>
 						</div>
 						<div class="card-footer">
+
 
 							<a href="{{ path('videos_show', {'id' :video.id}) }}" class="btn btn-primary" style="margin-left:55%;  font-size:18px; margin-top:15% ">Commenter</a>
 

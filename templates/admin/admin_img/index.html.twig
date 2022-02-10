@@ -1,34 +1,31 @@
-{% extends 'base_admin_contact.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %}Img index
 {% endblock %}
 
 {% block body %}
-	<a href="{{ path('admin_img_new') }}" class="btn btn-info position-fixed fixed-top " style="margin-left:5%; margin-top:15%">
+	<a href="{{ path('img_new') }}" class="btn btn-info position-fixed fixed-top " style="margin-left:5%; margin-top:25%">
 		Télécharger</a>
-	<div class="register-form ">
+
+
+	<div class=" register-form " style="margin-top:-40%">
 
 
 		{% for img in imgs | reverse %}
-
-			{# {{ dump(app.user) }}
-															
-													 {{ dump(img.imga) }} #}
-
 
 			{% if app.user is same as img.imga %}
 				<div class="contenaire">
 
 					<div class"row">
 						<div class="col">
-							<img class="w-100" src="{{ asset(img.vu) }}" style="height: 600px; margin-top:5%;  object-fit:contain !important; "/>
+							<img class="w-100" src="{{ asset(img.vu) }}" style="height: 500px; margin-top:5%;  object-fit:contain !important; "/>
 						</div>
 					</div>
 				</div>
 				{# {{ include('img/_delete_form.html.twig') }} #}
 
 				{# <a href="{{ path('img_show', {'id': img.id}) }}">show</a>
-																<a href="{{ path('img_edit', {'id': img.id}) }}">edit</a> #}
+																																																																				<a href="{{ path('img_edit', {'id': img.id}) }}">edit</a> #}
 
 				{{ include('img/_delete_form.html.twig') }}
 

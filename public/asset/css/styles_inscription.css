@@ -6,30 +6,35 @@
 
 
 .MonCompte {
-  margin-left: 89%;
-  margin-top: -1%;
+
+  margin-top: -1.5%;
   color: #ffffff;
   font-size: 20px;
+  margin-left: -20%;
 }
 
 /* le lien connexion pour aller sur la page de connexion */
 
+.logo {
+  margin-top: 1%;
+
+}
 
 
 .ImageProfil {
   color: #ffffff;
-  margin-left: 90%;
-  margin-top: -3.5%;
+  margin-top: -4.9%;
+
 }
 
 /* logo de la touche mon compte */
 
 
-.titre {
+.inscription {
   text-align: center;
-  font-size: 70px;
+  font-size: 50px;
   color: blue;
-  margin-top: 10%;
+  margin-top: 6%;
 }
 
 /* titre de la page d'inscription */
@@ -51,8 +56,9 @@
 
 .agree {
   margin-left: 5%;
-  font-size: 20px;
+  font-size: 12px;
   color: blue;
+  margin-top: -2%;
 }
 
 /* css de l'agree de la page d'inscription */
@@ -61,16 +67,16 @@
 
 .inscrire {
   text-align: center;
-  height: 65px;
-  width: 370px;
-  background-color: rgb(1, 112, 116);
+  height: 45px;
+  width: 320px;
+  background-color: #8EC760;
   color: #ffffff;
   border-radius: 15px;
   border-color: #fff;
-  font-size: 40px;
+  font-size: 30px;
   border-style: double;
   cursor: pointer;
-  margin-left: 35%;
+  margin-left: 23%;
 }
 
 /* css de la touche s'inscrire */
@@ -80,7 +86,7 @@
 .message {
   font-size: 20px;
   margin: 0px;
-  margin-top: 50px;
+  margin-top: -1%;
   color: rgb(120, 120, 247);
   text-align: center;
   display: flex;
@@ -88,15 +94,27 @@
 
 /* css du message */
 
+.footer {
+  margin-top: 4;
+}
 
+
+.mentionslegales {
+  display: flex;
+  margin-left: -50%;
+  margin-top: 8%;
+}
+
+/* mention legales le parent de la classe apropos et mention*/
 
 .APROPOS {
   font-size: 20px;
+  margin-left: -50%;
+  margin-top: -3%;
 
 }
 
-.allo {
-  display: flex;
+.mention {
   margin-left: 10%;
   margin-top: -3%;
 }
@@ -105,5 +123,5 @@
 .text {
   font-size: 20px;
   margin-left: 100%;
-  margin-top: -3%;
+  margin-top: 2%;
 }

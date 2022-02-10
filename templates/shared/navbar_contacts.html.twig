@@ -8,6 +8,7 @@
 
 			<div class="navbar-menu ml-auto">
 
+
 				<div class="logo_profil">
 					<a class="navbar-link" href="{{path ("photo_profil") }}">
 						<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="ImageProfil"/>
@@ -87,9 +88,20 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						<a class="parametreduconde" href="{{path('contact')}}">contactez-nous!</a>
-						<a class="navbar-link" href="{{path("app_logout")}}">
-							<main class="deconnexion">Déconnexion</main>
-						</a>
+						{% if app.user %}
+							{% if app.user.roles[0] is same as "ROLE_ADMIN" %}
+								<li class="nav-item">
+									<a class="nav-link" href="{{ path('admin_home') }}">
+										Administration</a>
+								</li>
+							{% endif %}
+
+							<a class="navbar-link" href="{{path("app_logout")}}">
+								<main class="deconnexion">Déconnexion</main>
+							</a>
+							{% else %}
+
+						{% endif %}
 					</div>
 				</div>
 				<!-- Button Paramètres code bootstrap -->

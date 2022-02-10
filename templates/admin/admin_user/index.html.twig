@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block body %}
-	<div class="register-form" style="margin-botto:05px; margin-top:13%; font-size:21px;">
+	<div class=" position-fixed fixed-top register-form" style="margin-botto:05px; margin-top:23%; font-size:21px;">
 
 		<div class="container">
 
@@ -22,7 +22,8 @@
 
 			<div class="row">
 
-				<h1 class="titre" style="margin-top:-8%">
+
+				<h1 class="titre" style="margin-top:-8%; color:blue; ">
 
 					Bienvenue
 					{{ app.user.prenom }}
@@ -54,22 +55,13 @@
 				<div class="col">{{ app.user.sexe}}</div>
 				<div class="w-100"></div>
 
-				{# <div class="col"><img class="w-100" src="{{ asset(user.photoProfil) }}" style="height: 300px; margin-top:5%;  object-fit:contain !important; "/>
-																<div class="col">{{ app.user.photo_profil}}</div>
-																<div class="w-100"></div> #}
+
 			</div>
 		</div>
 
 
-		{{ include('admin/admin_user/_delete_form.html.twig') }}</div>
+		{{ include('user/_delete_form.html.twig') }}
+	</div>
 
-	{# {{ include('user/photo_profil.html.twig') }} #}
-</div>{#  ici je met le h1 pour pouvoir afficher mes information modifier, le nom et le prénom par le suite je fais un for #}{#  attends voir un cours sur les annonces #}
-{# </div class="col-xs4">
-																																    <h1> Annonces de {{ app.user.prenom }}  {{ app.user.nom }} ( {{ app.user.annonces|length }}) </h1>
-																																        </div>
-																																  
-																																          
-																																      {% for annonce in app.user.annonces %}
-																																      <div class="col -xs1"> Titre : </div>
-																									{% endfor %} #}{% endblock %}
+
+{% endblock %}

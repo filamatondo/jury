@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MesServices; 
+namespace App\MesServices;
 
 use Symfony\Component\String\Slugger\SluggerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
@@ -10,16 +10,16 @@ class ImageService
 
 {
 
-     protected $slugger; 
-     protected $parameterBag; 
+     protected $slugger;
+     protected $parameterBag;
 
 
-    public function __construct(SluggerInterface $slungger,ParameterBagInterface $parameterBagInterface)
+     public function __construct(SluggerInterface $slungger, ParameterBagInterface $parameterBagInterface)
 
-    {
-         $this->slugger = $slungger; 
-         $this->parameterBag = $parameterBagInterface;  
-    }
+     {
+          $this->slugger = $slungger;
+          $this->parameterBag = $parameterBagInterface;
+     }
 
 
 
@@ -27,29 +27,26 @@ class ImageService
 
      public function sauvegarderImage(object $object, object $file)
      {
-          $originalFileName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME); 
-                $safeFileName = $this->slugger->slug($originalFileName); 
-                $newFileName = $safeFileName. '-' . uniqid() . '.' . $file->guessExtension(); 
+          $originalFileName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
+          $safeFileName = $this->slugger->slug($originalFileName);
+          $newFileName = $safeFileName . '-' . uniqid() . '.' . $file->guessExtension();
 
-                $file->move(
-                    $this->parameterBag->get('app_images_directory'),
-                    $newFileName
-                ); 
+          $file->move(
+               $this->parameterBag->get('app_images_directory'),
+               $newFileName
+          );
 
-                $object-> setImage('uploads/'. $newFileName);
+          $object->setImage('uploads/' . $newFileName);
      }
-          
 
 
-       public function supprimerImage( string $fileName)
-       {
-              $pathFile = $this->parameterBag->get('app_images_directory') . '/..' . $fileName; 
 
-              if(file_exists($pathFile))
-              {
-                   unlink($pathFile); 
-              }
+     public function supprimerImage(string $fileName)
+     {
+          $pathFile = $this->parameterBag->get('app_images_directory') . '/..' . $fileName;
 
-       }
-
+          if (file_exists($pathFile)) {
+               unlink($pathFile);
+          }
+     }
 }

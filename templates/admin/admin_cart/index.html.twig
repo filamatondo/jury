@@ -1,74 +1,66 @@
-{% extends 'base.html.twig' %}
+{%  extends "base.html.twig" %}
 
-{% block title %}Votre panier
+{% block title %}
+	Hello CartController !
+
 {% endblock %}
 
 {% block body %}
-	<div class="table" style=" margin-top:-40%; margin-left:20%">
-		<section class="btn">
 
-			<h1>
-				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-plus" viewbox="0 0 16 16">
-					<path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-					<path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
-				</svg>
-				Amis
-
-			</h1>
+	<div class="bg-light p-3">
 
 
-		</section>
-		<div class="allo" style="margin:10%">
+		<h1>Votre panier
+
+		</h1>
+
+	</div>
+
+	{% if items | length >0 %}
 
 
-			{% for user in dataPanier %}
+		<thead class="table">
 
+			<tr>
+				<th>produit</th>
+				<th>Prix</th>
+				<th>Quantité</th>
+				<th>Total</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
 
-				{% for user in user %}
+			{% for item in items %}
 
-					{# <div class="nom_user">
-																																																																																																																														{{ user.prenom }}
-																																																																																																																														{{ user.nom }}
-																																																																																																																													</div> #}
+				<tr>
+					<td>{{ item.produit.tetle }}</td>
 
-					<div class="row" style="margin-left:20%">
+					<td>{{ item.product.price }}</td>
 
+					<td>{{ item.quantity }}</td>
 
-						{%  if app.user %}
-							<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3" style=" height: 250px; width: 280px;"/>
-						{% endif %}
+					<td>{{ item.product.price * item.quantity }}</td>
 
+					<td>
+						<a href="#" class="btn btn-danger btn-sm">
 
-						<div class="card-body">
-							<a href="{{ path ("send", {'id': user})}} " class="btn btn-primary">
-								Envoyer un message</a>
+							<i class="fas fa-trash"></i>
+						</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3">Total :</td>
 
-							{%  if app.user %}
-								<a href="{{ path ("home_profil", {'id': user})}} " class="btn">
-									Profil</a>
-							{% endif %}
+				<td></td>
+				<td></td>
+			</tr>
 
-
-							<a href="{{path("cart_add", {id: user})}}" class="btn btn-success">
-								<i class="bi bi-cart-plus"></i>
-							</a>
-							<a href="{{path("cart_remove", {id: user})}}" class="btn btn-warning">
-								<i class="bi bi-cart-dash"></i>
-							</a>
-							<a href="{{path("cart_delete", {id: user})}}" class="btn btn-danger">
-								<i class="bi bi-cart-x"></i>
-							</a>
-						{% else %}
-							<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3" style=" height: 250px; width: 280px;"/>
-						{% endfor %}
-
-						<td colspan="3">Total</td>
-						<td class="text-end">{{ total }}</td>
-						<td>
-							<a href="{{path("cart_delete_all")}}" class="btn btn-danger">
-								<i class="bi bi-cart-x"></i>
-							</a>
-						</td>
-					</div>
-				{% endfor %}
-			{% endblock %}
+		{% else %}
+			<p>
+				Surprise, c'est vide !</p>
+		{% endif %}
+	{% endblock %}

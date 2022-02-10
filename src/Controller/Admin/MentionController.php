@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MentionController extends AbstractController
 {
     /**
-     * @Route("/", name="admin_mention_index", methods={"GET"})
+     * @Route("/", name="mention_index", methods={"GET"})
      */
     public function index(MentionRepository $mentionRepository): Response
     {
@@ -26,7 +26,7 @@ class MentionController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="admin_mention_new", methods={"GET","POST"})
+     * @Route("/new", name="mention_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -49,7 +49,7 @@ class MentionController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="admin_mention_show", methods={"GET"})
+     * @Route("/{id}", name="mention_show", methods={"GET"})
      */
     public function show(Mention $mention): Response
     {
@@ -59,7 +59,7 @@ class MentionController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="admin_mention_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="mention_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Mention $mention): Response
     {
@@ -79,7 +79,7 @@ class MentionController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="admin_mention_delete", methods={"POST"})
+     * @Route("/{id}", name="mention_delete", methods={"POST"})
      */
     public function delete(Request $request, Mention $mention): Response
     {

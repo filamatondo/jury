@@ -7,11 +7,12 @@
 {% endblock %}
 
 {% block body %}
-	<div class="register-form" style="margin-botto:05px; margin-top:13%; font-size:21px;">
+
+	<div class="   register-form " style="font-size:21px; margin-left:45%;  margin-top:-4%">
 
 		<div class="container">
 
-			{% for message in app.flashes('message') %}
+			{% for photoProfil in app.flashes('message') %}
 
 				<div class="col">
 					<div class="p-3 my2 rounded-2 success">
@@ -21,53 +22,45 @@
 			{% endfor %}
 
 
-			{# {% for user in users %} #}
+			<div class=" position-fixed fixed-top row col-1 col-md-6 py-4" style="margin-top:7%; margin-left:30%">
 
-			<div class="row">
+				<h1 class="titre" style="margin-top:10%; color:blue;  ">
 
-				<h1 class="titre" style="margin-top:-8%">
+					<marquee>
+						Bonjour
+						{{ app.user.prenom }}
+						{{app.user.nom}}
+					</marquee>
 
-					Bonjour
-
-
-					<p class="text">
-						Est-il obligatoire d'avoir une photo de profil ?
-												Chez Malt nous croyons beaucoup à l'image : donc sans photo, votre profil n'est pas visible dans les résultats de recherche.
-												
-												De plus nous sommes un réseau de professionnels et votre profil est une vitrine pour les clients qui cherchent des freelances, avoir une photo professionnelle permet d’instaurer un climat de confiance entre vous et le client.
-												
-												Nous avons constaté qu’une photo de profil pro c’est en moyenne 5 fois plus de clics sur votre profil, donc 5 fois plus de contacts potentiels ou de missions pour vous 
-																		Chez Small-World nous croyons beaucoup
-																		
-																					 à l'image : donc sans photo, votre profil n'est pas visible dans les résultats de recherche
-																					 .</p>
 
 				</h1>
 
 
-				{%  if app.user  %}
+				{%  if app.user  %}{% endif %}
 
-					<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3" style=" height: 50px;
-															                    width: 50px;">
+				<div class="col-3 col-md-7" style="margin-top:-5%; margin-left:-7%">
 
-
-				{% endif %}
-
-				<div>
 					{{form_start(form)}}
 
-					{{form_widget(form)}}
+					<div class="col-12" style="margin-left:25%">
+						{% if user.photoProfil is not null %}
+							<img class="w-90" src="{{ asset(user.photoProfil) }}" style="height: 490px; margin-top:10%; margin-left:40%; "/>
+						{% else %}
+							<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3" style=" height: 250px; width: 280px;"/>
+						{% endif %}
+						<div class="col-12 " style="margin-top:2%; margin-left:10%">
+							{{form_widget(form)}}
+						</div>
+					</div>
 
-					<button type="submit" class="btn btn-primary mt-3">
+					<button type="submit" class="btn btn-primary " style="margin-left:18%; margin-top:-25%">
 						enregistre
 					</button>
 
 					{{form_end(form)}}
 
-					<a href="{{ path('admin_home_profil') }}">retour sur le profil</a>
-
 				</div>
-				{# {% endfor %} #}
+
 			</div>
 		</div>
 

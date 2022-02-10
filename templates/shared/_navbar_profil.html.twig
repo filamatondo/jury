@@ -10,7 +10,7 @@
 							<h1 class="titre" style="color:blue">Small world</h1>
 						</a>
 						<!-- Titre de ma page et le lien qui index qui
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													             conduit à une autre page pour savoir plus sur le site. -->
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													             conduit à une autre page pour savoir plus sur le site. -->
 
 
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -103,9 +103,20 @@
 								</a>
 								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 									<a class="parametreduconde" href="{{path('contact')}}">contactez-nous!</a>
-									<a class="navbar-link" href="{{path("app_logout")}}">
-										<main class="deconnexion">Déconnexion</main>
-									</a>
+									{% if app.user %}
+										{% if app.user.roles[0] is same as "ROLE_ADMIN" %}
+											<li class="nav-item">
+												<a class="nav-link" href="{{ path('admin_home') }}">
+													Administration</a>
+											</li>
+										{% endif %}
+
+										<a class="navbar-link" href="{{path("app_logout")}}">
+											<main class="deconnexion">Déconnexion</main>
+										</a>
+										{% else %}
+
+									{% endif %}
 								</div>
 							</div>
 							<!-- Button Paramètres code bootstrap -->
@@ -144,11 +155,8 @@
 	<a href="{{path ('img_index')}}" class=" sidenav-link color-primary " style="margin-left:15px; color:blue; font-size:22px ">
 		Album</a>
 
-	<a href="{{path ('agenda_index')}}" class=" sidenav-link color-primary " style="margin-left:15px; color:blue; font-size:22px ">
-		Agenda</a>
 
-
-	<a href="{{path ('panier_ajouter')}}" class=" sidenav-link color-primary " style="margin-left:15px; color:blue; font-size:22px ">
+	<a href="{{path ('liste_ami_ajouter_index')}}" class=" sidenav-link color-primary " style="margin-left:15px; color:blue; font-size:22px ">
 		Amis
 
 		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-plus" viewbox="0 0 16 16">
@@ -157,4 +165,4 @@
 		</svg>
 
 	</a>
-</div>
+</div></div>

@@ -50,13 +50,13 @@ class Videos
     private $date;
 
     /**
-     * @ORM\OneToMany(targetEntity=CommentaireVideo::class, mappedBy="videoes")
+     * @ORM\OneToMany(targetEntity=VideoCommentaire::class, mappedBy="video")
      */
-    private $commentaireVideos;
+    private $videoCommentaires;
 
     public function __construct()
     {
-        $this->commentaireVideos = new ArrayCollection();
+        $this->videoCommentaires = new ArrayCollection();
     }
 
     /**
@@ -142,29 +142,29 @@ class Videos
     }
 
     /**
-     * @return Collection|CommentaireVideo[]
+     * @return Collection|VideoCommentaire[]
      */
-    public function getCommentaireVideos(): Collection
+    public function getVideoCommentaires(): Collection
     {
-        return $this->commentaireVideos;
+        return $this->videoCommentaires;
     }
 
-    public function addCommentaireVideo(CommentaireVideo $commentaireVideo): self
+    public function addVideoCommentaire(VideoCommentaire $videoCommentaire): self
     {
-        if (!$this->commentaireVideos->contains($commentaireVideo)) {
-            $this->commentaireVideos[] = $commentaireVideo;
-            $commentaireVideo->setVideoes($this);
+        if (!$this->videoCommentaires->contains($videoCommentaire)) {
+            $this->videoCommentaires[] = $videoCommentaire;
+            $videoCommentaire->setVideo($this);
         }
 
         return $this;
     }
 
-    public function removeCommentaireVideo(CommentaireVideo $commentaireVideo): self
+    public function removeVideoCommentaire(VideoCommentaire $videoCommentaire): self
     {
-        if ($this->commentaireVideos->removeElement($commentaireVideo)) {
+        if ($this->videoCommentaires->removeElement($videoCommentaire)) {
             // set the owning side to null (unless already changed)
-            if ($commentaireVideo->getVideoes() === $this) {
-                $commentaireVideo->setVideoes(null);
+            if ($videoCommentaire->getVideo() === $this) {
+                $videoCommentaire->setVideo(null);
             }
         }
 
