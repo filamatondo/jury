@@ -1,10 +1,6 @@
 {% extends 'base_admin_user.html.twig' %}
 
-{% block title %}
-
-	Profil
-
-{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body %}
 	<div class=" position-fixed fixed-top register-form" style="margin-botto:05px; margin-top:23%; font-size:21px;">
@@ -23,7 +19,7 @@
 			<div class="row">
 
 
-				<h1 class="titre" style="margin-top:-8%; color:blue; ">
+				<h1 class="titre" style="margin-top:-8%; color:blue; font-size:18px ">
 
 					Bienvenue
 					{{ app.user.prenom }}

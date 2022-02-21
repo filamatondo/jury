@@ -65,12 +65,7 @@
 					<a href="{{ path('article_edit', {'id' :article.id}) }}" class="btn btn-info" style=" margin-left:-40%; margin-top:-8% ; font-size:14px; ">Modifier</a>
 
 
-					{% if app.user.roles[0] is same as "ROLE_ADMIN" %}
-						<a href="{{ path('admin_article_edit', {'id' :article.id}) }}" class="btn btn-info" style=" margin-left:-40%; margin-top:-8% ; font-size:14px; ">Modifier</a>
-					{% endif %}
-
 				{% endif %}
-
 
 			</div>
 
