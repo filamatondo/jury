@@ -31,8 +31,8 @@ class SearchUserType extends AbstractType
                 'label' => false,
                 'required' => false,
                 'attr' => ['placeholder' => 'Rechercher par nom']
-               
-                
+
+
             ]);
     }
 

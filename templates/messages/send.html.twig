@@ -3,15 +3,23 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-	<div class="register-form" style="margin-botton:105px;">
+	<div class="register-form" style="margin-left:20%; width:70%; height:48px; margin-top:10%">
 
 		<section>
 
 			<div class="contenaire">
+				{% for message in app.flashes('message') %}
+
+					<div class="col">
+						<div class="p-3 my2 rounded-2 success">
+							{{message}}
+						</div>
+					</div>
+				{% endfor %}
 
 				<div class="row">
 					<div class="col">
-						<h1 class="reception" style="margin-top:7%; ">Envoyer un message</h1>
+						<h1 class="reception" style="margin-top:7%; font-size:25px; color:blue ">Envoyer un message</h1>
 
 						{{ form(form) }}
 

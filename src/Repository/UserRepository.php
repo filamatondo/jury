@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Repository;
+
 use App\Entity\User;
 use Doctrine\ORM\QueryBuilder;
 use Doctrine\Persistence\ManagerRegistry;
@@ -23,28 +24,27 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
     }
 
 
-    public function findAllQuery(): QueryBuilder 
+    public function findAllQuery(): QueryBuilder
     {
-        return $this->createQueryBuilder('u'); 
+        return $this->createQueryBuilder('u');
     }
-    
+
     public function findAllUserByFilter($search)
     {
-       $query = $this->findAllQuery(); 
-        
-       if ($search->getFiltrerParNom()){
-           $query = $query->andWhere('u.nom = :nom'); 
-           $query->setParameter('nom', $search->getFiltrerParNom()); 
-       }
-           // Si la valeur à été envoyer per get prenom, il va me filtre le getFiltreParPrenom,
-       if ($search->getFiltrerParPrenom()){
-           $query = $query->andWhere('u.prenom = :prenom'); 
-           $query->setParameter('prenom', $search->getFiltrerParPrenom()); 
-          
-       }
-            // si non tu me retourne toute la liste. 
-          
-       return $query->getQuery()->getResult(); 
+        $query = $this->findAllQuery();
+
+        if ($search->getFiltrerParNom()) {
+            $query = $query->andWhere('u.nom = :nom');
+            $query->setParameter('nom', $search->getFiltrerParNom());
+        }
+        // Si la valeur à été envoyer per get prenom, il va me filtre le getFiltreParPrenom,
+        if ($search->getFiltrerParPrenom()) {
+            $query = $query->andWhere('u.prenom = :prenom');
+            $query->setParameter('prenom', $search->getFiltrerParPrenom());
+        }
+        // si non tu me retourne toute la liste. 
+
+        return $query->getQuery()->getResult();
     }
 
     /**

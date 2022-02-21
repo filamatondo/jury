@@ -1,9 +1,9 @@
-	{% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %}
 
-	{% block title %}Article
-	{% endblock %}
+{% block title %}Article
+{% endblock %}
 
-	{% block body %}
+{% block body %}
 
 	<div class="register-form" style="margin-top:-40%; margin-left:10%; margin:30%" ;>
 		<div class="contaire py-5">
@@ -80,60 +80,33 @@
 												{% if article.commentaires | length > 0 %}
 													{% for commentaire in article.commentaires %}
 
-														<p Date {% if app.user is same as commentaire.auteur %} 
-														
-														style="font-form_widget:bold; color:red; "
-														
-														
-														
-														 {% endif %} 
-														
-														
-														
-														<P> auteur: {{ commentaire.auteur.nom}} 
-
-														
-														
-														
-														{# <a href="{{ path('', {'id' :article.id}) }}" class="btn btn-danger" style="margin-top:-7.5%; margin-left:77%">Supprimer</a> #}
-
-														
-														{# <a href="{{ path('article_edit', {'id' :article.id}) }}" class="btn btn-info" style="margin-top:-8.8%; margin-left:50%">Modifier</a>
-														 #}
-														
-														</p> 
-														
-														
-														<p> : {{ commentaire.date | date('d-m-Y') }} </p>
-														
-														
-														 <p> contenu : {{ commentaire.contenu }} </p> 
-														
-														
-														<hr/> 
-														
-														
-														
-														{% endfor %}
-														
-														
-														{% else %} 
-														
-														
-										<p> il n y a pas encore de commentaires.</p> 
-									
-									{% endif %}
-
-
-	</div> 
-															
-	    </div> 
-															
-		     </div>																		
-						</div> 							
-								</div> 							
+														<p date {% if app.user is same as commentaire.auteur %} style="font-form_widget:bold; color:red; ">
+														{% endif %}
+														<P>
+															auteur:
+															{{ commentaire.auteur.nom}}
+														{# <a href="{{ path('commentaire_delete', {'id' :article.id}) }}" class="btn btn-danger" style="margin-top:-7.5%; margin-left:77%">Supprimer</a> #}
+															{# <a href="{{ path('article_edit', {'id' :article.id}) }}" class="btn btn-info" style="margin-top:-8.8%; margin-left:50%">Modifier</a> #}
+														</p>
+														<p>
+															:
+															{{ commentaire.date | date('d-m-Y') }}
+														</p>
+														<p>
+															contenu :
+															{{ commentaire.contenu }}
+														</p>
+														<hr/>
+													{% endfor %}
+												{% else %}
+													<p>
+														il n y a pas encore de commentaires.</p>
+												{% endif %}
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-									</div> 
-																									
-														
-{% endblock %}
+					</div>
+				{% endblock %}

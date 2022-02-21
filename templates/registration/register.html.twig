@@ -6,100 +6,90 @@
 
 {% block body %}
 
-	<section class="container col-1 col-md-7 py-4 position-fixed fixed-top" style="margin-top:5%">
-		<main>
+
+	<h1 class="titre" style="margin-top:1%; font-weight: bold; text-align: center; font-size:25px">
+		INSCRIPTION
+	</h1>
+	<!-- Titre pour s'inscrire sur le site small world-->
 
 
-			{# <div class="p-7 m-5 baground-color-primary  "> #}
+	<div class="col-3 mb-7 col-md-7  " style="margin-left:21%;">
+		<div class="card">
 
-			<h1 class="inscription">
+			<div class="card-header">
+				{{ form_start(registrationForm) }}
 
-				INSCRIPTION
+				<div class"container">
 
-			</h1>
-			<!-- Titre pour s'inscrire sur le site small world-->
+					<div class="row">
 
-			<div class="card">
-				<div class="card-header">
-					{{ form_start(registrationForm) }}
-
-					<div class"container position-fixed">
-
-						<div class="row">
-
-							<div class="col-8 col-md-6">
-								{{ form_widget(registrationForm.nom, { 'attr': {'class': 'nom'} }) }}
-							</div>
-
-
-							<div class="col-8 col-md-6">
-								{{ form_row(registrationForm.prenom ) }}
-							</div>
-
-
-							{{ form_row(registrationForm.email) }}
-
-
-							<div class="col-8 col-md-6">
-								{{ form_row(registrationForm.plainPassword.first )  }}
-							</div>
-
-							<div class="col-8 col-md-6">
-								{{ form_row(registrationForm.plainPassword.second ) }}
-							</div>
-
-
-							<div class="col-8 col-md-2 sexe">
-								{{ form_row(registrationForm.sexe ) }}
-							</div>
-
-
-							<div class="col-8 col-md-4 date">
-								{{ form_row(registrationForm.date) }}
-
-							</div>
-
-							<div class="agree">
-								{{ form_row(registrationForm.agreeTerms) }}
-							</div>
-
-
-							<div class="INSCRIPTION">
-								<button type="submit" class="inscrire">S'inscrire</button>
-
-							</div>
-
-							{{ form_end(registrationForm) }}
+						<div class="mb-3">
+							{{ form_widget(registrationForm.nom, { 'attr': {'class': 'nom'} }) }}
 						</div>
 
-						<footer class="footer">
-							<div class="message">
-								<marquee>
-									<p>Il existe des tas de façons de rester en contact avec vos proches
-																			Small world est un petit moyen sympa de garder contact avec
-																	        le monde; C'est super facile à utiliser
-									</p>
-								</marquee>
-							</div>
-							{# Message explicatif #}
 
-							<div class=" col-1 col-md-7 mentionslegales">
-								<div class="APROPOS">
-									<a class="navbar-link" href="{{path ("apropo_index") }}">
-										<div class="APROPO">À propos</div>
-									</a>
-								</div>
+						<div class="mb-3">
+							{{ form_row(registrationForm.prenom ) }}
+						</div>
+
+						<div class="mb-3" style="margin-top:-2%;">
+							{{ form_row(registrationForm.email) }}
+						</div>
+
+						<div class="mb-3" style="margin-top:-2%;">
+							{{ form_row(registrationForm.plainPassword.first )  }}
+						</div>
+
+						<div class="mb-3" style="margin-top:-2%;">
+							{{ form_row(registrationForm.plainPassword.second ) }}
+						</div>
 
 
-								<div class="mention">
-									<a class="mentions" href="{{path("mention_index")}}">Mentions légales</a>
-								</div>
+						<div class="col-3 md-3 sexe" style="margin-top:-2%; font-size: 12px">
+							{{ form_row(registrationForm.sexe ) }}
+						</div>
 
-							</div>
-						</footer>
+
+						<div class="col-12  md-3 date" style="margin-left:-1.5%; margin-top:-1%;">
+							{{ form_row(registrationForm.date) }}
+
+						</div>
+
+						<div class="agree" style="font-size: 12px; margin-top-20%">
+							{{ form_row(registrationForm.agreeTerms) }}
+						</div>
+
+
+						<div class="col-1 col-md-1">
+							<button class="inscrire" style=" height: 50px; margin-left:-4%; width: 90px; font-size:18px" type="submit">S'inscrire</button>
+						</div>
+
+						{{ form_end(registrationForm) }}
 					</div>
+
+					<footer class="footer">
+						<div class="message">
+							<p class="col-12 col-md-7 " style=" margin-left:55%; font-size:12px; margin-top:-15%">Il existe des tas de façons de rester en contact avec vos proches
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								Small world est un petit moyen sympa de garder contact avec le monde; C'est super facile à utiliser</p>
+
+						</div>
+						{# Message explicatif #}
+
+						<div class=" col-1 col-md-7 mentionslegales" style="margin-top:1%">
+							<div class="APROPOS">
+								<a class="navbar-link" href="{{path ("apropo_index") }}">
+									<div class="APROPO" style="margin-left:-140%; font-size:18px; margin-top:8%">À propos</div>
+								</a>
+							</div>
+							<div class="mention">
+								<a class="col-1 mentions" style="margin-left:-80%; font-size:18px; margin-top:-5.5%" href="{{path("mention_index")}}">Mentions légales</a>
+							</div>
+
+						</div>
+					</footer>
 				</div>
 			</div>
-		</main>
-	</section>
+		</div>
+
+	</div>
 {% endblock %}

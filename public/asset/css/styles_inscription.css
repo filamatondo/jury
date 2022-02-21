@@ -1,43 +1,18 @@
-.navbar-expand-lg {
-  background-color: rgb(1, 112, 116);
-}
-
-/* navbar de la page d'inscription */
-
-
-.MonCompte {
-
-  margin-top: -1.5%;
-  color: #ffffff;
-  font-size: 20px;
-  margin-left: -20%;
-}
-
-/* le lien connexion pour aller sur la page de connexion */
-
-.logo {
-  margin-top: 1%;
-
-}
-
-
-.ImageProfil {
-  color: #ffffff;
-  margin-top: -4.9%;
-
-}
-
-/* logo de la touche mon compte */
-
-
-.inscription {
+.titre {
   text-align: center;
-  font-size: 50px;
-  color: blue;
-  margin-top: 6%;
+  font-size: 70px;
+  color: black;
+  margin-top: 2%;
+  font-weight: bold;
 }
 
 /* titre de la page d'inscription */
+
+
+.md-7 {
+  text-align: center;
+}
+
 
 
 .sexe {
@@ -48,7 +23,7 @@
 
 .date {
   margin-top: -40%;
-  margin-left: 31.8%;
+  margin-left: -8%;
 }
 
 /* css de formulaire de la date */
@@ -56,7 +31,7 @@
 
 .agree {
   margin-left: 5%;
-  font-size: 12px;
+  font-size: 15px;
   color: blue;
   margin-top: -2%;
 }
@@ -66,17 +41,16 @@
 
 
 .inscrire {
-  text-align: center;
-  height: 45px;
+  height: 80%;
   width: 320px;
   background-color: #8EC760;
   color: #ffffff;
-  border-radius: 15px;
+  border-radius: 10px;
   border-color: #fff;
   font-size: 30px;
   border-style: double;
   cursor: pointer;
-  margin-left: 23%;
+  margin-left: 40%;
 }
 
 /* css de la touche s'inscrire */
@@ -85,7 +59,7 @@
 
 .message {
   font-size: 20px;
-  margin: 0px;
+  margin: 20px;
   margin-top: -1%;
   color: rgb(120, 120, 247);
   text-align: center;
@@ -124,4 +98,10 @@
   font-size: 20px;
   margin-left: 100%;
   margin-top: 2%;
+}
+
+.nom {
+  width: 40px;
+  height: 20px;
+  font-size: 12px;
 }

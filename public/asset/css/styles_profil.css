@@ -30,8 +30,8 @@ header .navbar-expand-lg {
 
 /* le css de la touche profil de la navbar */
 .profil {
-    font-size: 18px;
-    color: black;
+    font-size: 12px;
+    color: #ffffff;
     margin-top: -55%;
     margin-left: -7%;
 
@@ -49,8 +49,8 @@ header .navbar-expand-lg {
 
 
 .ImageProfil {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
 
 }
 
@@ -61,7 +61,7 @@ header .navbar-expand-lg {
 /* le css de la touche mes contact */
 
 .contact {
-    font-size: 18px;
+    font-size: 14px;
     color: black;
     margin-top: -25%;
 
@@ -94,7 +94,7 @@ header .navbar-expand-lg {
 
 
 .message {
-    font-size: 18px;
+    font-size: 14px;
     color: black;
     margin-top: -18%;
 

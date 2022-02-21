@@ -34,7 +34,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\Column(type="string", length=180, unique=true)
      * @Assert\NotBlank(message="Vous devez ajouter un email")
      */
-    private $email;
+    private $email = 0;
 
     /**
      * @ORM\Column(type="json")
