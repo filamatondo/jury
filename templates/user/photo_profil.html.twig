@@ -22,17 +22,17 @@
 			{% endfor %}
 
 
-			<h1 class="titre" style="margin-top:40%; font-weight: bold;  font-size:28px; margin-left:-50%  ">
+			<h1 class="titre" style="margin-top:40%; font-weight: bold;  font-size:40px; margin-left:-50%  ">
 				Bonjour
 				{{ app.user.prenom }}
 				<p>
 					Bienvenue dans votre espace</p>
 			</h1>
-			<div class=" row col-1 col-md-6 py-4" style="margin-top:10%; margin-left:-30%">
+			<div class=" row" style="margin-top:10%; margin-left:-30%; width: 15rem;  height:31rem;">
 
 				{%  if app.user  %}{% endif %}
 
-				<div class="col-12 " style="margin-top:5%; margin-left: 1% ">
+				<div class="image " style="margin-top:5%; margin-left: 1% ">
 
 					{{form_start(form)}}
 
@@ -40,12 +40,12 @@
 					<div class="card-body">
 						{% if user.photoProfil is not null %}
 
-							<img class="card-img-top" src="{{ asset(user.photoProfil) }}" style="height: 400px; margin-top:1%; margin-left:-35%;width: 280px "/>
+							<img class="card-img-top" src="{{ asset(user.photoProfil) }}" style=" margin-top:1%; margin-left:-55%;  max-width :350%;heigth: auto; display: block; "/>
 
 						{% else %}
-							<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3" style=" height: 250px; width: 280px;"/>
+							<img src=" https://img.icons8.com/ios/50/000000/name--v2.png " class=" div3" style=" height: 250px; width: 280px;"/>
 						{% endif %}
-						<div class="a " style="margin-top:28%; margin-left:-30%;">
+						<div class=" a " style=" margin-top:28%; margin-left:-30%;">
 							{{form_widget(form)}}
 						</div>
 					</div>
@@ -58,8 +58,8 @@
 
 				</div>
 				{# <div>
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																					<a class="btn btn-info" href="{{ path('home_profil') }}" style="margin-top:2.5%; margin-left:-25%">retour sur le profil</a>
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				</div> #}
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													<a class="btn btn-info" href="{{ path('home_profil') }}" style="margin-top:2.5%; margin-left:-25%">retour sur le profil</a>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												</div> #}
 
 			</div>
 		</div>

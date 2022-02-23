@@ -98,6 +98,12 @@
 						<a class="navbar-link" href="{{path("photo_profil")}}">
 							<main class="deconnexion">Accueil</main>
 						</a>
+						<a class="navbar-link" href="{{path("admin_mention_index")}}">
+							<main class="deconnexion">Mentions Légales</main>
+						</a>
+						<a class="navbar-link" href="{{path("admin_apropo_index")}}">
+							<main class="deconnexion">À propos</main>
+						</a>
 						<a class="navbar-link" href="{{path("app_logout")}}">
 							<main class="deconnexion">Déconnexion</main>
 						</a>
@@ -112,7 +118,7 @@
 </nav>
 
 
-<div id="example-sidenav" class="sidenav large fixed white" style="width: 18%; font-size:25px">
+<div id="example-sidenav" class="sidenav large fixed white" style="width: 25%; font-size:25px">
 	<div class="sidenav-header" style="margin-top:80%; color:blue; font-size:12px">
 		<button data-target="example-sidenav" class="sidenav-trigger">
 			<i class="fas fa-times"></i>
@@ -122,16 +128,16 @@
 		</div>vous êtes connectés......
 	</div>
 
-	<a href=" {{path ('admin_user_index') }}" class=" sidenav-link color-primary " style="margin-left:15px; color:blue; font-size:19px; margin-top:10%;">
+	<a href=" {{path ('admin_user_index') }}" class=" sidenav-link color-primary " style="margin-left:15px; color:blue; font-size:25px; margin-top:10%;">
 		Infos compte</a>
 
-	<a href="{{ path('admin_user_profil_modifier')}}" class="sidenav-link" style="margin-left:15px; color:blue; font-size:19px;  ">
+	<a href="{{ path('admin_user_profil_modifier')}}" class="sidenav-link" style="margin-left:15px; color:blue; font-size:25px;  ">
 		Modifier le profil</a>
 
-	<a href="{{path ('admin_user_pass_modifier')}}" class=" sidenav-link color-primary " style="margin-left:15px; color:blue; font-size:19px ">
+	<a href="{{path ('admin_user_pass_modifier')}}" class=" sidenav-link color-primary " style="margin-left:15px; color:blue; font-size:25px ">
 		Modifier le mot de passe</a>
 
-	<a href="{{path ('admin_img_index')}}" class=" sidenav-link color-primary " style="margin-left:15px; color:blue; font-size:19px ">
+	<a href="{{path ('admin_img_index')}}" class=" sidenav-link color-primary " style="margin-left:15px; color:blue; font-size:25px ">
 		Album</a>
 
 

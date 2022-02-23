@@ -17,7 +17,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ApropoController extends AbstractController
 {
     /**
-     * @Route("/", name="apropo_index", methods={"GET"})
+     * @Route("/", name="admin_apropo_index", methods={"GET"})
      */
     public function index(ApropoRepository $apropoRepository): Response
     {
@@ -27,7 +27,7 @@ class ApropoController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="apropo_new", methods={"GET","POST"})
+     * @Route("/new", name="admin_apropo_new", methods={"GET","POST"})
      */
     public function new(Request $request, AproposVideo $aproposVideo): Response
     {
@@ -54,7 +54,7 @@ class ApropoController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="apropo_show", methods={"GET"})
+     * @Route("/{id}", name="admin_apropo_show", methods={"GET"})
      */
     public function show(Apropo $apropo): Response
     {
@@ -64,7 +64,7 @@ class ApropoController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="apropo_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="admin_apropo_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Apropo $apropo): Response
     {
@@ -84,7 +84,7 @@ class ApropoController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="apropo_delete", methods={"POST"})
+     * @Route("/{id}", name="admin_apropo_delete", methods={"POST"})
      */
     public function delete(Request $request, Apropo $apropo): Response
     {
