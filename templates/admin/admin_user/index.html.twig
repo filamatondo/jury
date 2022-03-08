@@ -1,0 +1,63 @@
+{% extends 'base_admin_user.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+	<div class=" position-fixed fixed-top register-form" style="margin-botto:05px; margin-top:23%; font-size:21px;">
+
+		<div class="container">
+
+			{% for message in app.flashes('message') %}
+
+				<div class="col">
+					<div class="p-3 my2 rounded-2 success">
+						{{message}}
+					</div>
+				</div>
+			{% endfor %}
+
+			<div class="row">
+
+
+				<h1 class="titre" style="margin-top:-8%; color:blue; font-size:18px ">
+
+					Bienvenue
+					{{ app.user.prenom }}
+					{{app.user.nom}}
+
+				</h1>
+
+				<div class="w-100"></div>
+				<div class="col">Nom :</div>
+				<div class="col">{{ app.user.nom}}</div>
+				<div class="w-100"></div>
+
+				<div class="col">
+					Prénom :</div>
+				<div class="col">{{ app.user.prenom}}</div>
+
+				<div class="w-100"></div>
+
+				<div class="col">Email:</div>
+				<div class="col">{{ app.user.email}}</div>
+				<div class="w-100"></div>
+
+				<div class="col">Date:</div>
+				<div class="col">{{ app.user.date |  date }}</div>
+				<div class="w-100"></div>
+
+
+				<div class="col">Sexe:</div>
+				<div class="col">{{ app.user.sexe}}</div>
+				<div class="w-100"></div>
+
+
+			</div>
+		</div>
+
+
+		{{ include('user/_delete_form.html.twig') }}
+	</div>
+
+
+{% endblock %}

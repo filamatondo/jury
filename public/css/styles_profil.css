@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .profil1 {
     margin-left: 45%;
     margin-top: 15%;
@@ -500,3 +501,609 @@
 
     }
 }
+=======
+.profil1 {
+    margin-left: 45%;
+    margin-top: 15%;
+    display: flex;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .profil1 {
+        font-size: 55px;
+        margin-top: 25%;
+    }
+}
+
+/* le profil la classe mère du profil */
+
+
+.titre {
+    margin-top: -10%;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: -55%;
+}
+
+/* Titre de la page profil. à savoir le noms du user  */
+
+@media screen and (max-width: 1100px) {
+
+    .titre {
+        font-size: 60px;
+        margin-left: -120%;
+    }
+}
+
+/* Titre de la page le nom */
+
+.formulaireimage {
+    margin-top: -25%;
+    margin-left: -120%;
+    width: 15rem;
+    height: 31rem;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .formulaireimage {
+        margin-top: 15%;
+        margin-left: -10%;
+        width: 15rem;
+        height: 31rem;
+    }
+}
+
+/* la class Row du profil qui est la classe mère de l'image de le bouton téléchargement et enregister  */
+
+
+
+.image {
+    margin-top: 5%;
+    margin-left: 1%;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .image {
+        margin-left: 130%;
+    }
+}
+
+/* le css de la classe image du profil */
+
+.card-img-top {
+    margin-top: 1%;
+    margin-left: -25%;
+    width: 150%;
+    display: block;
+}
+
+/* la classe de l'image de profil */
+@media screen and (max-width: 1100px) {
+
+    .card-img-top {
+        width: 350%;
+        margin-left: -350%;
+        display: block;
+    }
+}
+
+/* la taille de l'image */
+
+
+.avatar {
+    height: 250px;
+    width: 280px;
+}
+
+/* le css de image avatar */
+
+.telecharger {
+    margin-top: 28%;
+    margin-left: -30%;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .telecharger {
+        width: 450%;
+        margin-left: -370%;
+        font-size: 50px;
+        margin-top: 40%;
+
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .form-control {
+        height: 100px;
+        width: 100%;
+        font-size: 50px;
+        margin-left: 5%;
+        margin-top: 10%
+    }
+}
+
+/* le css du champs téléchargement */
+
+
+.btn-info {
+
+    margin-left: 20%;
+    margin-top: 12%;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .btn-info {
+        height: 100%;
+        width: 250%;
+        font-size: 60px;
+        margin-left: -230%;
+        margin-top: 5%
+    }
+}
+
+/* le booton enregistrer la photo */
+
+
+.infos-compte {
+    margin-left: 15px;
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 5%;
+    background-color: #8EC760;
+}
+
+/* le css du profil */
+@media screen and (max-width: 1100px) {
+
+    .infos-compte {
+
+        background-color: #8EC760;
+        color: #ffffff;
+        border-radius: 10px;
+        border-color: #fff;
+        font-size: 60px;
+        border-style: double;
+        cursor: pointer;
+        height: 50px;
+        width: 90%;
+    }
+}
+
+/* css du profil infos compte de user */
+
+
+.info {
+    margin-top: -35%;
+    margin-left: 75%;
+    display: block;
+
+}
+
+/* @media screen and (max-width: 2810px) {
+    .info {
+        margin-top: 10%;
+        display: block;
+    }
+} */
+
+@media screen and (max-width: 1100px) {
+
+    .info {
+        margin-top: 150%;
+        font-size: 50px;
+        margin-left: 8%;
+    }
+}
+
+/* le css de info  */
+
+.modifierProfil {
+    margin-left: 15px;
+    color: #ffffff;
+    font-size: 18px;
+    background-color: #048B9A;
+    margin-top: 10%
+}
+
+/* css du mot de passe oublié */
+
+@media screen and (max-width: 1100px) {
+
+    .modifierProfil {
+
+        background-color: #6073c7;
+        color: #ffffff;
+        border-radius: 10px;
+        border-color: #fff;
+        font-size: 60px;
+        border-style: double;
+        cursor: pointer;
+        height: 50px;
+        width: 90%;
+        margin-top: 15%
+    }
+}
+
+/* le css du bouton modifer le profil */
+
+
+@media screen and (max-width: 1100px) {
+
+    .profilModifier {
+
+        margin-top: -50%;
+
+    }
+}
+
+
+.modifiermotpasse {
+    margin-left: 15px;
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 5%;
+    background-color: #048B9A;
+}
+
+
+
+.modifiermotdepasse {
+    margin-top: 10%;
+    background-color: #048B9A;
+    margin-left: 5%;
+    color: #ffffff;
+}
+
+
+
+@media screen and (max-width: 1100px) {
+
+    .modifiermotdepasse {
+
+        background-color: #6073c7;
+        color: #ffffff;
+        border-radius: 10px;
+        border-color: #fff;
+        font-size: 60px;
+        border-style: double;
+        cursor: pointer;
+        height: 50px;
+        width: 90%;
+        margin-left: 1%;
+
+    }
+}
+
+/* le css du booton modifier le mot de passe */
+
+.album {
+    margin-left: 15px;
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 5%;
+    background-color: #40826D;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .album {
+
+        background-color: #6073c7;
+        color: #ffffff;
+        border-radius: 10px;
+        border-color: #fff;
+        font-size: 60px;
+        border-style: double;
+        cursor: pointer;
+        height: 50px;
+        width: 90%;
+    }
+}
+
+/* le css du booton album */
+
+
+
+
+
+/*  Le css de la page Infos compte */
+
+.informationPersonnelle {
+
+    margin-top: 13%;
+    font-size: 21px;
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .informationPersonnelle {
+        color: #6073c7;
+        font-size: 60px;
+
+    }
+}
+
+.Bienvenu {
+    margin-top: -4%;
+    color: blue;
+    font-size: 38px;
+    margin-left: 40%;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .Bienvenu {
+
+        font-size: 65px;
+        margin-left: -10%;
+        margin-top: 25%
+    }
+}
+
+/* Titre de la page  le css du message bienvenu user */
+
+/* .binevenue {
+    margin-top: 1%;
+    color: blue;
+    font-size: 18px;
+    margin-left: 40%;
+} */
+
+.btn-danger {
+    text-align: center;
+    font-size: 18px;
+    margin-left: 30%
+}
+
+@media screen and (max-width: 1100px) {
+
+    .btn-danger {
+
+        font-size: 55px;
+        margin-left: -10%;
+        margin-top: 25%;
+    }
+}
+
+/* css du booton supprimé */
+
+
+
+
+/* Css da la Page Modifier les information */
+
+
+.modifierinfoPersonnel {
+    margin-left: 15%;
+    margin-top: 15%;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .modifierinfoPersonnel {
+
+        font-size: 50px;
+        margin-left: 5%;
+        margin-top: 45%;
+    }
+}
+
+/*le css de la class mère */
+
+
+
+
+@media screen and (max-width: 1100px) {
+
+    .form-control {
+
+        font-size: 60px;
+        margin-left: -3%;
+        width: 100%;
+        height: 120px;
+        margin-top: 1%;
+    }
+}
+
+/* css des ipunt de changer les infos */
+
+
+
+@media screen and (max-width: 1100px) {
+
+    .form-select {
+
+        font-size: 60px;
+        height: 140%;
+        width: 100%;
+        margin-left: 8%;
+        margin-top: 5%;
+
+    }
+}
+
+/* css du booton select la date */
+
+
+.modification-profil {
+    color: blue;
+    font-size: 40px;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .modification-profil {
+        font-size: 80px;
+        text-align: center;
+    }
+}
+
+/* titre de la passe */
+
+
+@media screen and (max-width: 1100px) {
+
+    .blue {
+        font-size: 60px;
+        text-align: center;
+        width: 100%;
+        width: 80%;
+        margin-top: 10%;
+        margin-left: 8%;
+    }
+}
+
+
+
+
+
+/* css Mod de passe oublié */
+
+.motdepasse {
+    color: blue;
+    font-size: 40px;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .motdepasse {
+        font-size: 60px;
+
+    }
+}
+
+
+.form-field {
+    color: black;
+    font-size: 40px;
+    margin-top: 30%;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .pass {
+        font-size: 60px;
+
+    }
+}
+
+.valider {
+    color: #ffffff;
+    font-size: 40px;
+    margin-top: 20%;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .valider {
+        font-size: 60px;
+        background-color: blue;
+    }
+}
+
+
+
+/* nav barre de profil */
+
+.fixed-top {
+    height: 108px;
+    width: 105%;
+    background-color: rgb(59, 89, 152);
+    color: #ffffff;
+    font-size: 50px;
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .fixed-top {
+        font-size: 60px;
+        width: 100%;
+        height: 15%;
+    }
+}
+
+
+
+
+.small-world {
+    margin-left: 51%;
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .small-world {
+        font-size: 80px;
+        color: #ffffff;
+
+    }
+}
+
+
+
+
+
+/* profil user */
+
+
+.photoProfil {
+    margin-bottom: 5px;
+    margin-top: 40%;
+    margin-left: 20%;
+    font-size: 21px;
+}
+
+
+
+.nomdeuser {
+    margin-top: 1%;
+    text-align: center;
+    color: blue;
+    font-size: 35px
+}
+
+@media screen and (max-width: 1100px) {
+
+    .nomdeuser {
+
+        font-size: 50px;
+        margin-top: 2%;
+
+    }
+}
+
+
+
+
+
+.photoprofil {
+    margin-top: 1%;
+    margin-left: -40%;
+    width: 40%;
+    display: block;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .photoprofil {
+        margin-left: -40%;
+        margin-top: 10%;
+        width: 150%;
+        display: block;
+
+    }
+}
+
+/* image profil */
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9

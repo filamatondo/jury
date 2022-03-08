@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactController!
+{% endblock %}
+
+{% block body %}
+
+	<div class="col-5 md-4 position-fixed fixed-top" style="margin-left:30%; margin-top:20%">
+		{% for contact in app.flashes('contact') %}
+
+			<div class="col">
+				<div class="p-3 my2 rounded-2 success">
+					{{contact}}
+				</div>
+			</div>
+		{% endfor %}
+
+		<div class="container">
+			<div class="card">
+				<div class="card-header">
+					{{ form_start(form) }}
+
+					{{ form_widget(form) }}
+					<button class="btn btn-primary" type="submit">Envoyer</button>
+					{{ form_end(form) }}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

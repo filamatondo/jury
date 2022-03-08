@@ -1,0 +1,14 @@
+{% extends 'base_apropos.html.twig' %}
+
+{% block title %}Nouvelle mention
+{% endblock %}
+
+{% block body %}
+	<div class="allo fixed-top" style="margin-top:10%;margin:10%">
+		<h1>Créer une nouvelle mention</h1>
+
+		{{ include('mention/_form.html.twig') }}
+
+		<a href="{{ path('mention_index') }}">retour à la liste</a>
+	</div>
+{% endblock %}

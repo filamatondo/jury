@@ -1,0 +1,28 @@
+{% extends 'base_apropos.html.twig' %}
+
+{% block title %}Apropo
+{% endblock %}
+
+{% block body %}
+
+
+	<div class="table position-fixed fixed-top" style="margin-top:20%;margin:10%">
+		<h1>Apropo</h1>
+
+		<div>Text</div>
+		<div>{{ apropo.text }}</div>
+
+
+		<div>Biographie</div>
+		<div>{{ apropo.biographie }}</div>
+
+
+	</div>
+
+	<a href="{{ path('apropo_index') }}">
+		retour à la liste</a>
+
+	<a href="{{ path('apropo_edit', {'id': apropo.id}) }}">Éditer</a>
+
+	{{ include('apropo/_delete_form.html.twig') }}
+{% endblock %}

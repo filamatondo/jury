@@ -5,7 +5,11 @@
 
 {% block body %}
 
+<<<<<<< HEAD
 	<section class="container py-1" style="margin-top:20%;">
+=======
+	<section class="container py-1" style="margin-top:-55%;">
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
 
 		<div class="row">
 
@@ -20,6 +24,7 @@
 
 
 						<div class="card-header">
+<<<<<<< HEAD
 						    
 						    {#{% if user.photoProfil is not null %}#}
 
@@ -29,6 +34,8 @@
 
 								{#{% endif %}#}
 						    
+=======
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
 							<h1 class="videos" style="color:blue">{{ video.video | upper}}</h1>
 							<p>Contenu</p>
 							{{ video.contenu }}
@@ -37,7 +44,11 @@
 						</div>
 
 						<div class="card-footer">
+<<<<<<< HEAD
 							<video controls class="w-100" src="{{ asset(video.partager) }}" style="height: 250px;  object-fit:contain !important; margin-top:10% "/>
+=======
+							<video controls class="w-100" src="{{ asset(video.partager) }}" style="height: 620px;  object-fit:contain !important; "/>
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
 						</div>
 						<div class="card-footer">
 
@@ -63,5 +74,9 @@
 	{% endfor %}
 
 
+<<<<<<< HEAD
 	{#<a href="{{ path('videos_new') }}">Créer un nouveau</a>#}
+=======
+	<a href="{{ path('videos_new') }}">Créer un nouveau</a>
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
 {% endblock %}

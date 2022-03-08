@@ -25,7 +25,7 @@ class MessagesController extends AbstractController
     }
 
     /**
-     * @Route("/send/{id}", name="send")
+     * @Route("/send/{id}", name="send",  methods={"GET", "POST"})
      */
 
     public function send(Request $request, UserRepository $userRepository, $id): Response
@@ -35,6 +35,7 @@ class MessagesController extends AbstractController
 
         // traitement du formulaire, il permet de recupere le formulaire et de le traiter, le " handleRequest".
         $form->handleRequest($request);
+       
 
         // voir si le formulaire est envoyer avec  " un   if form"
         if ($form->isSubmitted() && $form->isValid()) {
@@ -50,10 +51,12 @@ class MessagesController extends AbstractController
 
             // une fois le message est envoyer et retourne à la page
             // d'accueil direct. et dire à sender que le message à bien été envoyer 
+           
             $this->addFlash("message", "Message envoyer avec succès");
             return $this->redirectToRoute("send", ["id" => $id]);
+           
         }
-
+       
         return $this->render("messages/send.html.twig", [
             "form" => $form->createView()
 

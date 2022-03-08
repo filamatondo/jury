@@ -84,9 +84,15 @@ class ArticleController extends AbstractController
     {
 
         $commentaire = new Commentaire();
+<<<<<<< HEAD
 
         $form = $this->createForm(CommentaireType::class, $commentaire);
 
+=======
+
+        $form = $this->createForm(CommentaireType::class, $commentaire);
+
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -164,5 +170,21 @@ class ArticleController extends AbstractController
         }
 
         return $this->redirectToRoute('article_index', [], Response::HTTP_SEE_OTHER);
+    }
+
+
+    /**
+     * @Route("/delete/commentaire/{id}", name="commentaire_delete", methods={"POST", "GET"})
+     */
+    public function delet(Request $request, Commentaire $commentaire): Response
+    {
+        if ($this->isCsrfTokenValid('delete' . $commentaire->getId(), $request->request->get('_token'))) {
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($commentaire);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('article/show.html.twig', [], Response::HTTP_SEE_OTHER);
     }
 }

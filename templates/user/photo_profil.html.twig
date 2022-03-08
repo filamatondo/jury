@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'user_base.html.twig' %}
 
 {% block title %}
@@ -79,3 +80,86 @@
 			 	   
 		    </footer> 
 {% endblock %}
+=======
+{% extends 'user_base.html.twig' %}
+
+{% block title %}
+
+	Profil
+
+{% endblock %}
+
+{% block body %}
+
+	<header class="profil1">
+
+		<div class="container">
+
+
+			<h1 class="titre ">
+				Bonjour
+				{{ app.user.prenom }}
+				<p>
+					Bienvenue dans votre espace</p>
+			</h1>
+			<div class="formulaireimage">
+			<div class=" row">
+
+				{%  if app.user  %}{% endif %}
+
+				<div class="image">
+
+					{{form_start(form)}}
+
+
+					<div class="card-body">
+						{% if user.photoProfil is not null %}
+
+							<img class="card-img-top" src="{{ asset(user.photoProfil) }} "/>
+
+						{% else %}
+							<img src=" https://img.icons8.com/ios/50/000000/name--v2.png " class="avatar"/>
+						{% endif %}
+						<div class="telecharger">
+							{{form_widget(form)}}
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-info ">
+						enregistre
+					</button>
+
+					{{form_end(form)}}
+				</div>
+              
+			</div>
+		</div>
+
+	</header>
+	
+           <footer class="info">
+
+		           
+			          <a href=" {{path ('user_index') }}" class="infos-compte btn">
+		                   Infos compte
+				     </a>
+                  
+
+              
+				        <a href="{{ path('user_profil_modifier')}}" class=" btn modifierProfil">
+		                  Modifier le profil
+				        </a>
+				
+              
+			   
+				        <a href="{{path ('user_pass_modifier')}}" class="btn modifiermotdepasse ">
+		                   Modifier le mot de passe
+						</a>
+                	
+
+				  <a href="{{path ('img_index')}}" class=" btn album ">
+		              Album</a>
+			 	   
+		    </footer> 
+{% endblock %}
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9

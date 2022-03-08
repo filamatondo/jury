@@ -1,0 +1,17 @@
+{% extends 'base_admin_contact.html.twig' %}
+
+{% block title %}Télécharger
+{% endblock %}
+
+{% block body %}
+	<section class="container py-4" style="margin-top:-75%;">
+
+		<div class="album position-fixed fixed-top" style="margin-top:25%; margin-left:43%; height:5px ;width: 250px; ">
+
+
+			{{ include('img/_form.html.twig') }}
+
+			<a href="{{ path('img_index') }}" class="btn blue" style="margin-left:-150%; margin-top:-37%">retour à la liste</a>
+		</div>
+	</section>
+{% endblock %}

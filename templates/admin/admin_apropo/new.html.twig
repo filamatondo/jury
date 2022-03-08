@@ -1,0 +1,13 @@
+{% extends 'base_apropos.html.twig' %}
+
+{% block title %}New Apropo
+{% endblock %}
+
+{% block body %}
+	<div class="allo fixed-top" style="margin-top:10%;margin:10%">
+		<h1>Create new Apropo</h1>
+
+		{{ include('apropo/_form.html.twig') }}
+
+		<a href="{{ path('apropo_index') }}">back to list</a>
+	{% endblock %}

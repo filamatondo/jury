@@ -1,0 +1,58 @@
+{% extends 'base_admin_contact.html.twig' %}
+
+{% block title %}Videos index
+{% endblock %}
+
+{% block body %}
+
+	<section class="container py-1" style="margin-top:-55%;">
+
+		<div class="row">
+
+
+			{% for video in videos | reverse %}
+				<div class="col-2 col-md-7 " style="margin-left:22%;">
+
+					<a href="{{ path('videos_show', {'id': video.id}) }}" style="text-decoration : none !important;  "></a>
+
+
+					<div class="card">
+
+
+						<div class="card-header">
+							<h1 class="videos" style="color:blue">{{ video.video | upper}}</h1>
+							<p>Contenu</p>
+							{{ video.contenu }}
+							<p>
+								{{ video.date ? video.date|date('d/m/Y  à  H:i:s') : '' }}</p>
+						</div>
+
+						<div class="card-footer">
+							<video controls class="w-100" src="{{ asset(video.partager) }}" style="height: 620px;  object-fit:contain !important; "/>
+						</div>
+						<div class="card-footer">
+
+
+							<a href="{{ path('videos_show', {'id' :video.id}) }}" class="btn btn-primary" style="margin-left:55%;  font-size:18px; margin-top:15% ">Commenter</a>
+
+
+							{% if app.user is same as video.video %}
+								<a class="btn btn-info" href="{{ path('videos_edit', {'id' :video.id}) }}" style=" margin-top:-8% ; font-size:18px; ">Modifier</a>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</diV>
+
+	{% else %}
+		</div>
+
+		<tr>
+			<td colspan="5">Aucun enregistrement trouvé</td>
+		</tr>
+
+	{% endfor %}
+
+
+	<a href="{{ path('videos_new') }}">Créer un nouveau</a>
+{% endblock %}
