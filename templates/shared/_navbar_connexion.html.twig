@@ -22,14 +22,14 @@
 		</ol>
 
 
-		<marquee class="text-primary" style="font-size:25px ">
+		<marquee class="text-primary position-fixed" style="font-size:25px; margin-top:-2% ">
 			Connectez-vous pour accéder a votre compte Small-World
-			<img class="w-80" src="{{ asset("asset/image/small.png") }}" style="height: 70px; margin-top:-6px;   object-fit:contain !important; "/> {% block body %}{% endblock %}
+			<img class="w-80" src="{{ asset("asset/image/small.png") }}" style="height: 70px; margin-top:-10px;   object-fit:contain !important; "/> {% block body %}{% endblock %}
 			</img>
 		</marquee>
 
 
-		<div class="carousel-inner col-1 col-md-7" style="margin-left:40%;  margin-top:5%">
+		<div class="carousel-inner col-1 col-md-7 position-fixed" style="margin-left:10%;  margin-top:10%">
 			<div class="carousel-item active">
 				<img src="{{ asset('asset/image/logo_large.png') }}" class="d-block w-50" alt=" ">
 				<div class="carousel-caption d-none d-md-block"></div>
@@ -54,12 +54,5 @@
 	</div>
 
 
-	<div id="example-sidenav" class="sidenav large fixed white position-fixed py-4" style=" margin-top:5%;  width: 25%; font-size:20px">
-		<div class="sidenav-header" style="margin-top:8%">
-			<button data-target="example-sidenav" class="sidenav-trigger">
-				<i class="fas fa-times"></i>
-			</button>
-
-		</button>
-	</div>
-</body></html>
+	
+</section>

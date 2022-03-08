@@ -1,0 +1,342 @@
+.Titre {
+  margin-top: 2%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 40px;
+
+}
+
+/* titre de la page d'inscription */
+@media screen and (max-width: 1100px) {
+
+  .Titre {
+    font-size: 80px;
+    margin-top: 1%;
+
+  }
+}
+
+
+.champs {
+  display: block;
+  margin: 20%;
+  margin-top: -1%;
+  position: fixed;
+
+}
+
+/* la classe champs qui est la classe mère des input */
+
+@media screen and (max-width: 1100px) {
+
+
+  .champs {
+
+    margin: 4%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+  }
+
+}
+
+
+.nom {
+  width: 100%;
+  height: 35px;
+  font-size: 20px;
+}
+
+/* taille des ipunt de création d'un compte. */
+
+
+@media screen and (max-width: 1100px) {
+
+  .nom {
+    height: 100px;
+    width: 110%;
+    font-size: 60px;
+    margin-top: 2%
+  }
+
+}
+
+.prenom {
+  width: 100%;
+  height: 35px;
+  font-size: 20px;
+  margin-top: -1%;
+}
+
+/* taille des ipunt de création d'un compte. */
+
+
+@media screen and (max-width: 1100px) {
+
+  .prenom {
+    height: 140%;
+    width: 110%;
+    font-size: 60px;
+    margin-top: 4%;
+
+
+  }
+}
+
+.email {
+  width: 100%;
+  height: 35px;
+  font-size: 20px;
+  margin-top: -4%;
+}
+
+/* taille des ipunt de création d'un compte. */
+
+@media screen and (max-width: 1100px) {
+
+  .email {
+    height: 140%;
+    width: 110%;
+    font-size: 60px;
+    margin-top: 1%;
+
+
+  }
+}
+
+
+.first {
+  width: 100%;
+  height: 35px;
+  font-size: 20px;
+  margin-top: -4%
+}
+
+@media screen and (max-width: 1100px) {
+
+  .first {
+    height: 140%;
+    width: 110%;
+    font-size: 60px;
+    margin-top: 1%;
+
+  }
+}
+
+
+.second {
+  width: 100%;
+  height: 35px;
+  font-size: 20px;
+  margin-top: -4%;
+}
+
+@media screen and (max-width: 1100px) {
+
+  .second {
+    height: 140%;
+    width: 110%;
+    font-size: 60px;
+    margin-top: 1%;
+
+  }
+}
+
+
+
+.sexe {
+  margin-top: 24%;
+  margin-left: 4%;
+}
+
+/* css du bouton sex */
+
+@media screen and (max-width: 1100px) {
+
+  .sexe {
+    height: 140%;
+    width: 180%;
+    font-size: 60px;
+    margin-top: 80%;
+
+  }
+}
+
+
+.date {
+  width: 100%;
+  height: 35px;
+  font-size: 20px;
+  margin-top: 4%;
+
+}
+
+/* css de formulaire de la date */
+
+@media screen and (max-width: 1100px) {
+
+  .form-select {
+
+
+    font-size: 55px;
+    height: 140%;
+    width: 143px;
+    margin-left: -1%;
+
+  }
+}
+
+
+
+
+.dates {
+  width: 90%;
+  height: 35px;
+  font-size: 10px;
+  margin-top: -8.5%;
+  margin-left: -2.5%;
+}
+
+@media screen and (max-width: 1100px) {
+
+  .dates {
+    font-size: 25px;
+    margin-top: -4%;
+    height: 50px;
+
+  }
+}
+
+
+
+
+.agree {
+  margin-left: 50%;
+  font-size: 15px;
+  color: blue;
+  margin-top: -8%;
+}
+
+/* css de l'agree de la page d'inscription */
+
+@media screen and (max-width: 1100px) {
+
+  .agree {
+    font-size: 35px;
+    margin-top: 8%;
+    margin-left: 3%;
+
+
+  }
+}
+
+.agrees {
+  margin-left: 50%;
+  font-size: 15px;
+  color: blue;
+  margin-top: 1%;
+}
+
+/* css de l'agree de la page d'inscription */
+
+@media screen and (max-width: 1100px) {
+
+  .agrees {
+    margin-top: 5%;
+    width: 8%;
+    height: 100%;
+    margin: -6.5%
+  }
+}
+
+/* input agrees avec le media query */
+
+
+
+.inscrire {
+  height: 120%;
+  width: 140px;
+  background-color: #8EC760;
+  color: #ffffff;
+  border-radius: 10px;
+  border-color: #fff;
+  font-size: 20px;
+  border-style: double;
+  cursor: pointer;
+  margin-left: 40%;
+}
+
+/* css de la touche s'inscrire */
+
+@media screen and (max-width: 1100px) {
+
+  .inscrire {
+    font-size: 50px;
+    height: 100px;
+    width: 240px;
+    margin: 5%;
+    margin-left: 1%;
+  }
+}
+
+/* touche inscrire et les media query */
+
+
+
+
+.message {
+  font-size: 20px;
+  margin: 20px;
+  margin-top: -1%;
+  color: rgb(120, 120, 247);
+  text-align: center;
+  display: flex;
+}
+
+/* css du message */
+
+.footer {
+  margin-left: 40%;
+  margin-top: -8%;
+}
+
+/* footer la classe footer  */
+
+/* mention legales le parent de la classe apropos et mention*/
+
+.APROPOS {
+  font-size: 18px;
+  margin-left: 28%;
+
+
+}
+
+@media screen and (max-width: 1100px) {
+
+  .APROPOS {
+    font-size: 35px;
+    margin-top: 20%;
+    margin-left: -40%;
+  }
+}
+
+/* botton appropos et les média query */
+
+
+.mentions {
+  margin-left: -57%;
+  font-size: 18px;
+
+}
+
+@media screen and (max-width: 1100px) {
+
+  .mentions {
+    font-size: 35px;
+    margin-left: -110%;
+    margin-top: 20%;
+  }
+}
+
+/* botton mentions et les media query */

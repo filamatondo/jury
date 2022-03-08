@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block body %}
-	<div class="register-form position-fixed fixed-top" style="margin-bottom:5px; margin-top:20%; margin-left:20%; font-size:21px;">
+	<header class="photoProfil">
 
 		<div
 			class="container">
@@ -17,14 +17,14 @@
 
 			<div class="row">
 
-				<h1 class="titre" style="margin-top:-10%;margin-left:20%;  color:blue; font-size:15px ">
+				<h1 class="nomdeuser">
 
 					{{ user.nom }}
 					{{ user.prenom }}
 				</h1>
 				<div>
 					{% if user.photoProfil is not null %}
-						<img class="w-80" src="{{ asset(user.photoProfil) }}" style="height: 280px; margin-top:1%; margin-left:10%; "/>
+						<img class="photoprofil" src="{{ asset(user.photoProfil) }} "/>
 					{% else %}
 						<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3" style=" height: 250px; width: 280px;"/>
 					{% endif %}

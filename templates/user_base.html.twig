@@ -12,10 +12,9 @@
 			{#{{ encore_entry_link_tags('app') }}#}
 		{% endblock %}
 
-		{% include "shared/_navbar_profil.html.twig" %}
+	
 
-		<link rel="stylesheet" href="{{ asset("asset/css/styles_profil.css") }}">
-
+	
 
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
@@ -47,11 +46,16 @@
 
 
 	</head>
+	
+		
 
-
+		<link rel="stylesheet" href="{{ asset("css/styles_profil.css") }}">
 	<body>
-		{% block body %}{% endblock %}
-
+		{% block body %}
+		
+		{% endblock %}
+		{% include "shared/_navbar_profil.html.twig" %}
 
 	</body>
+	
 </html>
