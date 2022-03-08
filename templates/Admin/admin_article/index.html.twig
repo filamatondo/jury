@@ -1,0 +1,80 @@
+{% extends 'base_admin_contact.html.twig' %}
+
+{% block title %}Article index
+{% endblock %}
+
+{% block body %}
+
+<section class="container py-4" style="margin-top:-10%;">
+
+
+	<div class="row">
+
+
+		{% for article in articles | reverse %}
+			<div class="col-1 col-md-7 " style="margin-left:18%;">
+
+
+				<a href="{{ path('article_show', {'id': article.id}) }}" style="text-decoration : none !important;  "></a>
+				<div class="card">
+
+
+					<div class="card-header">
+						<h1>{{ article.titre | upper}}</h1>
+						<p>Auteur :{{ article.auteur}}
+
+
+							<div class="col-1" style="margin-left:1% ; ">
+								{%  if app.user == article.auteur == user.photoProfil %}
+
+									<img class="w-90" src="{{ asset(user.photoProfil) }}" style="height: 100px; margin-top:10%; margin-left:20%;  "/>
+								{% else %}
+									<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3" style=" height: 100px; width: 90px;"/>
+
+								{% endif %}
+
+
+							</p>
+						</p>
+					</div>
+
+				</p>
+			</p>
+			<p>Contenu</p>
+			{{ article.contenu }}
+			<p>
+				{{ article.date ? article.date|date('d/m/Y  à  H:i:s') : '' }}</p>
+		</div>
+
+
+		<div class="card-body">
+
+			<img class="w-100" src="{{ asset(article.image) }}" style="height: 620px;  object-fit:contain !important; "/>
+
+
+			<div class="card-footer">
+
+
+				<a href="{{ path('article_show', {'id' :article.id}) }}" class="btn btn-primary" style="margin-left:60%; font-size:14px; font-size:14px; ">Commenter</a>
+
+				<a href="{{ path('article_show', {'id' :article.id}) }}" class="btn btn-success" style="margin-left:20%; margin-top:-8% ; font-size:14px; ">voir l'article</a>
+
+
+				{% if app.user is same as article.auteur %}
+
+					<a href="{{ path('article_edit', {'id' :article.id}) }}" class="btn btn-info" style=" margin-left:-40%; margin-top:-8% ; font-size:14px; ">Modifier</a>
+
+
+					{% if app.user.roles[0] is same as "ROLE_ADMIN" %}
+						<a href="{{ path('admin_article_edit', {'id' :article.id}) }}" class="btn btn-info" style=" margin-left:-40%; margin-top:-8% ; font-size:14px; ">Modifier</a>
+					{% endif %}
+
+				{% endif %}
+
+
+			</div>
+
+
+		</div>
+	</div>
+</div>{% endfor %}</div></section>{% endblock %}

@@ -1,0 +1,10 @@
+[02-Oct-2021 03:31:47 UTC] PHP Fatal error:  Interface 'Symfony\Component\Security\Core\User\UserInterface' not found in /home/c1726408c/public_html/jury/src/Entity/User.php on line 18
+[02-Oct-2021 03:31:48 UTC] PHP Fatal error:  Interface 'Symfony\Component\Security\Core\User\UserInterface' not found in /home/c1726408c/public_html/jury/src/Entity/User.php on line 18
+[02-Oct-2021 04:12:34 UTC] PHP Fatal error:  Interface 'Symfony\Component\Security\Core\User\UserInterface' not found in /home/c1726408c/public_html/jury/src/Entity/User.php on line 18
+[02-Oct-2021 04:12:35 UTC] PHP Fatal error:  Interface 'Symfony\Component\Security\Core\User\UserInterface' not found in /home/c1726408c/public_html/jury/src/Entity/User.php on line 18
+[02-Oct-2021 17:31:21 UTC] PHP Fatal error:  Interface 'Symfony\Component\Security\Core\User\UserInterface' not found in /home/c1726408c/public_html/jury/src/Entity/User.php on line 18
+[02-Oct-2021 17:31:22 UTC] PHP Fatal error:  Interface 'Symfony\Component\Security\Core\User\UserInterface' not found in /home/c1726408c/public_html/jury/src/Entity/User.php on line 18
+[05-Oct-2021 13:21:43 UTC] PHP Fatal error:  Interface 'Symfony\Component\Security\Core\User\UserInterface' not found in /home/c1726408c/public_html/jury/src/Entity/User.php on line 18
+[05-Oct-2021 13:21:44 UTC] PHP Fatal error:  Interface 'Symfony\Component\Security\Core\User\UserInterface' not found in /home/c1726408c/public_html/jury/src/Entity/User.php on line 18
+[05-Oct-2021 21:01:49 UTC] PHP Fatal error:  Interface 'Symfony\Component\Security\Core\User\UserInterface' not found in /home/c1726408c/public_html/jury/src/Entity/User.php on line 18
+[05-Oct-2021 21:01:51 UTC] PHP Fatal error:  Interface 'Symfony\Component\Security\Core\User\UserInterface' not found in /home/c1726408c/public_html/jury/src/Entity/User.php on line 18

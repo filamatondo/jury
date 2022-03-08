@@ -4,28 +4,38 @@
 {% endblock %}
 
 {% block body %}
-	<div class="register-form" style="margin-botton:105px;">
 
-		<section class="container">
-			<div class="row">
-				<div class="col-12">
-					<h1>Messagerie</h1>
-
-
-					<p>Message de
-						{{ message.sender.email }}</p>
-					<p>Le
-						{{ message.createdAt|date }}</p>
-					<div>{{ message.message }}</div>
-
-					<a href="{{ path ("send", {'id': message.sender.id })}} " class="btn btn-primary mt-5">Répondre</a>
-
-					<a href="{{ path("received") }}" class="btn btn-link mt-5">Retour à la boite de réception</a>
+	<section class="container">
+		<div class="row">
+			<div class="col-12" style="margin-left:20%">
+				<h1 class="reception" style="margin-top:23%; margin-left:1%; font-size:29px;  color:blue ">Vous avez Reçu</h1>
 
 
+				<div class="card" style="width: 38.5rem;  height:18rem;  margin-left:5%;">
+					<div class="card-body">
+						<div class="card-heard">
+							<div class="card-title" style="color:blue; width: 12rem; font-size:15px">
+								<p class="email" style="color:blue; margin-top:-12% ">Message de</p>
+
+								<p class="email" style="color:#008B8B; margin-top:-10%; font-weight: bold ">
+									{{ message.sender.email }}
+								</p>
+								<p class="email" style="color:black; margin-top:-10% ;font-size:14px">
+									{{ message.createdAt|date }}</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-footer" style="width: 35rem;  height:31rem;  margin:1%; font-size:17px">
+						<div>{{ message.message | raw}}</div>
+
+					</div>
 				</div>
 			</div>
-		</section>
-	</div>
+		</div>
+	</section>
+	<a href="{{ path ("send", {'id': message.sender.id })}} " class="btn btn-info mt-5;" style=" font-size:17px; margin-left:32.5%; margin-top:2%">Répondre</a>
+
+	<a href="{{ path("received") }}" class="btn btn-link mt-5; " style="font-size:17px; margin-left:60%; margin-top:-4%">Retour à la boite de réception</a>
 
 {% endblock %}

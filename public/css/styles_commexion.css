@@ -1,0 +1,93 @@
+.font-weight-normal {
+    font-size: 30px;
+    margin-left: -5%;
+    margin-top: 12%;
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .font-weight-normal {
+        margin-top: 85%;
+        font-size: 60px;
+    }
+}
+
+/* la classe du message de veillez vous connecter */
+
+
+.connexion {
+    margin: 8%;
+    margin-top: -10%;
+    font-size: 18px;
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .connexion {
+        font-size: 55px;
+        margin: 10%;
+
+    }
+}
+
+/* la classe connexion des input de connexion */
+
+
+.form-control {
+    width: 30%;
+    height: 40px;
+    margin-left: -2%;
+    font-size:50px;
+
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .form-control {
+        width: 100%;
+        height: 120px;
+        margin-left: -1%;
+        font-size:50px;
+        
+       
+    }
+}
+
+/* taille des input de connexion */
+
+
+
+.btn-primary {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .btn-primary {
+        width: 90%;
+        height: 120px;
+        font-size: 60px;
+    }
+}
+
+/* botton de connexion */
+
+
+.motdepasseoublier {
+    margin-left: 10%;
+    font-size: 18px
+}
+
+@media screen and (max-width: 1100px) {
+
+    .motdepasseoublier {
+        font-size: 50px;
+    }
+}
+
+.mot {
+    margin-top: -8%;
+}

@@ -8,33 +8,23 @@
 {% endblock %}
 
 {% block body %}
-	<div class="register-form" style="margin:25px;">
+	 <div class=" modifierinfoPersonnel">
 
-		<div class="grix xs2 container">
+				<div class="col-12">
 
-
-			<div class="grix xs4 containe">
-
-				<div class="col-xs4">
-
-					<h1>
-						Modification du profil de
-						{{ app.user.prenom }}
-						{{ app.user.nom }}
+					<h1 class="modification-profil">
+						Modifier profil
 					</h1>
-
 
 					{{ form_start(form) }}
 					{{ form_widget(form) }}
-					<button class="btn">{{ button_label|default('Save') }}</button>
+					<button class="btn blue">{{ button_label|default('Enregistrer') }}</button>
 					{{ form_end(form) }}
 
 
 				</div>
 
-
-			</div>
 		</div>
 
 
-	{% endblock %}
+{% endblock %}

@@ -9,11 +9,12 @@ use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
@@ -24,33 +25,45 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('nom', TextType::class, [
-                'label' => 'Nom',
+                'label' => false,
                 'attr' => ['placeholder' => 'Entrez votre nom']
 
             ])
 
             ->add('prenom', TextType::class, [
-                'label' => 'Prenom',
+                'label' => false,
                 'attr' => ['placeholder' => 'Entrez votre prénom']
             ])
 
             ->add('email', EmailType::class, [
-                'label' => 'Email',
+                'label' => false,
                 'attr' => ['placeholder' => 'Entrez votre email']
 
             ])
 
 
-            ->add('date', DateType::class, [
-                'label' => 'Date',
-                'attr' => ['placeholder' => 'Entrez votre Age']
+            ->add('date', BirthdayType::class, [
+                'label' => false,
+
+
             ])
 
             ->add('sexe', ChoiceType::class, [
-                'label' => 'Sexe',
+                'label' => false,
                 'choices' => [
-                    'Homme' => 'Homme',
-                    'Femme' => 'Femme',
+                    'Sexe' => '',
+                    'Homme' => 'H',
+                    'Femme' => 'F',
+                ]
+            ])
+
+            ->add('agreeTerms', CheckboxType::class, [
+                'mapped' => false,
+                'label' => 'Veuillez accepter les CGUV',
+                'constraints' => [
+                    new IsTrue([
+                        'message' => 'Vous devez accepter les CGUV',
+                    ])
                 ]
             ])
 
@@ -82,7 +95,9 @@ class RegistrationFormType extends AbstractType
                         ]),
                     ],
                 ],
-            ]);
+            ]); 
+
+             
     }
 
     public function configureOptions(OptionsResolver $resolver)

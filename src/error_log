@@ -1,0 +1,68 @@
+[02-Oct-2021 03:31:33 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10
+[02-Oct-2021 03:31:34 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10
+[02-Oct-2021 04:12:17 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10
+[02-Oct-2021 04:12:18 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10
+[02-Oct-2021 17:31:06 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10
+[02-Oct-2021 17:31:07 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10
+[05-Oct-2021 13:21:30 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10
+[05-Oct-2021 13:21:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10
+[05-Oct-2021 21:00:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10
+[05-Oct-2021 21:01:00 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10
+[07-Oct-2021 13:23:33 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10
+[07-Oct-2021 13:23:33 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10
+[07-Oct-2021 13:23:33 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10
+[07-Oct-2021 13:23:33 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10
+[07-Oct-2021 13:23:34 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10
+[07-Oct-2021 13:23:38 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10
+[07-Oct-2021 13:23:38 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\HttpKernel\Kernel' not found in /home/c1726408c/public_html/jury/src/Kernel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Kernel.php on line 10

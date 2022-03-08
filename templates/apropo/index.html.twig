@@ -1,0 +1,36 @@
+{% extends 'base_apropos.html.twig' %}
+
+{% block title %}Apropo index
+{% endblock %}
+
+{% block body %}
+
+	<h1 class="titre fixed-top position-top " style=" margin:10%">Small-world</h1>
+
+
+	{% for apropo in apropos %}
+
+		<div class="allo" style="margin-left:30%; margin-top:-53%">
+			<video controls class="w-80" src="{{ asset(apropo.paragraphe) }}" style="height: 520px;"/>
+		</div>
+
+		<div class="allo" style="margin-top:5%;margin-left:30%">
+			<div>{{ apropo.text }}</div>
+			<div>{{ apropo.biographie }}</div>
+		</div>
+
+		<div class="edit" style="margin-left:30%; margin-top:5%">
+			<a class="btn btn-success" href="{{ path('apropo_show', {'id': apropo.id}) }}">Afficher</a>
+			<a class="btn btn-primary" href="{{ path('apropo_edit', {'id': apropo.id}) }}" style="margin-left:30%; margin-top:-3.5%">Éditer</a>
+		</div>
+
+	{% else %}
+
+		<div colspan="5">Aucun enregistrement trouvé</div>
+
+	{% endfor %}
+
+
+	<a class="btn btn-info" href="{{ path('apropo_new') }}" style="margin-left:70%; margin-top:-3%">
+		Télécharger</a>
+</div>{% endblock %}

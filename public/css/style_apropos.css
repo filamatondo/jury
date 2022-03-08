@@ -1,0 +1,56 @@
+.navbar-expand-lg {
+  background-color: rgb(1, 112, 116);
+}
+
+/* navbar de la page d'inscription */
+
+
+.MonCompte {
+  margin-top: -2.5%;
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 93%;
+}
+
+/* le lien connexion pour aller sur la page de connexion */
+
+.connexion {
+  margin-left: -14%;
+}
+
+.ImageProfil {
+  color: #ffffff;
+  margin-top: -10%;
+  margin-left: 22%;
+
+}
+
+/* logo de la touche mon compte */
+
+
+.AproposTitre {
+  text-align: center;
+  font-size: 70px;
+  color: blue;
+  /* margin-top: -45%; */
+}
+
+/* titre de la page d'inscription */
+
+.container {
+  font-size: 20px;
+  text-align: center;
+}
+
+/*  la class container de l'index apropos. */
+
+
+.AproposNew {
+  text-align: center;
+  font-size: 70px;
+  color: blue;
+}
+
+.page {
+  margin-top: -50%
+}

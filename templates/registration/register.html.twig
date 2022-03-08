@@ -1,90 +1,98 @@
 {% extends 'base_inscrire.html.twig' %}
 
-{% block title %}s'inscrire
+{% block title %}
+	Inscription
 {% endblock %}
 
 {% block body %}
 
+<div class ="Inscription">
+	<h1 class ="Titre">
+		INSCRIPTION
+	</h1>
+	{#<marquee> Bonjour Générale  avec mon frère désiré</marquee>#}
+</div>
+	<!-- Titre pour s'inscrire sur le site small world-->
 
-	<nav>
+<div class=" champs">
+	
+		<div class="card">
+
+			<div class="card-header">
+				{{ form_start(registrationForm) }}
+
+				<div class="container">
+
+					<div class="row">
+
+					
+
+						<div class="mb-3">
+							{{ form_widget(registrationForm.nom, { 'attr': {'class': 'nom'} }) }}
+						</div>
 
 
-		<main>
+						<div class="mb-3">
+							{{ form_row(registrationForm.prenom,  { 'attr': {'class': 'prenom'} } ) }}
+						</div>
+
+						<div class="mb-3">
+							{{ form_row(registrationForm.email,  { 'attr': {'class': 'email'} }) }}
+						</div>
+
+						<div class="mb-3">
+							{{ form_row(registrationForm.plainPassword.first,  { 'attr': {'class': 'first'} } )  }}
+						</div>
+
+						<div class="mb-3">
+							{{ form_row(registrationForm.plainPassword.second,{ 'attr': {'class': 'second'} }  ) }}
+						</div>
+
+                        <div class="dates ">
+							{{ form_row(registrationForm.date, { 'attr': {'class': 'date'} }) }}
+						</div>
+
+						<div class="col-3 md-3">
+							{{ form_row(registrationForm.sexe, { 'attr': {'class': 'sexe'} } ) }}
+						</div>
 
 
-			{# <div class="p-7 m-5 baground-color-primary  "> #}
-		
-
-				<h2>
-					<div class="register-form" style="margin-bottom:50px; font-size:50px;  margin-left: 330px; ">
-						
-							Créer votre compte Small World
-						
-
-					</div>
-
-
-				</h2>
-
-				<!-- Titre pour s'inscrire sur le site small world-->
-
-				<div class="register-form" style="  display: flex; ">
+						<div class="agree">
+							{{ form_row(registrationForm.agreeTerms, { 'attr': {'class': 'agrees'} }) }}
+						</div>
 
 
 						<div class="col-12">
-
-							{{ form_start(registrationForm) }}
-
-							<div class="register-form" style="margin-bottom:15px; margin-left: 350px;  width: 500px; ">
-								{{ form_widget(registrationForm.nom ) }}
-							</div>
-
-							<div class="register-form" style="margin-bottom:15px; margin-left: 350px; width: 500px;">
-
-								{{ form_widget(registrationForm.prenom ) }}
-							</div>
-
-							<div class="register-form" style="margin-bottom:15px; margin-left: 350px; width: 500px;">
-								{{ form_widget(registrationForm.email) }}
-							</div>
-
-
-							<div class="register-form" style="margin-bottom:15px; margin-left: 350px;  width: 500px; ">
-								{{ form_widget(registrationForm.plainPassword ) }}
-							</div>
-
-
-							<div class="register-form" style="margin-bottom:15px; margin-left: 350px;  width: 500px; ">
-								{{ form_widget(registrationForm.date) }}
-							</div>
-
-
-							<div class="register-form" style="margin-bottom:5px; margin-left: 350px; width: 80px; ">
-								{{ form_widget(registrationForm.sexe ) }}
-							</div>
-
-
-							<div class="INSCRIPTION">
-								<button type="submit" class="inscrire">S'inscrire</button>
-							</div>
-
-							{{ form_end(registrationForm) }}
+							<button class="inscrire" type="submit">S'inscrire</button>
 						</div>
+
+						{{ form_end(registrationForm) }}
 					</div>
+
+					<footer class=" footer">
+						{# <div class="message">
+							<p class="col-12 col-md-7 " style=" margin-left:55%; font-size:12px; margin-top:-15%">Il existe des tas de façons de rester en contact avec vos proches
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								Small world est un petit moyen sympa de garder contact avec le monde; C'est super facile à utiliser</p>
+
+						</div> #}
+						{# Message explicatif #}
+
+						
+							<div class="col-12">
+								<a class="navbar-link" href="{{path ("apropo_index") }}">
+									<div class="APROPOS">À propos</div>
+								</a>
+							</div>
+							<div class="col-12">
+								<a class="navbar-link" href="{{path("mention_index")}}">
+								 <div class="mentions">Mentions légales </div>
+								</a>
+							</div>
+					</footer>
 				</div>
-
 			</div>
-
 		</div>
-		<footer>
-			<div class="message">
-				<ul>
-					<ol>Il existe des tas de façons de rester en contact avec vos proches</ol>
-					<ol>Small world est un petit moyen sympa de garder contact avec</ol>
-					<ol>le monde; C'est super facile à utiliser</ol>
-				</ul>
-			</div>
-		</footer>
 
-	</main>
-</nav>{% endblock %}
+	</div>
+
+{% endblock %}

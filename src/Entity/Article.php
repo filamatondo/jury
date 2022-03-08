@@ -39,9 +39,10 @@ class Article
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="articles")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true, onDelete="SET NULL")
      */
     private $auteur;
+
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -59,7 +60,7 @@ class Article
      public function prePersist()
      {
          if(empty($this->date)){
-         $this->createdAt = new DateTime();
+         $this->date = new DateTime();
          } 
      }
 

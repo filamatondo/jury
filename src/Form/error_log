@@ -1,0 +1,360 @@
+[02-Oct-2021 03:31:48 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php on line 22
+[02-Oct-2021 03:31:49 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php on line 22
+[02-Oct-2021 03:31:49 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/ArticleType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/ArticleType.php on line 13
+[02-Oct-2021 03:31:50 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/ArticleType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/ArticleType.php on line 13
+[02-Oct-2021 03:31:50 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CalepinType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CalepinType.php on line 13
+[02-Oct-2021 03:31:51 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CalepinType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CalepinType.php on line 13
+[02-Oct-2021 03:31:51 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php on line 11
+[02-Oct-2021 03:31:52 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php on line 11
+[02-Oct-2021 03:31:52 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php on line 14
+[02-Oct-2021 03:31:53 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php on line 14
+[02-Oct-2021 03:31:53 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/MessagesType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/MessagesType.php on line 15
+[02-Oct-2021 03:31:54 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/MessagesType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/MessagesType.php on line 15
+[02-Oct-2021 03:31:54 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php on line 21
+[02-Oct-2021 03:31:55 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php on line 21
+[02-Oct-2021 03:31:55 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php on line 15
+[02-Oct-2021 03:31:56 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php on line 15
+[02-Oct-2021 03:31:56 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/UserType.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/UserType.php on line 10
+[02-Oct-2021 03:31:57 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/UserType.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/UserType.php on line 10
+[02-Oct-2021 04:12:35 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php on line 22
+[02-Oct-2021 04:12:36 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php on line 22
+[02-Oct-2021 04:12:36 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/ArticleType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/ArticleType.php on line 13
+[02-Oct-2021 04:12:37 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/ArticleType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/ArticleType.php on line 13
+[02-Oct-2021 04:12:37 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CalepinType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CalepinType.php on line 13
+[02-Oct-2021 04:12:38 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CalepinType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CalepinType.php on line 13
+[02-Oct-2021 04:12:38 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php on line 11
+[02-Oct-2021 04:12:39 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php on line 11
+[02-Oct-2021 04:12:39 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php on line 14
+[02-Oct-2021 04:12:40 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php on line 14
+[02-Oct-2021 04:12:40 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/MessagesType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/MessagesType.php on line 15
+[02-Oct-2021 04:12:41 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/MessagesType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/MessagesType.php on line 15
+[02-Oct-2021 04:12:41 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php on line 21
+[02-Oct-2021 04:12:42 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php on line 21
+[02-Oct-2021 04:12:42 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php on line 15
+[02-Oct-2021 04:12:43 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php on line 15
+[02-Oct-2021 04:12:43 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/UserType.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/UserType.php on line 10
+[02-Oct-2021 04:12:44 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/UserType.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/UserType.php on line 10
+[02-Oct-2021 17:31:22 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php on line 22
+[02-Oct-2021 17:31:23 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php on line 22
+[02-Oct-2021 17:31:23 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/ArticleType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/ArticleType.php on line 13
+[02-Oct-2021 17:31:24 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/ArticleType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/ArticleType.php on line 13
+[02-Oct-2021 17:31:24 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CalepinType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CalepinType.php on line 13
+[02-Oct-2021 17:31:25 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CalepinType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CalepinType.php on line 13
+[02-Oct-2021 17:31:25 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php on line 11
+[02-Oct-2021 17:31:26 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php on line 11
+[02-Oct-2021 17:31:26 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php on line 14
+[02-Oct-2021 17:31:27 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php on line 14
+[02-Oct-2021 17:31:27 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/MessagesType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/MessagesType.php on line 15
+[02-Oct-2021 17:31:28 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/MessagesType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/MessagesType.php on line 15
+[02-Oct-2021 17:31:28 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php on line 21
+[02-Oct-2021 17:31:29 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php on line 21
+[02-Oct-2021 17:31:29 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php on line 15
+[02-Oct-2021 17:31:30 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php on line 15
+[02-Oct-2021 17:31:30 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/UserType.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/UserType.php on line 10
+[02-Oct-2021 17:31:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/UserType.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/UserType.php on line 10
+[05-Oct-2021 13:21:44 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php on line 22
+[05-Oct-2021 13:21:45 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php on line 22
+[05-Oct-2021 13:21:45 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/ArticleType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/ArticleType.php on line 13
+[05-Oct-2021 13:21:46 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/ArticleType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/ArticleType.php on line 13
+[05-Oct-2021 13:21:46 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CalepinType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CalepinType.php on line 13
+[05-Oct-2021 13:21:47 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CalepinType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CalepinType.php on line 13
+[05-Oct-2021 13:21:47 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php on line 11
+[05-Oct-2021 13:21:48 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php on line 11
+[05-Oct-2021 13:21:48 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php on line 14
+[05-Oct-2021 13:21:49 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php on line 14
+[05-Oct-2021 13:21:50 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/MessagesType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/MessagesType.php on line 15
+[05-Oct-2021 13:21:51 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/MessagesType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/MessagesType.php on line 15
+[05-Oct-2021 13:21:51 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php on line 21
+[05-Oct-2021 13:21:52 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php on line 21
+[05-Oct-2021 13:21:52 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php on line 15
+[05-Oct-2021 13:21:53 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php on line 15
+[05-Oct-2021 13:21:53 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/UserType.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/UserType.php on line 10
+[05-Oct-2021 13:21:54 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/UserType.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/UserType.php on line 10
+[05-Oct-2021 21:01:52 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php on line 22
+[05-Oct-2021 21:01:53 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/AdminPasswordType.php on line 22
+[05-Oct-2021 21:01:53 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/ArticleType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/ArticleType.php on line 13
+[05-Oct-2021 21:01:55 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/ArticleType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/ArticleType.php on line 13
+[05-Oct-2021 21:01:55 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CalepinType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CalepinType.php on line 13
+[05-Oct-2021 21:01:56 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CalepinType.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CalepinType.php on line 13
+[05-Oct-2021 21:01:56 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php on line 11
+[05-Oct-2021 21:01:57 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/CommentaireType.php on line 11
+[05-Oct-2021 21:01:57 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php on line 14
+[05-Oct-2021 21:01:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/EditProfileType.php on line 14
+[05-Oct-2021 21:01:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/MessagesType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/MessagesType.php on line 15
+[05-Oct-2021 21:02:00 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/MessagesType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/MessagesType.php on line 15
+[05-Oct-2021 21:02:00 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php on line 21
+[05-Oct-2021 21:02:01 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/RegistrationFormType.php on line 21
+[05-Oct-2021 21:02:01 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php on line 15
+[05-Oct-2021 21:02:03 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/SearchUserType.php on line 15
+[05-Oct-2021 21:02:03 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/UserType.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/UserType.php on line 10
+[05-Oct-2021 21:02:04 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Form\AbstractType' not found in /home/c1726408c/public_html/jury/src/Form/UserType.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Form/UserType.php on line 10

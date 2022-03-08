@@ -1,0 +1,40 @@
+[02-Oct-2021 03:32:03 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Security\Http\Authenticator\AbstractLoginFormAuthenticator' not found in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php on line 19
+[02-Oct-2021 03:32:04 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Security\Http\Authenticator\AbstractLoginFormAuthenticator' not found in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php on line 19
+[02-Oct-2021 04:12:50 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Security\Http\Authenticator\AbstractLoginFormAuthenticator' not found in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php on line 19
+[02-Oct-2021 04:12:51 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Security\Http\Authenticator\AbstractLoginFormAuthenticator' not found in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php on line 19
+[02-Oct-2021 17:31:37 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Security\Http\Authenticator\AbstractLoginFormAuthenticator' not found in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php on line 19
+[02-Oct-2021 17:31:38 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Security\Http\Authenticator\AbstractLoginFormAuthenticator' not found in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php on line 19
+[05-Oct-2021 13:21:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Security\Http\Authenticator\AbstractLoginFormAuthenticator' not found in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php on line 19
+[05-Oct-2021 13:22:00 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Security\Http\Authenticator\AbstractLoginFormAuthenticator' not found in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php on line 19
+[05-Oct-2021 21:02:17 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Security\Http\Authenticator\AbstractLoginFormAuthenticator' not found in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php on line 19
+[05-Oct-2021 21:02:18 UTC] PHP Fatal error:  Uncaught Error: Class 'Symfony\Component\Security\Http\Authenticator\AbstractLoginFormAuthenticator' not found in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/c1726408c/public_html/jury/src/Security/UserAuthenticator.php on line 19

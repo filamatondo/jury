@@ -2,18 +2,22 @@
 
 namespace App\Entity;
 
+use DateTime;
+use App\Entity\Article;
+use App\Entity\Messages;
+use App\Entity\Commentaire;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
-use Symfony\Component\Validator\Constraints\DateTime;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
- * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
+ * @UniqueEntity(fields={"email"}, message="Cet email n'est pas valide.")
  */
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -24,10 +28,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $id;
 
+
+
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Assert\NotBlank(message="Vous devez ajouter un email")
      */
-    private $email;
+    private $email = 0;
 
     /**
      * @ORM\Column(type="json")
@@ -42,11 +49,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Vous devez ajouter un nom de famille")
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Vous devez ajouter un prénom")
      */
     private $prenom;
 
@@ -66,7 +75,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $sent;
 
     /**
-     * @ORM\OneToMany(targetEntity=Messages::class, mappedBy="recipient")
+     * @ORM\OneToMany(targetEntity=Messages::class, mappedBy="recipient",  orphanRemoval=true)
      */
     private $received;
 
@@ -80,23 +89,60 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $commentaires;
 
-    public function __toString() {
-        return $this->getNom();
-    }
+    /**
+     * @ORM\OneToMany(targetEntity=Img::class, mappedBy="imga", orphanRemoval=true)
+     */
+    private $imgs;
 
-    
-       /**
+    /**
+     * @ORM\OneToMany(targetEntity=Videos::class, mappedBy="video", orphanRemoval=true)
+     */
+    private $videos;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $photoProfil;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Apropo::class, mappedBy="videos", orphanRemoval=true)
+     */
+    private $apropos;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Mention::class, mappedBy="mentions", orphanRemoval=true)
+     */
+    private $mentions;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=ListeAmiAjouter::class, mappedBy="listeAjouter")
+     */
+    private $listeAmiAjouters;
+
+    /**
+     * @ORM\OneToMany(targetEntity=VideoCommentaire::class, mappedBy="auteur")
+     */
+    private $videoCommentaires;
+
+
+
+
+    /**
+     * @var \DateTime $updated_at
+     *
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime")
+     */
+
+    /**
      * @ORM\PrePersist
      */
     public function prePersist()
     {
-        if(empty($this->date)){
-        $this->createdAt = new DateTime();
-        } 
+        if (empty($this->date)) {
+            $this->date = new DateTime();
+        }
     }
-
-
-
 
     public function __construct()
     {
@@ -104,6 +150,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->received = new ArrayCollection();
         $this->articles = new ArrayCollection();
         $this->commentaires = new ArrayCollection();
+        $this->imgs = new ArrayCollection();
+        $this->videos = new ArrayCollection();
+        $this->apropos = new ArrayCollection();
+        $this->mentions = new ArrayCollection();
+        $this->listeAmiAjouters = new ArrayCollection();
+        $this->videoCommentaires = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -363,6 +415,204 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
+    /**
+     * @return Collection|Img[]
+     */
+    public function getImgs(): Collection
+    {
+        return $this->imgs;
+    }
+
+    public function addImg(Img $img): self
+    {
+        if (!$this->imgs->contains($img)) {
+            $this->imgs[] = $img;
+            $img->setImga($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImg(Img $img): self
+    {
+        if ($this->imgs->removeElement($img)) {
+            // set the owning side to null (unless already changed)
+            if ($img->getImga() === $this) {
+                $img->setImga(null);
+            }
+        }
+
+        return $this;
+    }
 
 
+    public function __toString()
+    {
+        return (string) $this->getNom();
+    }
+
+    /**
+     * @return Collection|Videos[]
+     */
+    public function getVideos(): Collection
+    {
+        return $this->videos;
+    }
+
+    public function addVideo(Videos $video): self
+    {
+        if (!$this->videos->contains($video)) {
+            $this->videos[] = $video;
+            $video->setVideo($this);
+        }
+
+        return $this;
+    }
+
+    public function removeVideo(Videos $video): self
+    {
+        if ($this->videos->removeElement($video)) {
+            // set the owning side to null (unless already changed)
+            if ($video->getVideo() === $this) {
+                $video->setVideo(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getPhotoProfil(): ?string
+    {
+        return $this->photoProfil;
+    }
+
+    public function setPhotoProfil(?string $photoProfil): self
+    {
+        $this->photoProfil = $photoProfil;
+
+        return $this;
+    }
+
+
+    // public function __toString()
+    // {
+    //     return $this->titre; 
+    // }
+
+    /**
+     * @return Collection|Apropo[]
+     */
+    public function getApropos(): Collection
+    {
+        return $this->apropos;
+    }
+
+    public function addApropo(Apropo $apropo): self
+    {
+        if (!$this->apropos->contains($apropo)) {
+            $this->apropos[] = $apropo;
+            $apropo->setVideos($this);
+        }
+
+        return $this;
+    }
+
+    public function removeApropo(Apropo $apropo): self
+    {
+        if ($this->apropos->removeElement($apropo)) {
+            // set the owning side to null (unless already changed)
+            if ($apropo->getVideos() === $this) {
+                $apropo->setVideos(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Mention[]
+     */
+    public function getMentions(): Collection
+    {
+        return $this->mentions;
+    }
+
+    public function addMention(Mention $mention): self
+    {
+        if (!$this->mentions->contains($mention)) {
+            $this->mentions[] = $mention;
+            $mention->setMentions($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMention(Mention $mention): self
+    {
+        if ($this->mentions->removeElement($mention)) {
+            // set the owning side to null (unless already changed)
+            if ($mention->getMentions() === $this) {
+                $mention->setMentions(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|ListeAmiAjouter[]
+     */
+    public function getListeAmiAjouters(): Collection
+    {
+        return $this->listeAmiAjouters;
+    }
+
+    public function addListeAmiAjouter(ListeAmiAjouter $listeAmiAjouter): self
+    {
+        if (!$this->listeAmiAjouters->contains($listeAmiAjouter)) {
+            $this->listeAmiAjouters[] = $listeAmiAjouter;
+            $listeAmiAjouter->addListeAjouter($this);
+        }
+
+        return $this;
+    }
+
+    public function removeListeAmiAjouter(ListeAmiAjouter $listeAmiAjouter): self
+    {
+        if ($this->listeAmiAjouters->removeElement($listeAmiAjouter)) {
+            $listeAmiAjouter->removeListeAjouter($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|VideoCommentaire[]
+     */
+    public function getVideoCommentaires(): Collection
+    {
+        return $this->videoCommentaires;
+    }
+
+    public function addVideoCommentaire(VideoCommentaire $videoCommentaire): self
+    {
+        if (!$this->videoCommentaires->contains($videoCommentaire)) {
+            $this->videoCommentaires[] = $videoCommentaire;
+            $videoCommentaire->setAuteur($this);
+        }
+
+        return $this;
+    }
+
+    public function removeVideoCommentaire(VideoCommentaire $videoCommentaire): self
+    {
+        if ($this->videoCommentaires->removeElement($videoCommentaire)) {
+            // set the owning side to null (unless already changed)
+            if ($videoCommentaire->getAuteur() === $this) {
+                $videoCommentaire->setAuteur(null);
+            }
+        }
+
+        return $this;
+    }
 }

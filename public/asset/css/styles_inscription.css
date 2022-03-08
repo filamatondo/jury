@@ -1,0 +1,101 @@
+.titre {
+  text-align: center;
+  font-size: 70px;
+  color: black;
+  margin-top: 2%;
+  font-weight: bold;
+}
+
+/* titre de la page d'inscription */
+
+
+.md-7 {
+  text-align: center;
+}
+
+
+
+.sexe {
+  margin-top: 2%;
+}
+
+/* css du bouton sex */
+
+.date {
+  margin-top: -40%;
+  margin-left: -8%;
+}
+
+/* css de formulaire de la date */
+
+
+.agree {
+  margin-left: 5%;
+  font-size: 15px;
+  color: blue;
+  margin-top: -2%;
+}
+
+/* css de l'agree de la page d'inscription */
+
+
+
+.inscrire {
+  height: 80%;
+  width: 320px;
+  background-color: #8EC760;
+  color: #ffffff;
+  border-radius: 10px;
+  border-color: #fff;
+  font-size: 30px;
+  border-style: double;
+  cursor: pointer;
+  margin-left: 40%;
+}
+
+/* css de la touche s'inscrire */
+
+
+
+.message {
+  font-size: 20px;
+  margin: 20px;
+  margin-top: -1%;
+  color: rgb(120, 120, 247);
+  text-align: center;
+  display: flex;
+}
+
+/* css du message */
+
+.footer {
+  margin-top: 4;
+}
+
+
+.mentionslegales {
+  display: flex;
+  margin-left: -50%;
+  margin-top: 8%;
+}
+
+/* mention legales le parent de la classe apropos et mention*/
+
+.APROPOS {
+  font-size: 20px;
+  margin-left: -50%;
+  margin-top: -3%;
+
+}
+
+.mention {
+  margin-left: 10%;
+  margin-top: -3%;
+}
+
+
+.text {
+  font-size: 20px;
+  margin-left: 100%;
+  margin-top: 2%;
+}

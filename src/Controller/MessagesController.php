@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+
 class MessagesController extends AbstractController
 {
     /**
@@ -110,7 +111,6 @@ class MessagesController extends AbstractController
     }
 
 
-
     // c'est une route qui me permet de consulter mes boite de messagerie
     /**
      * @Route("/sent", name="sent")
@@ -120,4 +120,8 @@ class MessagesController extends AbstractController
 
         return $this->render('messages/sent.html.twig');
     }
+
+
+
+
 }
