@@ -98,11 +98,9 @@ class UserController extends AbstractController
 
 
     /**
-<<<<<<< HEAD
-     * @Route("/{id}", name="admin_user_delete", methods={"POST"})
-=======
+
      * @Route("/{id}", name="admin_user_delete", methods={"GET", "POST"})
->>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
+
      */
     public function delete(Request $request, User $user): Response
     {
@@ -112,11 +110,9 @@ class UserController extends AbstractController
             $entityManager->flush();
         }
 
-<<<<<<< HEAD
-        return $this->redirectToRoute('app_register', [], Response::HTTP_SEE_OTHER);
-=======
+
         return $this->redirectToRoute('admin_home', [], Response::HTTP_SEE_OTHER);
->>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
+
         // return $this->render('registration/register.html.twig');     
     }
 

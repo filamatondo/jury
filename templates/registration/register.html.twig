@@ -1,103 +1,3 @@
-<<<<<<< HEAD
-{% extends 'base_inscrire.html.twig' %}
-
-{% block title %}
-	Inscription
-{% endblock %}
-
-{% block body %}
-
-<div class ="Inscription">
-	<h1 class ="Titre">
-		INSCRIPTION
-	</h1>
-	{#<marquee> Bonjour Générale  avec mon frère désiré</marquee>#}
-</div>
-	<!-- Titre pour s'inscrire sur le site small world-->
-
-<div class=" champs">
-	
-		<div class="card">
-
-			<div class="card-header">
-				{{ form_start(registrationForm) }}
-
-				<div class="container">
-
-					<div class="row">
-
-					
-
-						<div class="mb-3">
-							{{ form_widget(registrationForm.nom, { 'attr': {'class': 'nom'} }) }}
-						</div>
-
-
-						<div class="mb-3">
-							{{ form_row(registrationForm.prenom,  { 'attr': {'class': 'prenom'} } ) }}
-						</div>
-
-						<div class="mb-3">
-							{{ form_row(registrationForm.email,  { 'attr': {'class': 'email'} }) }}
-						</div>
-
-						<div class="mb-3">
-							{{ form_row(registrationForm.plainPassword.first,  { 'attr': {'class': 'first'} } )  }}
-						</div>
-
-						<div class="mb-3">
-							{{ form_row(registrationForm.plainPassword.second,{ 'attr': {'class': 'second'} }  ) }}
-						</div>
-
-                        <div class="dates ">
-							{{ form_row(registrationForm.date, { 'attr': {'class': 'date'} }) }}
-						</div>
-
-						<div class="col-3 md-3">
-							{{ form_row(registrationForm.sexe, { 'attr': {'class': 'sexe'} } ) }}
-						</div>
-
-
-						<div class="agree">
-							{{ form_row(registrationForm.agreeTerms, { 'attr': {'class': 'agrees'} }) }}
-						</div>
-
-
-						<div class="col-12">
-							<button class="inscrire" type="submit">S'inscrire</button>
-						</div>
-
-						{{ form_end(registrationForm) }}
-					</div>
-
-					<footer class=" footer">
-						{# <div class="message">
-							<p class="col-12 col-md-7 " style=" margin-left:55%; font-size:12px; margin-top:-15%">Il existe des tas de façons de rester en contact avec vos proches
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								Small world est un petit moyen sympa de garder contact avec le monde; C'est super facile à utiliser</p>
-
-						</div> #}
-						{# Message explicatif #}
-
-						
-							<div class="col-12">
-								<a class="navbar-link" href="{{path ("apropo_index") }}">
-									<div class="APROPOS">À propos</div>
-								</a>
-							</div>
-							<div class="col-12">
-								<a class="navbar-link" href="{{path("mention_index")}}">
-								 <div class="mentions">Mentions légales </div>
-								</a>
-							</div>
-					</footer>
-				</div>
-			</div>
-		</div>
-
-	</div>
-
-{% endblock %}
-=======
 {% extends 'base_inscrire.html.twig' %}
 
 {% block title %}
@@ -162,26 +62,18 @@
 			{{ form_end(registrationForm) }}
 		</div>
 	</div>
-<<<<<<< HEAD
 </div>
-
-<footer class=" footer">
-	<section class="flex-around">
-		<div class="bloc-footer">
-			<a class="navbar-link" href="{{path ("apropo_index") }}">
-				<p class="APROPOS">À propos</p>
+<footerclass="footer">
+	<sectionclass="flex-around">
+		<divclass="bloc-footer">
+			<aclass="navbar-link"href="{{path("apropo_index")}}">
+				<pclass="APROPOS">Àpropos</p>
 			</a>
 		</diV>
-		<div class="bloc-footer">
-			<a class="navbar-link" href="{{path("mention_index")}}">
-				<p class="mentions">Mentions légales
-				</p>
+		<divclass="bloc-footer">
+			<aclass="navbar-link"href="{{path("mention_index")}}">
+				<pclass="mentions">Mentionslégales</p>
 			</a>
 		</div>
 	</section>
 </footer></div></div>{% endblock %}
-=======
-
-{% endblock %}
->>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
->>>>>>> 017d8a5b370cbeec6385cb7c4cc77bffc0d77168

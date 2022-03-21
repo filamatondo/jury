@@ -84,15 +84,10 @@ class ArticleController extends AbstractController
     {
 
         $commentaire = new Commentaire();
-<<<<<<< HEAD
+
 
         $form = $this->createForm(CommentaireType::class, $commentaire);
 
-=======
-
-        $form = $this->createForm(CommentaireType::class, $commentaire);
-
->>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

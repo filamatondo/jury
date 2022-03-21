@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 <form method="post" action="{{ path('article_delete', {'id': article.id}) }}" onsubmit="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');">
 	<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ article.id) }}">
 	<button class="btn btn-danger" style=" margin-left: 17%;  margin-top:-4%">Supprimer</button>
 </form>
-=======
-<form method="post" action="{{ path('article_delete', {'id': article.id}) }}" onsubmit="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');">
-	<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ article.id) }}">
-	<button class="btn btn-danger" style=" margin-left: 17%;  margin-top:-4%">Supprimer</button>
-</form>
->>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9

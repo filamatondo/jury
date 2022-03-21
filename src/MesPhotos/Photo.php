@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 <?php
 
-namespace App\MesPhotos; 
+namespace App\MesPhotos;
 
 use Symfony\Component\String\Slugger\SluggerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
@@ -11,16 +10,16 @@ class Photo
 
 {
 
-     protected $slugger; 
-     protected $parameterBag; 
+     protected $slugger;
+     protected $parameterBag;
 
 
-    public function __construct(SluggerInterface $slugger,ParameterBagInterface $parameterBagInterface)
+     public function __construct(SluggerInterface $slugger, ParameterBagInterface $parameterBagInterface)
 
-    {
-         $this->slugger = $slugger; 
-         $this->parameterBag = $parameterBagInterface;  
-    }
+     {
+          $this->slugger = $slugger;
+          $this->parameterBag = $parameterBagInterface;
+     }
 
 
 
@@ -28,89 +27,26 @@ class Photo
 
      public function sauvegarderPhotoProfil(object $object, object $file)
      {
-          $originalFileName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME); 
-                $safeFileName = $this->slugger->slug($originalFileName); 
-                $newFileName = $safeFileName. '-' . uniqid() . '.' . $file->guessExtension(); 
+          $originalFileName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
+          $safeFileName = $this->slugger->slug($originalFileName);
+          $newFileName = $safeFileName . '-' . uniqid() . '.' . $file->guessExtension();
 
-                $file->move(
-                    $this->parameterBag->get('app_images_directory'),
-                    $newFileName
-                ); 
+          $file->move(
+               $this->parameterBag->get('app_images_directory'),
+               $newFileName
+          );
 
-                $object->setPhotoProfil('uploads/'. $newFileName);
-
-                
+          $object->setPhotoProfil('uploads/' . $newFileName);
      }
-          
-
-
-       public function supprimerPhotoProfil( string $fileName)
-       {
-              $pathFile = $this->parameterBag->get('app_images_directory') . '/..' . $fileName; 
-
-              if(file_exists($pathFile))
-              {
-                   unlink($pathFile); 
-              }
-
-       }
-
-=======
-<?php
-
-namespace App\MesPhotos; 
-
-use Symfony\Component\String\Slugger\SluggerInterface;
-use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
-
-
-class Photo
-
-{
-
-     protected $slugger; 
-     protected $parameterBag; 
-
-
-    public function __construct(SluggerInterface $slugger,ParameterBagInterface $parameterBagInterface)
-
-    {
-         $this->slugger = $slugger; 
-         $this->parameterBag = $parameterBagInterface;  
-    }
 
 
 
-
-
-     public function sauvegarderPhotoProfil(object $object, object $file)
+     public function supprimerPhotoProfil(string $fileName)
      {
-          $originalFileName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME); 
-                $safeFileName = $this->slugger->slug($originalFileName); 
-                $newFileName = $safeFileName. '-' . uniqid() . '.' . $file->guessExtension(); 
+          $pathFile = $this->parameterBag->get('app_images_directory') . '/..' . $fileName;
 
-                $file->move(
-                    $this->parameterBag->get('app_images_directory'),
-                    $newFileName
-                ); 
-
-                $object->setPhotoProfil('uploads/'. $newFileName);
-
-                
+          if (file_exists($pathFile)) {
+               unlink($pathFile);
+          }
      }
-          
-
-
-       public function supprimerPhotoProfil( string $fileName)
-       {
-              $pathFile = $this->parameterBag->get('app_images_directory') . '/..' . $fileName; 
-
-              if(file_exists($pathFile))
-              {
-                   unlink($pathFile); 
-              }
-
-       }
-
->>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
 }

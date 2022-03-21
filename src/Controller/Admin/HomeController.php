@@ -21,11 +21,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class HomeController extends AbstractController
 {
     /**
-<<<<<<< HEAD
-     * @Route("/", name="admin_home")
-=======
+
      * @Route("/home", name="admin_home")
->>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
+
      */
     public function index(UserRepository $userRepository, Request $request): Response
     {

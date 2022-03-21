@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {% extends 'user_base.html.twig' %}
 
 {% block title %}
@@ -9,55 +8,23 @@
 {% endblock %}
 
 {% block body %}
-	 <div class=" modifierinfoPersonnel">
+	<div class=" modifierinfoPersonnel">
 
-				<div class="col-12">
+		<div class="col-12">
 
-					<h1 class="modification-profil">
-						Modifier profil
-					</h1>
+			<h1 class="modification-profil">
+				Modifier profil
+			</h1>
 
-					{{ form_start(form) }}
-					{{ form_widget(form) }}
-					<button class="btn blue">{{ button_label|default('Enregistrer') }}</button>
-					{{ form_end(form) }}
+			{{ form_start(form) }}
+			{{ form_widget(form) }}
+			<button class="btn blue">{{ button_label|default('Enregistrer') }}</button>
+			{{ form_end(form) }}
 
-
-				</div>
 
 		</div>
 
-
-{% endblock %}
-=======
-{% extends 'user_base.html.twig' %}
-
-{% block title %}
-	Modification du profil de
-	{{app.user.prenom}}
-	{{ app.user.nom}}
-
-{% endblock %}
-
-{% block body %}
-	 <div class=" modifierinfoPersonnel">
-
-				<div class="col-12">
-
-					<h1 class="modification-profil">
-						Modifier profil
-					</h1>
-
-					{{ form_start(form) }}
-					{{ form_widget(form) }}
-					<button class="btn blue">{{ button_label|default('Enregistrer') }}</button>
-					{{ form_end(form) }}
-
-
-				</div>
-
-		</div>
+	</div>
 
 
 {% endblock %}
->>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9

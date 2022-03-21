@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 <?php
 
-namespace App\MesPhotos; 
+namespace App\MesPhotos;
 
 use Symfony\Component\String\Slugger\SluggerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
@@ -11,16 +10,16 @@ class Album
 
 {
 
-     protected $slugger; 
-     protected $parameterBag; 
+     protected $slugger;
+     protected $parameterBag;
 
 
-    public function __construct(SluggerInterface $slugger,ParameterBagInterface $parameterBagInterface)
+     public function __construct(SluggerInterface $slugger, ParameterBagInterface $parameterBagInterface)
 
-    {
-         $this->slugger = $slugger; 
-         $this->parameterBag = $parameterBagInterface;  
-    }
+     {
+          $this->slugger = $slugger;
+          $this->parameterBag = $parameterBagInterface;
+     }
 
 
 
@@ -28,89 +27,26 @@ class Album
 
      public function sauvegarderImage(object $object, object $file)
      {
-          $originalFileName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME); 
-                $safeFileName = $this->slugger->slug($originalFileName); 
-                $newFileName = $safeFileName. '-' . uniqid() . '.' . $file->guessExtension(); 
+          $originalFileName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
+          $safeFileName = $this->slugger->slug($originalFileName);
+          $newFileName = $safeFileName . '-' . uniqid() . '.' . $file->guessExtension();
 
-                $file->move(
-                    $this->parameterBag->get('app_images_directory'),
-                    $newFileName
-                ); 
+          $file->move(
+               $this->parameterBag->get('app_images_directory'),
+               $newFileName
+          );
 
-                $object->setVu('uploads/'. $newFileName);
-
-                
+          $object->setVu('uploads/' . $newFileName);
      }
-          
-
-
-       public function supprimerVu( string $fileName)
-       {
-              $pathFile = $this->parameterBag->get('app_images_directory') . '/..' . $fileName; 
-
-              if(file_exists($pathFile))
-              {
-                   unlink($pathFile); 
-              }
-
-       }
-
-=======
-<?php
-
-namespace App\MesPhotos; 
-
-use Symfony\Component\String\Slugger\SluggerInterface;
-use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
-
-
-class Album
-
-{
-
-     protected $slugger; 
-     protected $parameterBag; 
-
-
-    public function __construct(SluggerInterface $slugger,ParameterBagInterface $parameterBagInterface)
-
-    {
-         $this->slugger = $slugger; 
-         $this->parameterBag = $parameterBagInterface;  
-    }
 
 
 
-
-
-     public function sauvegarderImage(object $object, object $file)
+     public function supprimerVu(string $fileName)
      {
-          $originalFileName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME); 
-                $safeFileName = $this->slugger->slug($originalFileName); 
-                $newFileName = $safeFileName. '-' . uniqid() . '.' . $file->guessExtension(); 
+          $pathFile = $this->parameterBag->get('app_images_directory') . '/..' . $fileName;
 
-                $file->move(
-                    $this->parameterBag->get('app_images_directory'),
-                    $newFileName
-                ); 
-
-                $object->setVu('uploads/'. $newFileName);
-
-                
+          if (file_exists($pathFile)) {
+               unlink($pathFile);
+          }
      }
-          
-
-
-       public function supprimerVu( string $fileName)
-       {
-              $pathFile = $this->parameterBag->get('app_images_directory') . '/..' . $fileName; 
-
-              if(file_exists($pathFile))
-              {
-                   unlink($pathFile); 
-              }
-
-       }
-
->>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
 }

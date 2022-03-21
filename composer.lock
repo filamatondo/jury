@@ -4,11 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "fc1cd641d398223d5d9e53ebbcdae888",
-=======
+
     "content-hash": "b6b7fcebb583828e6d17f2950cc829b6",
->>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1595,18 +1592,6 @@
         },
         {
             "name": "friendsofsymfony/ckeditor-bundle",
-<<<<<<< HEAD
-            "version": "2.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfSymfony/FOSCKEditorBundle.git",
-                "reference": "a4df4056b2832881e17b939e83f25406a6cc6414"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSCKEditorBundle/zipball/a4df4056b2832881e17b939e83f25406a6cc6414",
-                "reference": "a4df4056b2832881e17b939e83f25406a6cc6414",
-=======
             "version": "2.3.0",
             "source": {
                 "type": "git",
@@ -1617,27 +1602,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/FriendsOfSymfony/FOSCKEditorBundle/zipball/282c79b0d3eda68855ea4c8732ab8d249cd5fbd0",
                 "reference": "282c79b0d3eda68855ea4c8732ab8d249cd5fbd0",
->>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-zip": "*",
                 "php": "^7.1|^8.0",
-<<<<<<< HEAD
-                "symfony/asset": "^4.4 || ^5.0 || ^6.0",
-                "symfony/config": "^4.4 || ^5.0 || ^6.0",
-                "symfony/dependency-injection": "^4.4 || ^5.0 || ^6.0",
-                "symfony/expression-language": "^4.4 || ^5.0 || ^6.0",
-                "symfony/form": "^4.4 || ^5.0 || ^6.0",
-                "symfony/framework-bundle": "^4.4 || ^5.0 || ^6.0",
-                "symfony/http-foundation": "^4.4 || ^5.0 || ^6.0",
-                "symfony/http-kernel": "^4.4 || ^5.0 || ^6.0",
-                "symfony/options-resolver": "^4.4 || ^5.0 || ^6.0",
-                "symfony/property-access": "^4.4 || ^5.0 || ^6.0",
-                "symfony/routing": "^4.4 || ^5.0 || ^6.0",
-                "symfony/twig-bundle": "^4.4 || ^5.0 || ^6.0",
-=======
+
                 "symfony/asset": "^4.4 || ^5.0",
                 "symfony/config": "^4.4 || ^5.0",
                 "symfony/dependency-injection": "^4.4 || ^5.0",
@@ -1650,7 +1621,6 @@
                 "symfony/property-access": "^4.4 || ^5.0",
                 "symfony/routing": "^4.4 || ^5.0",
                 "symfony/twig-bundle": "^4.4 || ^5.0",
->>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
                 "twig/twig": "^2.4 || ^3.0"
             },
             "conflict": {
@@ -1660,15 +1630,10 @@
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.0",
                 "matthiasnoback/symfony-dependency-injection-test": "^3.0 || ^4.0",
-<<<<<<< HEAD
-                "symfony/console": "^4.4 || ^5.0 || ^6.0",
-                "symfony/phpunit-bridge": "^4.4 || ^5.0 || ^6.0",
-                "symfony/yaml": "^4.4 || ^5.0 || ^6.0"
-=======
+
                 "symfony/console": "^4.4 || ^5.0",
                 "symfony/phpunit-bridge": "^4.4 || ^5.0",
                 "symfony/yaml": "^4.4 || ^5.0"
->>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
             },
             "suggest": {
                 "egeloen/form-extra-bundle": "Allows to load CKEditor asynchronously"
@@ -1704,15 +1669,10 @@
             ],
             "support": {
                 "issues": "https://github.com/FriendsOfSymfony/FOSCKEditorBundle/issues",
-<<<<<<< HEAD
-                "source": "https://github.com/FriendsOfSymfony/FOSCKEditorBundle/tree/2.4.0"
-            },
-            "time": "2022-01-07T12:34:18+00:00"
-=======
+
                 "source": "https://github.com/FriendsOfSymfony/FOSCKEditorBundle/tree/2.3.0"
             },
             "time": "2020-12-26T14:29:00+00:00"
->>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
         },
         {
             "name": "helios-ag/fm-elfinder-bundle",

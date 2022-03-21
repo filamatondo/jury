@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-.html,
-body {
-    margin: 0%;
-    padding: 0%;
-    background-color: #F5F5F5;
-}
-
-@media screen and (max-width: 1100px) {
-
-    .html,
-    body {
-        background-color: #ffffff;
-    }
-}
-
-.navbare {
-    background-color: rgb(59, 89, 152);
-    width: auto;
-    height: 75px;
-    position: relative;
-
-
-}
-
-@media screen and (max-width: 1100px) {
-
-    .navbare {
-        width: auto;
-        height: 50%;
-        margin: 0%;
-    }
-}
-
 /* Nave bare la couleur et la taille */
 
 .navbar-brand {
@@ -267,60 +233,12 @@ body {
 /* css du logo paramèttre */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-<<<<<<< HEAD
+/* 
 .profil1 {
     margin-left: 45%;
     margin-top: 15%;
     display: flex;
-}
+} */
 
 @media screen and (max-width: 1100px) {
 
@@ -818,8 +736,7 @@ body {
 
     }
 }
-=======
->>>>>>> 017d8a5b370cbeec6385cb7c4cc77bffc0d77168
+
 .profil1 {
     margin-left: 45%;
     margin-top: 15%;
@@ -1424,4 +1341,3 @@ body {
 }
 
 /* image profil */
->>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
