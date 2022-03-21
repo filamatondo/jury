@@ -1,0 +1,473 @@
+.html,
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: #F5F5F5;
+}
+
+@media screen and (max-width: 1100px) {
+
+  .html,
+  body {
+    background-color: #ffffff;
+  }
+}
+
+.navbare {
+  background-color: rgb(59, 89, 152);
+  width: auto;
+  height: 72px;
+  text-align: left;
+  margin: 0%;
+}
+
+@media screen and (max-width: 1100px) {
+
+  .navbare {
+    width: auto;
+    height: 50%;
+    margin: 0%;
+  }
+}
+
+/* Nave bare la couleur et la taille */
+
+.navbar-brand {
+  margin-left: 5%;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+
+}
+
+@media screen and (max-width: 1100px) {
+
+  .navbar-brand {
+    font-size: 50px;
+    margin-top: 3%;
+  }
+}
+
+/* Le Logo Small world de la nav bar */
+
+
+.flex-column-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -4.5%;
+  color: #ffffff;
+  margin-left: 75%;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+  .flex-column-between {
+    font-size: 40px;
+    margin-left: 60%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+
+  .image {
+    width: 85px;
+    height: 85px;
+    margin-top: -17%;
+  }
+}
+
+/* taille du logo */
+
+.Titre {
+  font-weight: bold;
+  text-align: center;
+  font-size: 35px;
+  margin-top: -0.5%;
+}
+
+/* titre de la page d'inscription */
+@media screen and (max-width: 1100px) {
+
+  .Titre {
+    font-size: 80px;
+    margin-top: 5%;
+
+  }
+}
+
+
+.card-header {
+  background-color: #fff;
+  justify-content: center;
+}
+
+
+.container {
+  background-color: #ffffff;
+  width: 50%;
+  height: auto;
+  margin: 0%;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+
+@media screen and (max-width: 1100px) {
+
+  .card-header {
+    width: 150%;
+  }
+
+}
+
+
+.champs {
+  margin-top: -1%;
+  justify-content: center;
+}
+
+
+/* la classe champs qui est la classe mère des input */
+
+
+
+.nom {
+  width: 80%;
+  height: auto;
+  font-size: 20px;
+  margin-top: 8px;
+  margin-left: 10%;
+}
+
+/* taille des ipunt de création d'un compte. */
+
+
+@media screen and (max-width: 1100px) {
+
+  .nom {
+    width: auto;
+    height: 180px;
+    font-size: 60px;
+    margin-top: 4%;
+
+  }
+
+}
+
+.prenom {
+  width: 80%;
+  height: auto;
+  font-size: 20px;
+  margin-top: -1%;
+  margin-left: 10%;
+  justify-content: center;
+}
+
+/* taille des ipunt de création d'un compte. */
+
+
+@media screen and (max-width: 1100px) {
+
+  .prenom {
+    height: 180px;
+    width: auto;
+    font-size: 60px;
+    margin-top: 4%;
+
+
+  }
+}
+
+.email {
+  width: 80%;
+  height: auto;
+  font-size: 20px;
+  margin-top: 2%;
+  margin-left: 10%;
+  justify-content: center;
+}
+
+/* taille des ipunt de création d'un compte. */
+
+@media screen and (max-width: 1100px) {
+
+  .email {
+    height: 180px;
+    width: auto;
+    font-size: 60px;
+    margin-top: 4%;
+  }
+}
+
+
+.first {
+  width: 80%;
+  height: auto;
+  font-size: 20px;
+  margin-top: 2%;
+  margin-left: 10%;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1100px) {
+
+  .first {
+    height: 180px;
+    width: auto;
+    font-size: 60px;
+    margin-top: 4%;
+  }
+}
+
+
+.second {
+  width: 80%;
+  height: auto;
+  font-size: 20px;
+  margin-top: 2%;
+  margin-left: 10%;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1100px) {
+
+  .second {
+    height: 180px;
+    width: auto;
+    font-size: 60px;
+    margin-top: 4%;
+
+  }
+}
+
+
+
+.sexe {
+  margin-top: 37%;
+  margin-left: 37%;
+  justify-content: center;
+}
+
+/* css du bouton sex */
+
+@media screen and (max-width: 1100px) {
+
+  .sexe {
+    height: 120%;
+    width: auto;
+    font-size: 20px;
+    margin-top: 60%;
+
+  }
+}
+
+.date {
+  width: 80%;
+  height: 140%;
+  font-size: 20px;
+  margin-top: 5%;
+  margin-left: 12%;
+  justify-content: center;
+
+}
+
+/* css de formulaire de la date */
+
+@media screen and (max-width: 1100px) {
+
+  .form-select {
+
+
+    font-size: 55px;
+    height: 140%;
+    width: 143px;
+    margin-left: -1%;
+
+  }
+}
+
+
+
+
+.dates {
+  width: 90%;
+  height: 35px;
+  font-size: 10px;
+  margin-top: -5.5%;
+  margin-left: -1.8%;
+}
+
+@media screen and (max-width: 1100px) {
+
+  .dates {
+    height: 80px;
+    width: 120%;
+    font-size: 60px;
+    margin-top: -4%;
+
+  }
+}
+
+
+
+
+.agree {
+  margin-left: 50%;
+  font-size: 15px;
+  color: blue;
+  margin-top: -8%;
+}
+
+/* css de l'agree de la page d'inscription */
+
+@media screen and (max-width: 1100px) {
+
+  .agree {
+    font-size: 35px;
+    margin-top: 8%;
+    margin-left: 3%;
+
+
+  }
+}
+
+.agrees {
+  margin-left: 50%;
+  font-size: 15px;
+  color: blue;
+  margin-top: 1%;
+}
+
+/* css de l'agree de la page d'inscription */
+
+@media screen and (max-width: 1100px) {
+
+  .agrees {
+    margin-top: 5%;
+    width: 10%;
+    height: 102%;
+    margin: -6.5%
+  }
+}
+
+/* input agrees avec le media query */
+
+
+
+.inscrire {
+  height: 40px;
+  width: 180px;
+  background-color: #8EC760;
+  color: #ffffff;
+  border-radius: 10px;
+  border-color: #fff;
+  font-size: 20px;
+  border-style: double;
+  cursor: pointer;
+  margin-left: 30%;
+  margin-top: -0.5
+}
+
+/* css de la touche s'inscrire */
+
+@media screen and (max-width: 1100px) {
+
+  .inscrire {
+    font-size: 50px;
+    height: 100px;
+    width: 280px;
+    margin: 5%;
+  }
+}
+
+/* touche inscrire et les media query */
+
+
+
+.footer {
+  margin-top: 0.1%;
+  justify-content: center;
+  background: linear-gradient(to left, rgb(163, 8, 8), rgb(247, 244, 65), rgb(10, 228, 58));
+
+}
+
+@media screen and (max-width: 1100px) {
+
+  .footer {
+    font-size: 45px;
+    margin: 0%;
+  }
+}
+
+/* footer la classe footer  */
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -4%;
+  margin: 0%;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+  .flex-around {
+    margin-top: 5%;
+  }
+}
+
+/* Apropos */
+
+.bloc-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+}
+
+/* mention legales le parent de la classe apropos et mention*/
+
+.APROPOS {
+  font-size: 12px;
+  margin-top: 1px;
+
+}
+
+@media screen and (max-width: 1100px) {
+
+  .APROPOS {
+    font-size: 55px;
+    margin: 0%;
+
+  }
+}
+
+/* botton appropos et les média query */
+
+
+.mentions {
+  font-size: 12px;
+
+}
+
+@media screen and (max-width: 1100px) {
+
+  .mentions {
+    font-size: 55px;
+  }
+}
+
+/* botton mentions et les media query */

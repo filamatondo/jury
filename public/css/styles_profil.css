@@ -1,3 +1,318 @@
+.html,
+body {
+    margin: 0%;
+    padding: 0%;
+    background-color: #F5F5F5;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .html,
+    body {
+        background-color: #ffffff;
+    }
+}
+
+.navbare {
+    background-color: rgb(59, 89, 152);
+    width: auto;
+    height: 75px;
+    position: relative;
+
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .navbare {
+        width: auto;
+        height: 50%;
+        margin: 0%;
+    }
+}
+
+/* Nave bare la couleur et la taille */
+
+.navbar-brand {
+    margin-left: 5%;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .navbar-brand {
+        font-size: 50px;
+        margin-top: 3%;
+    }
+}
+
+/* Le Logo Small world de la nav bar */
+
+
+.flex-column-between {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -9%;
+    color: #ffffff;
+    margin-left: -5%;
+    font-size: 14px;
+
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .flex-column-between {
+        font-size: 40px;
+
+    }
+}
+
+
+.image {
+    width: 40px;
+    height: 40px;
+    margin-top: -2%;
+
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .image {
+        width: 85px;
+        height: 85px;
+        margin-top: -2%;
+    }
+}
+
+/* Profil de la page de profil */
+
+
+
+.listeDesContacte {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.1%;
+    color: #ffffff;
+    margin-left: 10%;
+    font-size: 14px;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .listeDesContacte {
+        font-size: 40px;
+
+    }
+}
+
+/* Profil de la page de profil */
+
+
+
+.bi-people-fill {
+    width: 40px;
+    height: 40px;
+    margin-top: -7%;
+
+}
+
+/* css de la touche contacte */
+
+
+.navbar-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -1.5%;
+    color: #ffffff;
+    margin-left: 25%;
+    font-size: 14px;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .navbar-link {
+        font-size: 40px;
+
+    }
+}
+
+/* Profil de la page de profil */
+
+
+.ImageMessage {
+    width: 40px;
+    height: 40px;
+    margin-top: -6%;
+
+}
+
+/* css du logo message */
+
+
+
+.liste_article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -4.6%;
+    color: #ffffff;
+    margin-left: 42%;
+    font-size: 14px;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .navbar-linke {
+        font-size: 40px;
+
+    }
+}
+
+/* article logo */
+
+
+.bi-gear {
+    width: 40px;
+    height: 40px;
+    margin-top: -4%;
+
+}
+
+/* css du logo contact */
+
+
+
+.liste_video {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -4.6%;
+    color: #ffffff;
+    margin-left: 57%;
+    font-size: 14px;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .liste_video {
+        font-size: 40px;
+        margin-top: 7%;
+
+    }
+}
+
+/* article logo */
+
+
+.bi-camera-reels-fill {
+    width: 40px;
+    height: 40px;
+    margin-top: -4%;
+
+}
+
+/* css du logo video */
+
+
+
+/* css du logo message */
+.liste_parametre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -3.8%;
+    color: #ffffff;
+    margin-left: 65%;
+    font-size: 14px;
+
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .liste_parametre {
+        font-size: 40px;
+
+    }
+}
+
+/* article logo */
+
+
+.bi-gear {
+    width: 40px;
+    height: 40px;
+    margin-top: -8%;
+
+}
+
+/* css du logo paramèttre */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .profil1 {
     margin-left: 45%;
     margin-top: 15%;
@@ -19,7 +334,7 @@
     margin-top: -10%;
     font-weight: bold;
     font-size: 30px;
-    margin-left: -55%;
+    justify-content: center;
 }
 
 /* Titre de la page profil. à savoir le noms du user  */
@@ -175,9 +490,9 @@
 
 
 .info {
-    margin-top: -35%;
-    margin-left: 75%;
-    display: block;
+
+    margin-left: 1%;
+
 
 }
 

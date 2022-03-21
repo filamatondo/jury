@@ -1,0 +1,228 @@
+.html,
+body {
+    margin: 0%;
+    padding: 0%;
+    background-color: #F5F5F5;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .html,
+    body {
+        background-color: #ffffff;
+    }
+}
+
+.navbare {
+    background-color: rgb(59, 89, 152);
+    width: auto;
+    height: 72px;
+    text-align: left;
+    margin: 0%;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .navbare {
+        width: auto;
+        height: 50%;
+        margin: 0%;
+    }
+}
+
+/* Nave bare la couleur et la taille */
+
+.navbar-brand {
+    margin-left: 5%;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .navbar-brand {
+        font-size: 50px;
+        margin-top: 3%;
+    }
+}
+
+/* Le Logo Small world de la nav bar */
+
+
+.flex-column-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -4.5%;
+    color: #ffffff;
+    margin-left: 75%;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .flex-column-between {
+        font-size: 40px;
+        margin-left: 60%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .image {
+        width: 85px;
+        height: 85px;
+        margin-top: -17%;
+    }
+}
+
+
+
+.profil {
+    margin-top: 20%;
+    font-size: 14px;
+}
+
+.font-weight-normal {
+    margin-top: 10%;
+    color: blue;
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .font-weight-normal {
+        font-size: 35px;
+        margin-top: 85%;
+        font-size: 60px;
+    }
+}
+
+/* la classe du message de veillez vous connecter */
+
+
+
+.connexion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .connexion {
+        font-size: 55px;
+        margin: 10%;
+        margin-top: -40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+}
+
+
+.Email {
+    margin-left: -29%;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .Email {
+        font-size: 50px;
+    }
+}
+
+/* la taille de EMail  */
+
+
+.Motde {
+    margin-left: -23%;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .Motde {
+        font-size: 50px;
+    }
+}
+
+/* taille de Mot de passe  */
+
+
+
+/* la classe connexion des input de connexion */
+
+
+.form-control {
+    width: 30%;
+    height: 40px;
+    margin-left: -2%;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .form-control {
+        width: 100%;
+        height: 120px;
+        margin-left: -1%;
+        font-size: 50px;
+        border-color: black;
+
+
+
+    }
+}
+
+/* taille des input de connexion */
+
+
+
+.btn-primary {
+    font-size: 15px;
+
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .btn-primary {
+        width: 90%;
+        height: 120px;
+        font-size: 60px;
+    }
+}
+
+/* botton de connexion */
+
+
+.motdepasseoublier {
+    margin-left: 34%;
+    font-size: 14px
+}
+
+@media screen and (max-width: 1100px) {
+
+    .motdepasseoublier {
+        font-size: 50px;
+
+        margin-left: 28%;
+    }
+}
+
+.mot {
+    margin-top: -2%;
+}

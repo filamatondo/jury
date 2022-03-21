@@ -1,15 +1,9 @@
-<link rel="stylesheet" href="{{ asset("css/styles_inscription.css") }}">
-<header>
-<nav class="navbar navbar-expand-lg  fixed-top" style=" height:75px;  background-color: rgb(59, 89, 152); ">
-	<div class="container-fluid">
-		<a class="navbar-brand" style="margin-left:2%; color:#ffffff; font-size:40px; font-weight: bold;" href="#">Small-world</a>
+<nav class="navbare">
+	<a class="navbar-brand" href="#">Small-world</a>
+	{# logo small world #}
 
-	</div>
-</nav>
-<div class="  fixed-top logo" style="margin-left:80%; margin-top:0.1%; text-align:center">
-	<a class="navbar-link" href="{{path ("app_login") }}">
-		<img class=" image" src="https://img.icons8.com/50/ffffff/name--v2.png " style=" width: 40px; height: 40px;"/>
-		<div class="MonCompte" style="color:#ffffff; margin-left:1%;  font-size:20px">MON COMPTE</div>
+	<a class="flex-column-between" href="{{path ("app_login") }}">
+		<img class=" image" src="https://img.icons8.com/50/ffffff/name--v2.png "/>
+		<p class="Compte">MON COMPTE</p>
 	</a>
-</div>
-</header>
+</nav>

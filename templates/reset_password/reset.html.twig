@@ -1,14 +1,14 @@
-{% extends 'base_connexion.html.twig' %}
+{% extends 'base_motdepasseoublier.html.twig' %}
 
 {% block title %}Reset your password
 {% endblock %}
 
 {% block body %}
-	<div class="col-3 col-md-7" style="margin-left:20%">
+	<div class="Renitialisez">
 		<h1 class="Renitialisez" style="color:blue">Réinitialisez votre mot de passe</h1>
 
 		{{ form_start(resetForm) }}
-		{{ form_row(resetForm.plainPassword) }}
+		{{ form_row(resetForm.plainPassword, { 'attr': {'class': 'pass'} }) }}
 		<button class="btn btn-primary">Réinitialiser le mot de passe</button>
 		{{ form_end(resetForm) }}
 	</div>
