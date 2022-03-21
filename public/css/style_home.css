@@ -1,0 +1,338 @@
+@media screen and (min-width: 576px) {
+    .filtre {
+        height: 40px;
+        display: flex;
+        margin: 1rem;
+
+
+    }
+
+    /* le filtre */
+
+}
+
+@media screen and (min-width: 768px) {
+    .filtre {
+        height: 40px;
+        display: flex;
+        margin: 1rem;
+    }
+
+    /* le filtre */
+
+}
+
+@media screen and (min-width: 992px) {
+    .filtre {
+        height: 40px;
+        display: flex;
+        margin: 1rem;
+    }
+
+    /* le filtre */
+
+}
+
+@media screen and (min-width: 1200px) {
+    .filtre {
+        height: 40px;
+        display: flex;
+        margin: 1rem;
+    }
+
+    /* le filtre */
+
+}
+
+@media screen and (min-width: 1400px) {
+    .filtre {
+        height: 40px;
+        display: flex;
+        margin: 1rem;
+    }
+
+    /* le filtre */
+
+}
+
+
+.titre {
+    margin-top: 7%;
+}
+
+
+
+.form-control {
+    width: 100%;
+    height: 40px;
+    font-size: 10px;
+    margin-top: 20%;
+
+}
+
+/* search */
+
+
+
+@media screen and (min-width: 576px) {
+    .form-control {
+        width: 200%;
+        height: 120px;
+        font-size: 40px;
+        margin-top: 40%;
+    }
+
+    /* search */
+
+
+}
+
+@media screen and (min-width: 768px) {
+    .form-control {
+        width: 200%;
+        height: 120px;
+        font-size: 40px;
+        margin-top: 40%;
+    }
+
+    /* search */
+
+
+}
+
+@media screen and (min-width: 992px) {
+    .form-control {
+        width: 200%;
+        height: 120px;
+        font-size: 40px;
+        margin-top: 40%;
+    }
+
+    /* search */
+
+}
+
+@media screen and (min-width: 1200px) {
+    .form-control {
+        width: 100%;
+        height: 40px;
+        font-size: 20px;
+        margin-top: 1%;
+    }
+
+    /* search */
+}
+
+@media screen and (min-width: 1400px) {
+    .form-control {
+        width: 100%;
+        height: 70px;
+        font-size: 40px;
+        margin-top: 40%;
+    }
+
+    /* search */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* la touche Search */
+
+
+
+.search {
+    width: 50%;
+    height: 80px;
+    font-size: 40px;
+    background-color: blue;
+    color: #ffffff;
+}
+
+/* la touche Search */
+
+@media screen and (min-width: 768px) {
+    .search {
+        width: 50%;
+        height: 80px;
+        font-size: 40px;
+        background-color: blue;
+        color: #ffffff;
+    }
+
+    /* search */
+
+
+}
+
+/* la touche Search */
+
+@media screen and (min-width: 992px) {
+    .search {
+        width: 50%;
+        height: 80px;
+        font-size: 40px;
+        background-color: blue;
+        color: #ffffff;
+    }
+}
+
+/* la touche Search */
+@media screen and (min-width: 1200px) {
+    .search {
+        width: 40%;
+        height: 30px;
+        font-size: 18px;
+        background-color: blue;
+        color: #ffffff;
+
+    }
+}
+
+/* la touche Search */
+@media screen and (min-width: 1200px) {
+    .searche {
+        margin-top: -15%;
+    }
+}
+
+/* searche la hauteur de l'ecriture */
+
+@media screen and (min-width: 1400px) {
+    .search {
+        width: 50%;
+        height: 80px;
+        font-size: 40px;
+        background-color: blue;
+        color: #ffffff;
+    }
+
+}
+
+/* la touche Search */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sidenav-header {
+    color: #228B22;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* nombre d'abonné le sidenav qui clignote  */
+
+
+
+.text-primary {
+
+    margin-left: 50%;
+    font-size: 15px;
+    margin-top: 16%;
+    color: #228B22;
+    font-weight: bold;
+    margin-top: 15%;
+}
+
+/* texte Abonnée */
+
+
+
+
+
+.NomPrenom {
+    background-color: black;
+    color: #ffffff;
+    font-size: 45px;
+    height: auto;
+    width: auto;
+}
+
+/* le nom de user NomPrenom le css */
+
+.EnvoyerMessage {
+    color: black;
+    background-color: #ffffff;
+    font-size: .875rem;
+    border-radius: 0.2rem;
+
+}
+
+/* Boutton envoyer un message */
+
+.btn-sm,
+.btn-bd-light,
+.mb-2,
+.mb-md-0 {
+    font-size: 40px;
+}
+
+/* css du bouton message envoyer. */
+
+
+
+
+.hr {
+    margin-top: 2rem;
+}
+
+/* la balise hr */
+
+.footer {
+    display: flex;
+    background-color: #20c997;
+}
+
+/* display footer, le footer qui est le message envoyer et le profil */
+
+
+.profil {
+    margin-left: 20rem;
+    font-size: 40px;
+    background-color: #ffffff;
+    color: black;
+}
+
+/* Profil  */
