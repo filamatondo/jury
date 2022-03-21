@@ -16,7 +16,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class MentionController extends AbstractController
 {
     /**
+<<<<<<< HEAD
+     * @Route("/", name="mention_index", methods={"GET"})
+=======
      * @Route("/", name="admin_mention_index", methods={"GET"})
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
      */
     public function index(MentionRepository $mentionRepository): Response
     {
@@ -26,7 +30,11 @@ class MentionController extends AbstractController
     }
 
     /**
+<<<<<<< HEAD
+     * @Route("/new", name="mention_new", methods={"GET","POST"})
+=======
      * @Route("/new", name="admin_mention_new", methods={"GET","POST"})
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
      */
     public function new(Request $request): Response
     {
@@ -49,7 +57,11 @@ class MentionController extends AbstractController
     }
 
     /**
+<<<<<<< HEAD
+     * @Route("/{id}", name="mention_show", methods={"GET"})
+=======
      * @Route("/{id}", name="admin_mention_show", methods={"GET"})
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
      */
     public function show(Mention $mention): Response
     {
@@ -59,7 +71,11 @@ class MentionController extends AbstractController
     }
 
     /**
+<<<<<<< HEAD
+     * @Route("/{id}/edit", name="mention_edit", methods={"GET","POST"})
+=======
      * @Route("/{id}/edit", name="admin_mention_edit", methods={"GET","POST"})
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
      */
     public function edit(Request $request, Mention $mention): Response
     {
@@ -79,7 +95,11 @@ class MentionController extends AbstractController
     }
 
     /**
+<<<<<<< HEAD
+     * @Route("/{id}", name="mention_delete", methods={"POST"})
+=======
      * @Route("/{id}", name="admin_mention_delete", methods={"POST"})
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
      */
     public function delete(Request $request, Mention $mention): Response
     {

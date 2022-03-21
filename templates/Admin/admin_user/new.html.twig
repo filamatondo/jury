@@ -1,0 +1,14 @@
+{% extends 'base_admin_user.html.twig' %}
+
+{% block title %}New Videos
+{% endblock %}
+
+{% block body %}
+	<div class="register-form position-fixed fixed-top" style="margin:105px; margin-left: 320px; margin-top:15%; ">
+		<h1>Create new Videos</h1>
+
+		{{ include('user/_form.html.twig') }}
+
+		<a href="{{ path('user_profil') }}">retour à la liste</a>
+	</div>
+{% endblock %}

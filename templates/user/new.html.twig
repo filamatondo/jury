@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html.twig' %}
 
 {% block title %}New Videos
@@ -12,3 +13,19 @@
 		<a href="{{ path('user_profil') }}">retour à la liste</a>
 	</div>
 {% endblock %}
+=======
+{% extends 'base.html.twig' %}
+
+{% block title %}New Videos
+{% endblock %}
+
+{% block body %}
+	<div class="register-form position-fixed fixed-top" style="margin:105px; margin-left: 320px; margin-top:15%; ">
+		<h1>Create new Videos</h1>
+
+		{{ include('user/_form.html.twig') }}
+
+		<a href="{{ path('user_profil') }}">retour à la liste</a>
+	</div>
+{% endblock %}
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9

@@ -31,8 +31,13 @@ class SearchUserType extends AbstractType
                 'label' => false,
                 'required' => false,
                 'attr' => ['placeholder' => 'Rechercher par nom']
+<<<<<<< HEAD
+               
+                
+=======
 
 
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
             ]);
     }
 

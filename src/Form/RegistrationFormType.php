@@ -9,7 +9,10 @@ use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+<<<<<<< HEAD
+=======
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -44,7 +47,11 @@ class RegistrationFormType extends AbstractType
             ])
 
 
+<<<<<<< HEAD
+            ->add('date', BirthdayType::class, [
+=======
             ->add('date', DateType::class, [
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
                 'label' => false,
 
 
@@ -54,8 +61,23 @@ class RegistrationFormType extends AbstractType
                 'label' => false,
                 'choices' => [
                     'Sexe' => '',
+<<<<<<< HEAD
+                    'Homme' => 'H',
+                    'Femme' => 'F',
+                ]
+            ])
+
+            ->add('agreeTerms', CheckboxType::class, [
+                'mapped' => false,
+                'label' => 'Veuillez accepter les CGUV',
+                'constraints' => [
+                    new IsTrue([
+                        'message' => 'Vous devez accepter les CGUV',
+                    ])
+=======
                     'Homme' => 'Homme',
                     'Femme' => 'Femme',
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
                 ]
             ])
 
@@ -97,7 +119,9 @@ class RegistrationFormType extends AbstractType
                         ]),
                     ],
                 ],
-            ]);
+            ]); 
+
+             
     }
 
     public function configureOptions(OptionsResolver $resolver)

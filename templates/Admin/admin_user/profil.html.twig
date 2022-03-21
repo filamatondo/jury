@@ -1,0 +1,48 @@
+{% extends 'base_admin_user.html.twig' %}
+
+{% block title %}
+
+	Profil
+
+{% endblock %}
+
+{% block body %}
+	<div class="register-form" style="margin-bottom:5px; margin-top:-50%; margin-left:20%; font-size:21px;">
+
+		<div class="container">
+
+			{% for message in app.flashes('message') %}
+
+				<div class="col">
+					<div class="p-3 my2 rounded-2 success">
+						{{message}}
+					</div>
+				</div>
+			{% endfor %}
+
+
+			{# {% for user in users %} #}
+
+			<div class="row">
+
+				<h1 class="titre" style="margin-top:-20%;margin-left:20%;  color:blue ">
+					Profil de
+					{{ user.nom }}
+					{{ user.prenom }}
+				</h1>
+
+				<div>
+					{% if user.photoProfil is not null %}
+						<img class="w-90" src="{{ asset(user.photoProfil) }}" style="height: 600px; margin-top:-1%; margin-left:10%; "/>
+					{% else %}
+						<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3" style=" height: 250px; width: 280px;"/>
+					{% endif %}
+
+					Bonjour
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

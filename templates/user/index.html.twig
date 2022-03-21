@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'user_base.html.twig' %}
 
 {% block title %}{% endblock %}
@@ -62,3 +63,69 @@
 
 
 {% endblock %}
+=======
+{% extends 'user_base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+	<div class=" informationPersonnelle">
+
+		<div class="container">
+
+			{% for message in app.flashes('message') %}
+
+				<div class="col">
+					<div class="p-3 my2 rounded-2 success">
+						{{message}}
+					</div>
+				</div>
+			{% endfor %}
+
+			<div class=" row">
+
+
+				<h1 class="Bienvenu">
+					Bienvenue
+					{{ app.user.prenom }}
+					{{app.user.nom}}
+				</h1>
+                 
+				 <hr>
+				<div class="w-100"></div>
+				<div class="col">Nom :</div>
+				<div class="col">{{ app.user.nom}}</div>
+				<div class="w-100"></div>
+                 <hr>
+				<div class="col">
+					Prénom :</div>
+				<div class="col">{{ app.user.prenom}}</div>
+
+				<div class="w-100"></div>
+               <hr>
+				<div class="col">Email:</div>
+				<div class="col">{{ app.user.email}}</div>
+				<div class="w-100"></div>
+                </hr>
+                <hr>
+				<div class="col">Date:</div>
+				<div class="col">{{ app.user.date |  date }}</div>
+				<div class="w-100"></div>
+                </hr>
+				<hr>
+
+				<div class="col">Sexe:</div>
+				<div class="col">{{ app.user.sexe}}</div>
+				<div class="w-100"></div>
+               <hr>
+
+			</div>
+		</div>
+
+
+		{{ include('user/_delete_form.html.twig') }}
+	</div>
+
+
+{% endblock %}
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9

@@ -17,7 +17,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ApropoController extends AbstractController
 {
     /**
+<<<<<<< HEAD
+     * @Route("/", name="apropo_index", methods={"GET"})
+=======
      * @Route("/", name="admin_apropo_index", methods={"GET"})
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
      */
     public function index(ApropoRepository $apropoRepository): Response
     {
@@ -27,7 +31,11 @@ class ApropoController extends AbstractController
     }
 
     /**
+<<<<<<< HEAD
+     * @Route("/new", name="apropo_new", methods={"GET","POST"})
+=======
      * @Route("/new", name="admin_apropo_new", methods={"GET","POST"})
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
      */
     public function new(Request $request, AproposVideo $aproposVideo): Response
     {
@@ -54,7 +62,11 @@ class ApropoController extends AbstractController
     }
 
     /**
+<<<<<<< HEAD
+     * @Route("/{id}", name="apropo_show", methods={"GET"})
+=======
      * @Route("/{id}", name="admin_apropo_show", methods={"GET"})
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
      */
     public function show(Apropo $apropo): Response
     {
@@ -64,7 +76,11 @@ class ApropoController extends AbstractController
     }
 
     /**
+<<<<<<< HEAD
+     * @Route("/{id}/edit", name="apropo_edit", methods={"GET","POST"})
+=======
      * @Route("/{id}/edit", name="admin_apropo_edit", methods={"GET","POST"})
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
      */
     public function edit(Request $request, Apropo $apropo): Response
     {
@@ -84,7 +100,11 @@ class ApropoController extends AbstractController
     }
 
     /**
+<<<<<<< HEAD
+     * @Route("/{id}", name="apropo_delete", methods={"POST"})
+=======
      * @Route("/{id}", name="admin_apropo_delete", methods={"POST"})
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
      */
     public function delete(Request $request, Apropo $apropo): Response
     {

@@ -12,7 +12,11 @@
         "doctrine/doctrine-bundle": "^2.4",
         "doctrine/doctrine-migrations-bundle": "^3.1",
         "doctrine/orm": "^2.9",
+<<<<<<< HEAD
+        "friendsofsymfony/ckeditor-bundle": "^2.4",
+=======
         "friendsofsymfony/ckeditor-bundle": "^2.3",
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
         "helios-ag/fm-elfinder-bundle": "^10.1",
         "knplabs/knp-paginator-bundle": "^5.6",
         "phpdocumentor/reflection-docblock": "^5.2",
@@ -53,7 +57,7 @@
         "symfony/browser-kit": "5.3.*",
         "symfony/css-selector": "5.3.*",
         "symfony/debug-bundle": "5.3.*",
-        "symfony/maker-bundle": "^1.0",
+        "symfony/maker-bundle": "^1.36",
         "symfony/phpunit-bridge": "^5.3",
         "symfony/stopwatch": "5.3.*",
         "symfony/web-profiler-bundle": "5.3.*"

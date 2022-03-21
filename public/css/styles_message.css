@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .body {
     background-color: blue;
     margin: 0%;
@@ -417,4 +418,425 @@ header .navbar-expand-lg {
     color: black;
 }
 
+=======
+.body {
+    background-color: blue;
+    margin: 0%;
+}
+
+/* Css de la page contact, liste des utilisateur */
+
+
+
+
+header .navbar-expand-lg {
+    background-color: #ffffff;
+    height: 120px;
+    width: 100%;
+    margin: 0px;
+}
+
+/* navbar de la page contact  */
+
+
+.Titre-page-contact {
+    color: blue;
+    margin-top: 15%;
+    position: fixed;
+    margin-left: 2%;
+    font-size: 25px;
+}
+
+/*  Titre de ma page contacte liste des utilisateur */
+
+/* le css de la touche profil de la navbar */
+.profil {
+    font-size: 18px;
+    color: black;
+    margin-top: -55%;
+    margin-left: -7%;
+
+}
+
+/*  texte profil */
+
+
+.logo_profil {
+    margin-left: -24%;
+    margin-top: 3%;
+}
+
+/* la classe du Logo de profil */
+
+
+.ImageProfil {
+    width: 35px;
+    height: 35px;
+
+}
+
+/* taille du logo profil */
+
+
+
+/* le css de la touche mes contact */
+
+.contact {
+    font-size: 18px;
+    color: black;
+    margin-top: -25%;
+
+}
+
+/*  texte contact */
+
+
+.logo_contact {
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+/* la classe du Logo de contacts */
+
+
+.bi-people-fill {
+    width: 30px;
+    height: 30px;
+    margin-left: 20%;
+
+}
+
+/* taille du logo contact */
+
+
+
+/* css de la touche message */
+
+
+
+.message {
+    font-size: 18px;
+    color: black;
+    margin-top: -18%;
+
+}
+
+/*  texte contact */
+
+
+.LogoMessage {
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+
+/* la classe du Logo de contacts */
+
+.ImageMessage {
+    width: 30px;
+    height: 30px;
+    margin-left: 30%;
+
+}
+
+/* taille du logo Messagerie */
+
+
+/* logo article */
+
+.article {
+    font-size: 18px;
+    color: black;
+    margin-top: -30%;
+    margin-left: 5%;
+}
+
+/*  texte contact */
+
+
+.liste_article {
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+/* la classe du Logo de contacts */
+
+.bi-menu-down {
+    width: 30px;
+    height: 30px;
+    margin-left: 25%;
+}
+
+/* taille du logo Video */
+
+
+
+/* logo article */
+
+.video {
+    font-size: 18px;
+    color: black;
+    margin-top: -30%;
+    margin-left: 5%;
+}
+
+/*  texte video */
+
+
+.liste_video {
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+/* la classe du Logo de video */
+
+
+.bi-camera-reels-fill {
+    width: 30px;
+    height: 30px;
+    margin-left: 25%;
+}
+
+/* taille du logo video */
+
+
+
+/* logo paramètre */
+
+.paramètres {
+    font-size: 18px;
+    color: black;
+    margin-top: -17%;
+
+}
+
+/*  texte Paramètres */
+
+
+.liste_parametre {
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+/* la classe du Logo de paramètre */
+
+
+.bi-gear {
+    width: 30px;
+    height: 30px;
+    margin-left: 25%;
+}
+
+/* taille du logo paramètres */
+
+
+/* Search le bouton de recherche de la page Contact */
+
+.recherche {
+    margin-top: 2%;
+    margin: 0px;
+}
+
+/* La classe principale du search */
+
+.position-fixed {
+    margin-left: 25%;
+    margin-top: 2%;
+}
+
+/* la 2ieme div principale de la class search */
+
+.btn-outline-success {
+    margin-top: -5.7%;
+    height: 40px;
+    margin-left: 75.4%;
+}
+
+/* bouton search le symbole. */
+
+
+
+.bi-zoom-in {
+    margin-left: 45%;
+    margin-top: -55%;
+    width: 25px;
+    height: 25px;
+}
+
+/* symbole recherche dans le bouton search */
+
+
+
+.foo {
+    width: 90%;
+    height: 25px;
+    margin: 0px;
+    font-size: 30%;
+}
+
+/* .container {
+    width: 90%;
+    height: 55px;
+} */
+
+/* la class de l'input search */
+
+
+
+
+/* coté publicité */
+
+.publicite1 {
+    margin-left: -32%;
+    width: 100%;
+    height: 90%;
+    margin-top: 2%;
+}
+
+/* div pricipale de la publicité 1 */
+.publicite1_1 {
+    margin-left: 2%;
+    margin-top: 40%;
+    background-color: #F8F8FF;
+    width: 13%;
+    height: 15%;
+}
+
+/* le background color de la publicité 1 */
+
+.ImagePub1 {
+    height: 80px;
+    margin-top: 48px;
+}
+
+/* image de publicité 1 */
+
+
+
+/* coté publicité 2 */
+
+.publicite2 {
+    margin-left: -82%;
+    width: 100%;
+    height: 90%;
+    margin-top: 2%;
+}
+
+/* div pricipale de la publicité 2 */
+
+
+.publicite2_2 {
+    margin-left: 2%;
+    margin-top: 20%;
+    background-color: #F8F8FF;
+    width: 13%;
+    height: 15%;
+    font-size: 30px;
+}
+
+/* le background color de la publicité 2 */
+
+
+.ImagePub2 {
+    height: 80px;
+    width: 100%;
+    margin-top: 15%;
+}
+
+/* image de publicité 2 */
+
+.pub2_text {
+    font-size: 30px;
+}
+
+/* text pub2 */
+
+
+
+
+/* coté publicité 3 */
+
+.publicite3 {
+    margin-left: -82%;
+    width: 100%;
+    height: 90%;
+    margin-top: 2%;
+}
+
+/* div pricipale de la publicité 3 */
+
+
+.publicite3_3 {
+    margin-left: 83%;
+    margin-top: 20%;
+    background-color: #F8F8FF;
+    width: 13%;
+    height: 15%;
+    font-size: 30px;
+}
+
+/* le background color de la publicité 3 */
+
+
+.ImagePub3 {
+    width: 100%;
+    height: 85px;
+    margin-top: 10%;
+}
+
+/* image de publicité 3 */
+
+
+
+.pub2_text3 {
+    font-size: 30px;
+    color: black;
+}
+
+/* text pub3 */
+
+
+
+
+/* coté publicité 4 */
+
+.publicite4 {
+    margin-left: -82%;
+    width: 100%;
+    height: 90%;
+    margin-top: 2%;
+}
+
+/* div pricipale de la publicité 4 */
+
+
+.publicite4_4 {
+    margin-left: 83%;
+    margin-top: 40%;
+    background-color: #F8F8FF;
+    width: 13%;
+    height: 15%;
+    font-size: 30px;
+}
+
+/* le background color de la publicité 4 */
+
+
+.ImagePub4 {
+    width: 120%;
+    height: 130px;
+    margin-top: 10%;
+    font-size: 50px;
+}
+
+/* image de publicité 4 */
+
+
+
+.pub2_text4 {
+    font-size: 30px;
+    color: black;
+}
+
+>>>>>>> 586cd3136a80a2bc73c9e90930e5d4dce85100c9
 /* text pub4 */
