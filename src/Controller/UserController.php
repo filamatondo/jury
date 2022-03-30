@@ -7,6 +7,7 @@ use App\Form\UserType;
 use App\MesPhotos\Photo;
 use App\Form\EditProfileType;
 use App\Repository\UserRepository;
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -170,5 +171,34 @@ class UserController extends AbstractController
             'user' => $user,
             'form' => $form->createView(),
         ]);
+    }
+
+
+
+    /**
+     * @Route("/", name="supprimer_user_admin")
+     */
+    public function deleteUser(int $id, ManagerRegistry $managerRegistry, UserRepository $userRepository)
+    {
+        // récupérer l'utilisateur et les commentaires liés
+        $user = $userRepository->find($id);
+        $comments = $user->getComments();
+
+        // récupération du gestionnaire
+        $manager = $managerRegistry->getManager();
+
+        // préparation de la suppression des commentaires
+        foreach ($comments as $comment) {
+            $manager->remove($content);
+        }
+
+        // préparation de la suppression de l'utilisateur
+        $manager->remove($user);
+
+        // suppression effective en base de données
+        $manager->flush();
+
+        // redirection
+        $this->redirecToRoute('nom_de_la_route');
     }
 }
