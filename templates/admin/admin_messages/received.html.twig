@@ -1,4 +1,4 @@
-{% extends 'base_messagerie.html.twig' %}
+{% extends 'base_admin_message.html.twig' %}
 
 {% block title %}{% endblock %}
 
@@ -9,41 +9,41 @@
 
 			<div class="col">
 
-				<h1 class="  reception_message" style="margin-top:20%; margin-left:2%; color:blue; ">Boîte de réception</h1>
+				<h1 class="  reception_message">Boîte de réception</h1>
 				{#  Mon titre H1 de ma messagerie #}
 
 
 				{# app.user.sent : c'est l'utilisateur qui envoye le message #}
-				<p class="recu" style="margin-left:2%; color:#32cd32; font-size:15px; ">Vous avez Reçu :{{ messages|length }}</p>
+				<p class="recu">Vous avez Reçu:
+					{{ messages|length }}</p>
 
 
-				{% for message in app.flashes('message') %}
-
-					<div class="col">
-						<div class="p-3 my2 rounded-2 success">
-							{{message}}
-						</div>
-					</div>
-				{% endfor %}
-
-
-				{#les titre de ma messagerie, pour mieux expliquer au utilisateur  #}
 			</div>
 		</div>
 
-		<div class="card" style="font-size:18px">
+		<div class="card">
 			<div class="row">
-				<div class="col-4" style="margin-left:1%; color:	#191970 ">De</div>
-				<div class="col-4" style="color:blue">Sujet</div>
-				<div class="col-2" style="color:#008080">Date</div>
-				<div class="col" style="color:#F81010">Supprimer</div>
+				<div class="col-4">De</div>
+				<div class="col-4">Sujet</div>
+				<div class="col-2">Date</div>
+				<div class="col">Supprimer</div>
 			</div>
 		</div>
 
-		<div class="row" style="font-size:20px; ">
+		<div class="row">
 			<div class="table-primary">
-				<div
-					class="col-12">
+				<div class="col-12">
+
+
+					{% for message in app.flashes('message') %}
+
+						<div class="col">
+							<div class="p-3 my2 rounded-2 success">
+								{{message}}
+							</div>
+						</div>
+					{% endfor %}
+
 
 					{# received message reçu, et le reverse :( permet de recevoir les message de manière reversible) #}
 					{% for message in messages | reverse %}
@@ -74,7 +74,7 @@
 									{{ message.createdAt|date }}
 									<a href="{{ path("dellet" , {id: message.id} ) }}">
 
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-archive-fill col-4 text-white" viewbox="0 0 16 16" style="margin-left:12%">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-archive-fill col-4 text-white" viewbox="0 0 16 16">
 											<path d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15h9.286zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zM.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8H.8z"/>
 										</svg>
 									</a>

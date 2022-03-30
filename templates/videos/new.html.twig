@@ -1,13 +1,13 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_video.html.twig' %}
 
 {% block title %}New Videos
 {% endblock %}
 
 {% block body %}
-	<div class="register-form position-fixed fixed-top" style="margin:105px; margin-left: 320px; margin-top:15%; ">
-		<h1 class="videos" style="color:blue; ">Créer un article</h1>
+	<div class="register-form position-fixed fixed-top">
+		<h1 class="videos">Créer un article</h1>
 
 		{{ include('videos/_form.html.twig') }}
 
-		<a class="btn btn-info" href="{{ path('videos_index') }}" style="margin-left:50%; margin-top:-3%">retour à la liste</a>
+		<a class="btn btn-info" href="{{ path('videos_index') }}">retour à la liste</a>
 	{% endblock %}

@@ -1,25 +1,25 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_video.html.twig' %}
 
 {% block title %}Videos
 {% endblock %}
 
 {% block body %}
 
-	<div class="col-1 col-md-7" style=" margin-left:22%; margin-top:-45%">
+	<div class="col-1 col-md-7">
 
 		<div class="card">
 			<div class="card-header">
-				<p class="auteur" style="color:#008080">Auteur</p>
-				<p class="auteurs" style="color:blue; font-size:25px">{{ video.video }}</p>
+				<p class="auteur">Auteur</p>
+				<p class="auteurs">{{ video.video }}</p>
 				<p>{{ video.date ? video.date|date('d/m/Y  à  H:i:s') : '' }}</p>
 
-				<p class="tt" style="color:#008080">Titre
+				<p class="tt">Titre
 				</p>
 
 				<p>{{ video.titre }}</p>
 
 
-				<p class="cont" style="color:#008080">Contenu</p>
+				<p class="cont">Contenu</p>
 
 				<p>{{ video.contenu }}</p>
 
@@ -27,14 +27,14 @@
 
 
 			<div class=" card-footer">
-				<video controls class="w-100" src="{{ asset(video.partager) }}" style="height: 520px;  object-fit:contain !important; "/>
+				<video controls class="w-100" src="{{ asset(video.partager) }}"/>
 			</div>
 
 
 			<div class="col-12 mt-3">
 				<div class="card">
 					<div class="card-header">
-						<h5 class="commentaire" style="color:#008080">Laiser un commentaire</h5>
+						<h5 class="commentaire">Laiser un commentaire</h5>
 					</div>
 					<div class="card-body">
 						{% if app.user %}
@@ -64,7 +64,7 @@
 
 
 						<div class="col-12 mt-3">
-							<h5 class="commentaires" style="color:#008080">Tous les commentaires</h5>
+							<h5 class="commentaires">Tous les commentaires</h5>
 							<hr/>
 						</div>
 
@@ -106,7 +106,7 @@
 
 							{# <a class="btn btn-info" href="{{ path('videos_index') }}">retour à la liste</a> #}
 							{# <a class="btn btn-" href="{{ path('videos_edit', {'id': video.id}) }}">editer</a>
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		{{ include('videos/_delete_form.html.twig') }} #}
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																	{{ include('videos/_delete_form.html.twig') }} #}
 
 
 						</div>

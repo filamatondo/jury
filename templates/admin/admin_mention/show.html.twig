@@ -1,11 +1,11 @@
-{% extends 'base_apropos.html.twig' %}
+{% extends 'base_admin_mention.html.twig' %}
 
 {% block title %}Mention
 {% endblock %}
 
 {% block body %}
 
-	<div class="allo fixed-top" style="margin-top:10%;margin:10%">
+	<div class="allo fixed-top">
 		<h1>Mention</h1>
 
 
@@ -18,8 +18,8 @@
 		<div>{{ mention.articles }}</div>
 
 
-		<a class="btn btn-primary" href="{{ path('mention_index') }}" style="margin-left:50%; margin-top:4%">retour à la liste</a>
-		<a class="btn btn-info" href="{{ path('mention_edit', {'id': mention.id}) }}" style="margin-left:30%; margin-top:-3.5%">Éditer</a>
+		<a class="btn btn-primary" href="{{ path('mention_index') }}">retour à la liste</a>
+		<a class="btn btn-info" href="{{ path('mention_edit', {'id': mention.id}) }}">Éditer</a>
 		{{ include('mention/_delete_form.html.twig') }}
 
 	</div>

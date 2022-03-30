@@ -20,24 +20,24 @@
 
 			{{ form_start(registrationForm) }}
 
-			<div class="col-1 mb-3">
+			<div class="col-12">
 				{{ form_widget(registrationForm.nom, { 'attr': {'class': 'nom'} }) }}
 			</div>
 
 
-			<div class="col-1 mb-3">
+			<div class="col-12">
 				{{ form_row(registrationForm.prenom,  { 'attr': {'class': 'prenom'} } ) }}
 			</div>
 
-			<div class="col-1 mb-3">
+			<div class="col-12">
 				{{ form_row(registrationForm.email,  { 'attr': {'class': 'email'} } ) }}
 			</div>
 
-			<div class="col-1 mb-3">
+			<div class="col-12">
 				{{ form_row(registrationForm.plainPassword.first,  { 'attr': {'class': 'first'} } )  }}
 			</div>
 
-			<div class="col-1 mb-3">
+			<div class="col-12">
 				{{ form_row(registrationForm.plainPassword.second,{ 'attr': {'class': 'second'} }  ) }}
 			</div>
 
@@ -45,7 +45,7 @@
 				{{ form_row(registrationForm.date, { 'attr': {'class': 'date'} } ) }}
 			</div>
 
-			<div class="col-3 md-3">
+			<div class="col-3">
 				{{ form_row(registrationForm.sexe, { 'attr': {'class': 'sexe'} } ) }}
 			</div>
 
@@ -62,18 +62,21 @@
 			{{ form_end(registrationForm) }}
 		</div>
 	</div>
-</div>
-<footerclass="footer">
-	<sectionclass="flex-around">
-		<divclass="bloc-footer">
-			<aclass="navbar-link"href="{{path("apropo_index")}}">
-				<pclass="APROPOS">Àpropos</p>
-			</a>
-		</diV>
-		<divclass="bloc-footer">
-			<aclass="navbar-link"href="{{path("mention_index")}}">
-				<pclass="mentions">Mentionslégales</p>
-			</a>
-		</div>
-	</section>
-</footer></div></div>{% endblock %}
+
+
+	<footer class=" footer">
+		<section class="flex-around">
+			<div class="bloc-footer">
+				<a class="navbar-link" href="{{path ("apropo_index") }}">
+					<p class="APROPOS">À propos</p>
+				</a>
+			</diV>
+			<div class="bloc-footer">
+				<a class="navbar-link" href="{{path("mention_index")}}">
+					<p class="mentions">Mentions légales
+					</p>
+				</a>
+			</div>
+		</section>
+	</footer>
+{% endblock %}

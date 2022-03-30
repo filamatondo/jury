@@ -1,13 +1,9 @@
-{% extends 'base_admin_user.html.twig' %}
+{% extends 'base_admin_profil.html.twig' %}
 
-{% block title %}
-
-	Profil
-
-{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body %}
-	<div class=" position-fixed fixed-top register-form" style="margin-botto:05px; margin-top:23%; font-size:21px;">
+	<div class=" informationPersonnelle">
 
 		<div class="container">
 
@@ -20,41 +16,42 @@
 				</div>
 			{% endfor %}
 
-			<div class="row">
+			<div class=" row">
 
 
-				<h1 class="titre" style="margin-top:-8%; color:blue; ">
-
+				<h1 class="Bienvenu">
 					Bienvenue
 					{{ app.user.prenom }}
 					{{app.user.nom}}
-
 				</h1>
 
+				<hr>
 				<div class="w-100"></div>
 				<div class="col">Nom :</div>
 				<div class="col">{{ app.user.nom}}</div>
 				<div class="w-100"></div>
-
+				<hr>
 				<div class="col">
 					Prénom :</div>
 				<div class="col">{{ app.user.prenom}}</div>
 
 				<div class="w-100"></div>
-
-				<div class="col">Email:</div>
-				<div class="col">{{ app.user.email}}</div>
-				<div class="w-100"></div>
-
-				<div class="col">Date:</div>
-				<div class="col">{{ app.user.date |  date }}</div>
-				<div class="w-100"></div>
-
+				<hr>
+					<div class="col">Email:</div>
+					<div class="col">{{ app.user.email}}</div>
+					<div class="w-100"></div>
+				</hr>
+				<hr>
+					<div class="col">Date:</div>
+					<div class="col">{{ app.user.date |  date }}</div>
+					<div class="w-100"></div>
+				</hr>
+				<hr>
 
 				<div class="col">Sexe:</div>
 				<div class="col">{{ app.user.sexe}}</div>
 				<div class="w-100"></div>
-
+				<hr>
 
 			</div>
 		</div>

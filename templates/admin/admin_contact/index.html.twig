@@ -1,11 +1,11 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_admin_contact.html.twig' %}
 
 {% block title %}Hello ContactController!
 {% endblock %}
 
 {% block body %}
 
-	<div class="col-5 md-4 position-fixed fixed-top" style="margin-left:30%; margin-top:20%">
+	<div class="contacter-nous">
 		{% for contact in app.flashes('contact') %}
 
 			<div class="col">

@@ -1,11 +1,11 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_article.html.twig' %}
 
 {% block title %}Article
 {% endblock %}
 
 {% block body %}
 
-	<div class="register-form" style="margin-top:-40%; margin-left:10%; margin:30%" ;>
+	<div class="register-form">
 		<div class="contaire py-5">
 			<div class="row">
 
@@ -26,7 +26,7 @@
 							<p>
 								<div class="card-body">
 
-									<img class="w-100" src="{{ asset(article.image) }}" style="height: 300px;  object-fit:contain !important; "/>
+									<img class="w-100" src="{{ asset(article.image) }} "/>
 								</div>
 
 							</p>
@@ -80,7 +80,7 @@
 												{% if article.commentaires | length > 0 %}
 													{% for commentaire in article.commentaires %}
 
-														<p date {% if app.user is same as commentaire.auteur %} style="font-form_widget:bold; color:red; ">
+														<p date {% if app.user is same as commentaire.auteur %} ">
 														{% endif %}
 														<P>
 															auteur:

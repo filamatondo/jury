@@ -1,0 +1,543 @@
+.html,
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: #F5F5F5;
+}
+
+/* css de la classe body */
+
+
+.navbare {
+  background-color: rgb(59, 89, 152);
+  width: auto;
+  height: 72px;
+  text-align: left;
+}
+
+/* la nav bare */
+
+
+
+.navbar-brand {
+  margin-left: 5%;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+
+
+}
+
+/* Logo de la navbar et le texte "Mon Compte" */
+
+
+
+.flex-column-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -4.5%;
+  color: #ffffff;
+  margin-left: 75%;
+}
+
+/* La classe Mon compte de la navbare */
+
+
+
+/* ******************************************** *
+************************************************
+*************************************************/
+
+
+.Titre {
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 0.2%;
+}
+
+/* titre de la page d'inscription */
+
+
+.card-header {
+  background-color: #fff;
+  justify-content: center;
+  margin: 1%;
+}
+
+/* la classe card-header */
+
+.container {
+  background-color: #ffffff;
+  width: 50%;
+  height: auto;
+  margin: 0%;
+
+}
+
+/* la classe container */
+
+
+.champs {
+  margin-top: -1%;
+  margin: 0%;
+}
+
+/* la classe champs qui est la classe mère des input */
+
+
+
+.nom {
+  width: 80%;
+  height: auto;
+  font-size: 18px;
+  margin-top: -1%;
+  margin-left: 10%;
+  justify-content: center;
+}
+
+/* taille des ipunt de création d'un compte. */
+
+
+
+
+.prenom {
+  width: 80%;
+  height: auto;
+  font-size: 18px;
+  margin-top: 2%;
+  margin-left: 10%;
+  justify-content: center;
+}
+
+/* taille des ipunt de création d'un compte. */
+
+
+.email {
+  width: 80%;
+  height: auto;
+  font-size: 18px;
+  margin-top: 2%;
+  margin-left: 10%;
+  justify-content: center;
+}
+
+/* taille des ipunt de création d'un compte. email */
+
+
+
+
+.first {
+  width: 80%;
+  height: auto;
+  font-size: 18px;
+  margin-top: 2%;
+  margin-left: 10%;
+  justify-content: center;
+}
+
+/* input de entrer votre mot de passe */
+
+
+.second {
+  width: 80%;
+  height: auto;
+  font-size: 18px;
+  margin-top: 2%;
+  margin-left: 10%;
+  justify-content: center;
+}
+
+/* input mot de passe  */
+
+
+
+.sexe {
+  margin-top: 37%;
+  margin-left: 37%;
+  justify-content: center;
+  font-size: 20px;
+}
+
+/* css du bouton sex */
+
+
+
+.date {
+  width: 80%;
+  height: 140%;
+  font-size: 20px;
+  margin-top: 5%;
+  margin-left: 12%;
+  justify-content: center;
+
+}
+
+/* css de formulaire de la date */
+
+
+.dates {
+  width: 90%;
+  height: 35px;
+  font-size: 10px;
+  margin-top: -5.5%;
+  margin-left: -1.8%;
+}
+
+/* date */
+
+
+
+.agree {
+  margin-left: 50%;
+  font-size: 15px;
+  color: blue;
+  margin-top: -8%;
+}
+
+/* css de l'agree de la page d'inscription */
+
+
+.agrees {
+  margin-left: 50%;
+  font-size: 15px;
+  color: blue;
+  margin-top: 1%;
+}
+
+/* css de l'agree de la page d'inscription */
+
+
+
+
+
+
+.inscrire {
+  height: 50px;
+  width: 180px;
+  background-color: #8EC760;
+  color: #ffffff;
+  border-radius: 10px;
+  border-color: #fff;
+  font-size: 20px;
+  border-style: double;
+  cursor: pointer;
+  margin-left: 30%;
+  margin-top: -0.5
+}
+
+/* css de la touche s'inscrire */
+
+
+
+.footer {
+  margin-top: 0.1%;
+  justify-content: center;
+  background: linear-gradient(to left, rgb(163, 8, 8), rgb(247, 244, 65), rgb(10, 228, 58));
+
+}
+
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -4%;
+  margin: 0%;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+  .flex-around {
+    margin-top: 5%;
+  }
+}
+
+/* Apropos */
+
+.bloc-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+}
+
+/* mention legales le parent de la classe apropos et mention*/
+
+.APROPOS {
+  font-size: 12px;
+  margin-top: 1px;
+
+}
+
+
+
+
+.mentions {
+  font-size: 12px;
+
+}
+
+
+
+/******************************************** Media query  1400px */
+/* **************************************** */
+/* *************************************** */
+
+@media screen and (max-width: 1200px) {
+
+  .html,
+  body {
+    margin: 0%;
+    padding: 0%;
+    background-color: #ffffff;
+  }
+
+
+  .navbar-brand {
+    font-size: 80px;
+  }
+
+  /* Le Logo Small world de la nav bar */
+
+  .navbare {
+    background-color: rgb(59, 89, 152);
+    width: auto;
+    height: 150px;
+    text-align: left;
+
+  }
+
+  /* Nave bare la couleur et la taille */
+
+
+  .navbar-brand {
+    margin-left: 5%;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+
+
+  }
+
+  /* Logo du site */
+
+  .flex-column-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+  }
+
+  /* La classe Mon compte de la navbare */
+
+  .image {
+    width: 100px;
+    height: 100px;
+    margin-left: -12%;
+    margin-top: 2%;
+  }
+
+  /* Logo de Monc ompte */
+
+  .Compte {
+    margin-left: -12%;
+    font-size: 40px;
+  }
+
+  /* css de Mon compte dans la navbare */
+
+
+
+  /*  Le Css du titre de la page d'inscription */
+  /* ****************************************** */
+  /* ******************************************* */
+
+  .Titre {
+    font-size: 80px;
+    margin-top: 1%;
+  }
+
+  /* Titre de la page Inscription */
+
+
+
+
+
+
+
+
+
+
+  .nom {
+    width: auto;
+    height: 180px;
+    font-size: 60px;
+    margin-top: 4%;
+    margin-left: -20%
+  }
+
+  /* input  nom  */
+
+
+
+  .prenom {
+    height: 180px;
+    width: auto;
+    font-size: 60px;
+    margin-top: 4%;
+    margin-left: -20%
+  }
+
+  /* input de prénom */
+
+  .email {
+    height: 180px;
+    width: auto;
+    font-size: 60px;
+    margin-top: 4%;
+    margin-left: -20%
+  }
+
+  /* input d'email */
+
+
+  .first {
+    height: 180px;
+    width: auto;
+    font-size: 60px;
+    margin-top: 4%;
+    margin-left: -20%
+  }
+
+  /* input mot de passe */
+
+
+  .second {
+    height: 180px;
+    width: auto;
+    font-size: 60px;
+    margin-top: 4%;
+    margin-left: -20%
+  }
+
+  /* second mot de passe */
+
+
+  .sexe {
+    height: 120%;
+    width: auto;
+    font-size: 10px;
+    margin-top: 60%;
+
+  }
+
+  /* input sexe */
+
+
+  .form-select {
+
+    font-size: 45px;
+    height: 140%;
+    width: 143px;
+    margin-left: -1%;
+    margin-left: -20%
+  }
+
+  /* select date */
+
+
+
+  .dates {
+    height: 80px;
+    width: 120%;
+    font-size: 60px;
+    margin-top: 4%;
+    margin-left: -25%
+  }
+
+  /* date */
+
+
+
+  .agree {
+    font-size: 35px;
+    margin-top: 12%;
+    margin-left: 3%;
+    margin-left: -20%
+  }
+
+  /* agree */
+
+  .agrees {
+    margin-top: 8%;
+    width: 80px;
+    height: 80px;
+    margin: -6.5%;
+    margin-left: 10%;
+  }
+
+  .required {
+    margin-left: 10%
+  }
+
+  /* agrees */
+
+
+
+  .inscrire {
+    font-size: 60px;
+    height: 100px;
+    width: 280px;
+    margin: 5%;
+    margin-left: 15%;
+  }
+
+
+  /* touche inscrire et les media query */
+
+
+
+
+
+
+  .footer {
+
+    background: linear-gradient(to left, rgb(163, 8, 8), rgb(247, 244, 65), rgb(10, 228, 58));
+    width: 100%;
+    height: 140px;
+  }
+
+  /* footer */
+
+
+  .APROPOS {
+    font-size: 55px;
+    margin: 0%;
+
+  }
+
+  /* botton appropos et les média query */
+
+
+
+
+
+
+  .mentions {
+    font-size: 55px;
+  }
+
+
+  /* botton mentions et les media query */
+
+
+}
+
+/******************************************** Media query */
+/* **************************************** */
+/* *************************************** */

@@ -1,4 +1,4 @@
-{% extends 'user_base.html.twig' %}
+{% extends 'profil_base.html.twig' %}
 
 {% block title %}
 
@@ -26,7 +26,7 @@
 					{% if user.photoProfil is not null %}
 						<img class="photoprofil" src="{{ asset(user.photoProfil) }} "/>
 					{% else %}
-						<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3" style=" height: 250px; width: 280px;"/>
+						<img src="https://img.icons8.com/ios/50/000000/name--v2.png "/>
 					{% endif %}
 
 				</div>

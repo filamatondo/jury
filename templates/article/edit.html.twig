@@ -1,16 +1,16 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_article.html.twig' %}
 
 {% block title %}Edit Article
 {% endblock %}
 
 {% block body %}
 
-	<div class="register-form fixed-top" style=" margin-left: 150px; margin-top:-10%; margin:10%">
+	<div class="register-form fixed-top">
 		<h1>Editer Article</h1>
 
 		{{ include('article/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-		<a class="btn btn-success" href="{{ path('article_index') }}" style="margin-left:30%; margin-top:-3.5%">Retour à la liste</a>
+		<a class="btn btn-success" href="{{ path('article_index') }}">Retour à la liste</a>
 
 		{{ include('article/_delete_form.html.twig') }}
 	</div>

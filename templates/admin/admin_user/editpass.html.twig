@@ -1,4 +1,4 @@
-{% extends 'base_admin_user.html.twig' %}
+{% extends 'base_admin_profil.html.twig' %}
 
 {% block title %}Modification du mot de passe de
 	{{ app.user.prenom }}
@@ -6,12 +6,12 @@
 {% endblock %}
 
 {% block body %}
-	<div class=" position-fixed fixed-top register-form" style="margin-left:10%; margin-top:20%">
+	<div class=" position-fixed fixed-top register-form">
 
 		<div class="grix xs4 container">
 
 			{% for message in app.flashes('error') %}
-				<div class="col-xs4 " style="margin-top:20%">
+				<div class="col-xs4 ">
 					<div class="p-3 my-2 rounded-2 error">{{message}}</div>
 				</div>
 				<div class="p-3 my2 rounded-2 success">
@@ -21,7 +21,7 @@
 
 
 			<div class="col-xs4">
-				<h1 class="mot de passe" style="color:blue; ">Modifier le mot de passe</h1>
+
 
 				<form method="post">
 
@@ -35,7 +35,7 @@
 						<input type="password" id="pass2" name="pass2" class="form-control">
 					</div>
 
-					<button class="btn blue">Valider</button>
+					<button class="btn valider">Valider</button>
 
 				</form>
 			</div>

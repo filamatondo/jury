@@ -1,16 +1,16 @@
-{% extends 'base_apropos.html.twig' %}
+{% extends 'base_admin_apropos.html.twig' %}
 
 {% block title %}Edit Apropo
 {% endblock %}
 
 {% block body %}
-	<h1 class="position-fixed fixed-top" style=" margin-top:1%; margin:10%">Edit Apropo</h1>
+	<h1 class="position-fixed fixed-top">Edit Apropo</h1>
 
-	<div class="titre" style="margin:20%; margin-top:-50%">
+	<div class="titre">
 
 		{{ include('apropo/_form.html.twig', {'button_label': 'Mettre à jour'} ) }}
 
-		<a class="btn btn-info" href="{{ path('apropo_index') }}" style="margin-left:40%">
+		<a class="btn btn-info" href="{{ path('apropo_index') }}">
 			Retour à la liste</a>
 
 		{{ include('apropo/_delete_form.html.twig') }}

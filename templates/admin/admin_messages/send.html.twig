@@ -1,17 +1,25 @@
-{% extends 'base_messagerie.html.twig' %}
+{% extends 'base_admin_message.html.twig' %}
 
 {% block title %}{% endblock %}
 
 {% block body %}
-	<div class="register-form" style="margin-botton:105px;">
+	<div class="register-form">
 
 		<section>
 
 			<div class="contenaire">
+				{% for message in app.flashes('message') %}
+
+					<div class="col">
+						<div class="p-3 my2 rounded-2 success">
+							{{message}}
+						</div>
+					</div>
+				{% endfor %}
 
 				<div class="row">
 					<div class="col">
-						<h1 class="reception" style="margin-top:7%; ">Envoyer un message</h1>
+						<h1 class="reception">Envoyer un message</h1>
 
 						{{ form(form) }}
 

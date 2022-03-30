@@ -1,26 +1,30 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_admin_video.html.twig' %}
 
 {% block title %}Videos index
 {% endblock %}
 
 {% block body %}
 
-	<section class="container py-1" style="margin-top:-55%;">
+
+	<section class="container py-1">
+
 
 		<div class="row">
 
 
 			{% for video in videos | reverse %}
-				<div class="col-2 col-md-7 " style="margin-left:22%;">
+				<div class="col-2 col-md-7 ">
 
-					<a href="{{ path('videos_show', {'id': video.id}) }}" style="text-decoration : none !important;  "></a>
+					<a href="{{ path('videos_show', {'id': video.id}) }}"></a>
 
 
 					<div class="card">
 
 
 						<div class="card-header">
-							<h1 class="videos" style="color:blue">{{ video.video | upper}}</h1>
+
+
+							<h1 class="videos">{{ video.video | upper}}</h1>
 							<p>Contenu</p>
 							{{ video.contenu }}
 							<p>
@@ -28,16 +32,18 @@
 						</div>
 
 						<div class="card-footer">
-							<video controls class="w-100" src="{{ asset(video.partager) }}" style="height: 620px;  object-fit:contain !important; "/>
+
+							<video controls class="w-100" src="{{ asset(video.partager) }}"/>
+
 						</div>
 						<div class="card-footer">
 
 
-							<a href="{{ path('videos_show', {'id' :video.id}) }}" class="btn btn-primary" style="margin-left:55%;  font-size:18px; margin-top:15% ">Commenter</a>
+							<a href="{{ path('videos_show', {'id' :video.id}) }}" class="btn btn-primary">Commenter</a>
 
 
 							{% if app.user is same as video.video %}
-								<a class="btn btn-info" href="{{ path('videos_edit', {'id' :video.id}) }}" style=" margin-top:-8% ; font-size:18px; ">Modifier</a>
+								<a class="btn btn-info" href="{{ path('videos_edit', {'id' :video.id}) }}">Modifier</a>
 							{% endif %}
 						</div>
 					</div>
@@ -54,5 +60,7 @@
 	{% endfor %}
 
 
-	<a href="{{ path('videos_new') }}">Créer un nouveau</a>
+	<ahref="{{path('videos_new')}}">Créerunnouveau</a>>>
+	{#<a href="{{ path('videos_new') }}">Créer un nouveau</a>#}
+
 {% endblock %}

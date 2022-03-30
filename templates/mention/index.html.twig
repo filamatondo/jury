@@ -6,22 +6,22 @@
 {% block body %}
 
 
-	<div class="titre  " style=" margin:20%; font-size:20px; margin-top:-60%; ">
+	<div class="titre ">
 
 
 		{% for mention in mentions %}
 
-			<h1 class="titre " style="margin-top:10%; margin-left:37%">Mention légalses</h1>
+			<h1 class="titre ">Mention légalses</h1>
 
 
-			<div class="allo" style="margin-left:10%; margin:5%">{{ mention.article }}</div>
+			<div class="allo">{{ mention.article }}</div>
 
-			<div class="allo" style="margin-left:10%;margin:5%">{{ mention.articl }}</div>
+			<div class="allo">{{ mention.articl }}</div>
 
-			<div class="allo" style="margin-left:10%;margin:5%">{{ mention.articles }}</div>
+			<div class="allo">{{ mention.articles }}</div>
 			<div>
-				<a class="btn btn-success " href="{{ path('mention_show', {'id': mention.id}) }}" style="margin-left:50%; margin-top:5%">Afficher</a>
-				<a class="btn btn-primary" href="{{ path('mention_edit', {'id': mention.id}) }}" style="margin-left:85%; margin-top:-3.4%">Éditer</a>
+				<a class="btn btn-success " href="{{ path('mention_show', {'id': mention.id}) }}">Afficher</a>
+				<a class="btn btn-primary" href="{{ path('mention_edit', {'id': mention.id}) }}">Éditer</a>
 			</td>
 
 		{% else %}
@@ -32,6 +32,6 @@
 	</div>
 
 
-	<a class="btn btn-info" href="{{ path('mention_new') }}" style="margin-top:-3%">Créer un nouveau</a>
+	<a class="btn btn-info" href="{{ path('mention_new') }}">Créer un nouveau</a>
 
 </div>{% endblock %}

@@ -1,21 +1,21 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_article.html.twig' %}
 
 {% block title %}Article index
 {% endblock %}
 
 {% block body %}
 
-<section class="container py-4" style="margin-top:-10%;">
+<section class="container py-4">
 
 
 	<div class="row">
 
 
 		{% for article in articles | reverse %}
-			<div class="col-1 col-md-7 " style="margin-left:18%;">
+			<div class="col-1 col-md-7 ">
 
 
-				<a href="{{ path('article_show', {'id': article.id}) }}" style="text-decoration : none !important;  "></a>
+				<a href="{{ path('article_show', {'id': article.id}) }}"></a>
 				<div class="card">
 
 
@@ -24,12 +24,12 @@
 						<p>Auteur :{{ article.auteur}}
 
 
-							<div class="col-1" style="margin-left:1% ; ">
+							<div class="col-1">
 								{%  if app.user == article.auteur == user.photoProfil %}
 
-									<img class="w-90" src="{{ asset(user.photoProfil) }}" style="height: 100px; margin-top:10%; margin-left:20%;  "/>
+									<img class="w-90" src="{{ asset(user.photoProfil) }}"/>
 								{% else %}
-									<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3" style=" height: 100px; width: 90px;"/>
+									<img src="https://img.icons8.com/ios/50/000000/name--v2.png " class="div3"/>
 
 								{% endif %}
 
@@ -49,20 +49,20 @@
 
 		<div class="card-body">
 
-			<img class="w-100" src="{{ asset(article.image) }}" style="height: 620px;  object-fit:contain !important; "/>
+			<img class="w-100" src="{{ asset(article.image) }}"/>
 
 
 			<div class="card-footer">
 
 
-				<a href="{{ path('article_show', {'id' :article.id}) }}" class="btn btn-primary" style="margin-left:60%; font-size:14px; font-size:14px; ">Commenter</a>
+				<a href="{{ path('article_show', {'id' :article.id}) }}" class="btn btn-primary">Commenter</a>
 
-				<a href="{{ path('article_show', {'id' :article.id}) }}" class="btn btn-success" style="margin-left:20%; margin-top:-8% ; font-size:14px; ">voir l'article</a>
+				<a href="{{ path('article_show', {'id' :article.id}) }}" class="btn btn-success">voir l'article</a>
 
 
 				{% if app.user is same as article.auteur %}
 
-					<a href="{{ path('article_edit', {'id' :article.id}) }}" class="btn btn-info" style=" margin-left:-40%; margin-top:-8% ; font-size:14px; ">Modifier</a>
+					<a href="{{ path('article_edit', {'id' :article.id}) }}" class="btn btn-info ">Modifier</a>
 
 
 				{% endif %}

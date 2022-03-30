@@ -1,8 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-info">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<a class="navbar-brand" href="#">Navbar</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
+
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item active">
@@ -19,16 +20,16 @@
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-					<a class="navbar-link" href="{{path ("admin_user_admin") }}">Profil</a>
-					<a class="navbar-link" href="{{path ("admin_home") }}">Mes contacts</a>
+					<a class="navbar-link" href="{{path ("user_admin") }}">Profil</a>
+					<a class="navbar-link" href="{{path ("home") }}">Mes contacts</a>
 
-					<a class="navbar-link" href="{{path("admin_received")}}">Messagerie</a>
+					<a class="navbar-link" href="{{path("received")}}">Messagerie</a>
 
-					<a class="navbar-link" href="{{ path("admin_article_new")}}">Publier un Article</a>
+					<a class="navbar-link" href="{{ path("article_new")}}">Publier un Article</a>
 
-					<a class="navbar-link" href="{{ path("admin_article_index")}}">Liste des Articles</a>
+					<a class="navbar-link" href="{{ path("article_index")}}">Liste des Articles</a>
 
-					<a class="navbar-link" href="{{ path("admin_article_index")}}">Connexion</a>
+					<a class="navbar-link" href="{{ path("article_index")}}">Connexion</a>
 
 					<a class="navbar-link" href="{{path("app_logout")}}">Déconnexion</a>
 				</div>
@@ -36,4 +37,7 @@
 
 		</li>
 	</ul>
-</form></div></nav>
+
+</form></div></nav><div class="navbar-menu ml-auto col-3 col-md-2 position-fixed fixed-top logo"><a class="navbar-link" href="{{path ("app_login") }}">
+<img src="https://img.icons8.com/ios/50/ffffff/name--v2.png "/>
+<div class="MonCompte">MON COMPTE</div></a></div>

@@ -1,32 +1,41 @@
-{% extends 'base_messagerie.html.twig' %}
+{% extends 'base_admin_message.html.twig' %}
 
 {% block title %}Messagerie
 {% endblock %}
 
 {% block body %}
-	<div class="register-form" style="margin-botton:105px;">
 
-		<section class="container">
-			<div class="row">
-				<div class="col-12">
-					<h1 class="reception" style="margin-top:28%; margin-left:2%;   color:blue ">Messagerie</h1>
+	<section class="container">
+		<div class="row">
+			<div class="col-12">
+				<h1 class="reception">Vous avez Reçu</h1>
 
 
-					<div class="tableau" style="font-size:22px;">
-						<p class="email" style="color:#32cd32">Message de :
-							{{ message.sender.email }}</p>
-						<p>Le
-							{{ message.createdAt|date }}</p>
-						<div>{{ message.message }}</div>
+				<div class="card">
+					<div class="card-body">
+						<div class="card-heard">
+							<div class="card-title">
+								<p class="email">Message de</p>
 
-						<a href="{{ path ("send", {'id': message.sender.id })}} " class="btn btn-primary mt-5">Répondre</a>
+								<p class="email">
+									{{ message.sender.email }}
+								</p>
+								<p class="email">
+									{{ message.createdAt|date }}</p>
+							</div>
+						</div>
+					</div>
 
-						<a href="{{ path("received") }}" class="btn btn-link mt-5">Retour à la boite de réception</a>
+					<div class="card-footer">
+						<div>{{ message.message | raw}}</div>
 
 					</div>
 				</div>
 			</div>
-		</section>
-	</div>
+		</div>
+	</section>
+	<a href="{{ path ("send", {'id': message.sender.id })}} " class="btn btn-info mt-5;">Répondre</a>
+
+	<a href="{{ path("received") }}" class="btn btn-link mt-5;">Retour à la boite de réception</a>
 
 {% endblock %}
